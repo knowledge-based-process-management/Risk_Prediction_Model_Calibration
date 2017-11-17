@@ -1,27 +1,27 @@
 #!/usr/bin/env Rscript
 
-# args = commandArgs(trailingOnly=TRUE)
+args = commandArgs(trailingOnly=TRUE)
 
-# if (length(args) < 1) {
-# 	stop("At least 1 argument must be supplied (input file).", call.=FALSE)
-# } else if (length(args)==1) {
-# 	# default output file
-# 	args[2] = "./Temp"
-# }
+if (length(args) < 1) {
+	stop("At least 1 argument must be supplied (input file).", call.=FALSE)
+} else if (length(args)==1) {
+	# default output file
+	args[2] = "./Temp"
+}
 
-# dataUrl <- args[1]
-# outputPath <- args[2]
-# reportPath <- paste(outputPath,'risk-predication-model-training-report.txt', sep='/')
-
-dataUrl <- "./Data/Input_Data_Example.csv"
-outputPath <- "./Temp"
+dataUrl <- args[1]
+outputPath <- args[2]
 reportPath <- paste(outputPath,'risk-predication-model-training-report.txt', sep='/')
+
+# dataUrl <- "./Data/Input_Data_Example.csv"
+# outputPath <- "./Temp"
+# reportPath <- paste(outputPath,'risk-predication-model-training-report.txt', sep='/')
 
 library(lattice)
 library(ggplot2)
 library(neuralnet)
 
-setwd("E:/WorkSpace/Huawei/R/Risk_Prediction_Model_Calibration")
+# setwd("E:/WorkSpace/Huawei/R/Risk_Prediction_Model_Calibration")
 sink(reportPath, append=TRUE, split=TRUE)
 
 df <- read.csv(dataUrl, header=TRUE, sep=",")
@@ -31,5 +31,5 @@ f <- as.formula(paste("RISK~", paste(names[!names %in% "RISK"], collapse= "+")))
 
 nn <- neuralnet(f, data=df, hidden=1, act.fct = "logistic", linear.output = FALSE) #model with one hidden layer and one neuron
 
-# print(nn)
+print(nn)
 plot(nn)
