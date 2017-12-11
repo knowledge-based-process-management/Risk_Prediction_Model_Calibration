@@ -85,9 +85,14 @@ for(i in 1:n){
 	simulatedRiskData[i,riskPick[i]] = 1
 }
 
+png(paste(outputPath,"scatter_matrics.png", sep='/'))
 print(simulatedRiskData)
 
+simulatedData <- cbind(simulatedCodeMetricsData, COCOMOData, simulatedCOQUALMOData, simulatedQualityManagementData, simulatedRiskData)
+write.csv(simulatedData, simulatedDataFilePath)
 
-write.csv(cbind(simulatedCodeMetricsData, COCOMOData, simulatedCOQUALMOData, simulatedQualityManagementData, simulatedRiskData), simulatedDataFilePath)
+#print(pairs(~CSmell+SVul+FCR+CD+ISS+ISRR+DRR+RELY+DATA+CPLX+RUSE+DOCU+TIME+STOR+PVOL+ACAP+PCAP+PCON+APEX+PLEX+LTEX+TOOL+SITE+SCED,data=simulatedData, main="Simple Scatterplot Matrix"))
+
+print(pairs(~CSmell+SVul+FCR+CD+ISS+ISRR+DRR,data=simulatedData, main="Simple Scatterplot Matrix"))
 
 sink()
