@@ -40,7 +40,7 @@ nn <- neuralnet(f, data=df, hidden=3, act.fct = "logistic", linear.output = FALS
 print(nn)
 
 # The following part implement the logic for 5-fold cross validation to estimate the predication accuracy. For cross validation, it is testing out-of-sample predication accuracy, which have better predication on predication accuracy on un-seen data points.
-nfold = 5
+nfold = 10
 print("sequence")
 print(seq(1,nrow(df)))
 folds <- cut(seq(1,nrow(df)),breaks=nfold,labels=FALSE)
