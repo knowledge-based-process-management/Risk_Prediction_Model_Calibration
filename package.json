@@ -1,0 +1,23 @@
+{
+  "name": "Risk_Prediction_Model_Calibration",
+  "version": "0.0.0",
+  "description": "Risk Prediction Model Calibration",
+  "main": "./RiskPredictionApis.js",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "eval": "^0.1.2",
+    "express": "^4.15.4",
+    "jade": "^1.11.0",
+    "mkdirp": "^0.5.1",
+    "multer": "^1.3.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./RiskPredictionApis.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/flyqk/Risk_Prediction_Model_Calibration.git"
+  },
+  "author": "Kan Qi (https://github.com/flyqk)"
+}
