@@ -11,7 +11,7 @@ if (length(args) < 1) {
 
 dataUrl <- args[1]
 outputPath <- args[2]
-reportPath <- paste(outputPath,'risk-predication-model-training-report.txt', sep='/')
+reportPath <- paste(outputPath,'risk-prediction-report.txt', sep='/')
 
 modelUrl <- "./Model/riskPredictionModel.rds"
 
@@ -29,7 +29,7 @@ sink(reportPath)
 
 df <- read.csv(dataUrl, header=TRUE, sep=",")
 names <- colnames(df)
-print('names')
+#print('names')
 #riskLabels <- names[grepl("RISK*", names)];
 #print(paste(paste(riskLabels, collapse= "+"), paste(names[!names %in% riskLabels], collapse= "+"), sep="~"))
 #f <- as.formula(paste("RISK1+RISK2+RISK3+RISK4+RISK5~", paste(names[!names %in% "RISK*"], collapse= "+"))) #making a formula to fit to neural net
@@ -42,9 +42,14 @@ print('names')
 #print(nn)
 
 nn <- readRDS(modelUrl)
-pr.nn <- compute(nn,df)
-predictions = as.matrix(apply(pr.nn$net.result, 1, FUN=which.max))
 
+print("prediction calculation with:")
+#print(nn$model.list$variables)
+variables = nn$model.list$variables
+names <- colnames(df)
+print(df[, names[names %in% variables]])
+pr.nn <- compute(nn,df[, names[names %in% variables]])
+predictions = as.matrix(apply(pr.nn$net.result, 1, FUN=which.max))
 
 print("prediction results:")
 print(pr.nn$net.result)

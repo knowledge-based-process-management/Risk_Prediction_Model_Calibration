@@ -77,7 +77,10 @@ print("testing results")
 print(clsRate)
 print(mean(clsRate))
 
+saveRDS(nn, "./Model/riskPredictionModel.rds")
 
 plot(nn)
+
+
 
 sink()

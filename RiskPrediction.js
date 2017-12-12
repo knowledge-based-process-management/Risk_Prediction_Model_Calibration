@@ -1,6 +1,6 @@
 (function(){
 	
-
+	var fs = require('fs');
 	var exec = require('child_process').exec;
 	
 	var RExec = '\"C:/Program Files/R/R-3.2.5/bin/Rscript\" ./Rscript/RiskPredication.R ';
@@ -17,9 +17,16 @@
 					callbackfunc(false);
 				}
 			} else {
-				if(callbackfunc){
-					callbackfunc(true);
-				}
+				fs.readFile("./Temp/risk-prediction-report.txt", 'utf-8', (err, str) => {
+					   if (err) throw err;
+//					    console.log(data);
+					   if(callbackfunc){
+						   callbackfunc(str);
+					   }
+				});
+//				if(callbackfunc){
+//					callbackfunc("alright");
+//				}
 			}
 		});
 	}
