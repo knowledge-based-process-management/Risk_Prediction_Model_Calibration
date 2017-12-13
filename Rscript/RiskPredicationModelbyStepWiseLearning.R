@@ -96,20 +96,22 @@ for (i in 1: (num_columns-5)){
 print("cls rate")
 print(clssRate[order(clssRate$rate),c(1,2)]);
 
+
 #iteratively remove the factors
 for (i in 1: nrow(clssRate)){
 	sum=0.0
 	print("iterating...")
-	print(clssRate[i, "colname"])
-	t[c(clssRate[i, "colname"])] <- NULL
+	print(as.character(clssRate[i, "colname"]))
+	t[c(as.character(clssRate[i, "colname"]))] <- NULL
 	#foldData = t[,c(colnames[!colnames %in% colnames[i]],riskLabels)]
 	#print(temp_train)
 	#print(temp_train)
 	names <- names(t)
 	print(names)
 	#temp_train <- t[1:(total_rows - num_of_test_rows),]
-	temp_train <- t
-	f <- as.formula(paste(paste(riskLabels, collapse= "+"), paste(names[!names %in% riskLabels], collapse= "+"), sep="~")) 
+	#temp_train <- t
+	f <- as.formula(paste(paste(riskLabels, collapse= "+"), paste(names[!names %in% riskLabels], collapse= "+"), sep="~"))
+	print(f)
 	#f <- as.formula(paste("Effort ~ ", paste(n[!n %in% "Effort"], collapse= "+"))) #making a formula to fit to neural net
 	#weights <- c(1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 	#		1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -118,7 +120,7 @@ for (i in 1: nrow(clssRate)){
 	#		1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 	#		1,0,0,0,0,0) 
 	#nn <- neuralnet(f,data=temp_train[1:nrow(temp_train),],hidden=c(5),linear.output=T,startweights = weights) #model with one hidden layer and one neuron
-	nn <- neuralnet(f, data=temp_train, hidden=3, act.fct = "logistic", linear.output = FALSE) #model with one hidden layer and one neuron
+	nn <- neuralnet(f, data=t, hidden=3, act.fct = "logistic", linear.output = FALSE) #model with one hidden layer and one neuron
 	
 	#plot(nn)
 	
@@ -127,7 +129,7 @@ for (i in 1: nrow(clssRate)){
 	#print(temp_test)
 	
 	#fnn <- neuralnet(f, data=trainData, hidden=3, act.fct = "logistic", linear.output = FALSE) #model with one hidden layer and one neuron
-	pr.nn <- compute(nn,temp_train[c(names[!names %in% riskLabels])])
+	pr.nn <- compute(nn,t[c(names[!names %in% riskLabels])])
 	
 	#print('the predictions results for testing data set')
 	#print(pr.nn$net.result)
@@ -135,7 +137,7 @@ for (i in 1: nrow(clssRate)){
 	#print('the predicted level of risk for testing data set')
 	#print(iterationPredictions)
 	print("testing data set actual risk")
-	runActualCls = as.matrix(apply(temp_train[c(names[names %in% riskLabels])], 1, function(x)which(x==1)))
+	runActualCls = as.matrix(apply(t[c(names[names %in% riskLabels])], 1, function(x)which(x==1)))
 	runPredictionResult = apply(cbind(iterationPredictions, runActualCls), 1, function(x){x[1] == x[2]});
 	#print(runPredictionResult)
 	#print(length(runPredictionResult[runPredictionResult == TRUE]))
@@ -146,6 +148,7 @@ for (i in 1: nrow(clssRate)){
 	#clssRate = rbind(clssRate, data.frame(colname=colnames[i], rate=runClsRate))
 }
 
+names <- colnames(df)
 #print(paste(paste(riskLabels, collapse= "+"), paste(names[!names %in% riskLabels], collapse= "+"), sep="~"))
 #f <- as.formula(paste("RISK1+RISK2+RISK3+RISK4+RISK5~", paste(names[!names %in% "RISK*"], collapse= "+"))) #making a formula to fit to neural net
 f <- as.formula(paste(paste(riskLabels, collapse= "+"), paste(names[!names %in% riskLabels], collapse= "+"), sep="~")) #making a formula to fit to neural net
