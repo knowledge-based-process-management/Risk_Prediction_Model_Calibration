@@ -49,12 +49,13 @@ print(num_columns)
 #eliminating one column at a time at determing ranking
 for (i in 1: (num_columns-5)){
 		sum=0.0
-		t[c(colnames[i])] <- NULL
+		#t[c(colnames[i])] <- NULL
+		foldData = t[,c(colnames[!colnames %in% colnames[i]],riskLabels)]
 		#print(temp_train)
 		#print(temp_train)
-		names <- names(t)
+		names <- names(foldData)
 		print(names)
-		temp_train <- t[1:(total_rows - num_of_test_rows),]
+		temp_train <- foldData[1:(total_rows - num_of_test_rows),]
 		f <- as.formula(paste(paste(riskLabels, collapse= "+"), paste(names[!names %in% riskLabels], collapse= "+"), sep="~")) 
 		#f <- as.formula(paste("Effort ~ ", paste(n[!n %in% "Effort"], collapse= "+"))) #making a formula to fit to neural net
 		#weights <- c(1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
@@ -69,7 +70,7 @@ for (i in 1: (num_columns-5)){
 		#plot(nn)
 		
 	#print((total_rows - num_of_test_rows)+1)
-	temp_test <- t[c((total_rows - num_of_test_rows+1):total_rows),]
+	temp_test <- foldData[c((total_rows - num_of_test_rows+1):total_rows),]
 	print(temp_test)
 	
 	#fnn <- neuralnet(f, data=trainData, hidden=3, act.fct = "logistic", linear.output = FALSE) #model with one hidden layer and one neuron
@@ -94,6 +95,56 @@ for (i in 1: (num_columns-5)){
 
 print("cls rate")
 print(clssRate[order(clssRate$rate),c(1,2)]);
+
+#iteratively remove the factors
+for (i in 1: nrow(clssRate)){
+	sum=0.0
+	print("iterating...")
+	print(clssRate[i, "colname"])
+	t[c(clssRate[i, "colname"])] <- NULL
+	#foldData = t[,c(colnames[!colnames %in% colnames[i]],riskLabels)]
+	#print(temp_train)
+	#print(temp_train)
+	names <- names(t)
+	print(names)
+	#temp_train <- t[1:(total_rows - num_of_test_rows),]
+	temp_train <- t
+	f <- as.formula(paste(paste(riskLabels, collapse= "+"), paste(names[!names %in% riskLabels], collapse= "+"), sep="~")) 
+	#f <- as.formula(paste("Effort ~ ", paste(n[!n %in% "Effort"], collapse= "+"))) #making a formula to fit to neural net
+	#weights <- c(1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	#		1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	#		1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	#		1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	#		1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+	#		1,0,0,0,0,0) 
+	#nn <- neuralnet(f,data=temp_train[1:nrow(temp_train),],hidden=c(5),linear.output=T,startweights = weights) #model with one hidden layer and one neuron
+	nn <- neuralnet(f, data=temp_train, hidden=3, act.fct = "logistic", linear.output = FALSE) #model with one hidden layer and one neuron
+	
+	#plot(nn)
+	
+	#print((total_rows - num_of_test_rows)+1)
+	#temp_test <- t[c((total_rows - num_of_test_rows+1):total_rows),]
+	#print(temp_test)
+	
+	#fnn <- neuralnet(f, data=trainData, hidden=3, act.fct = "logistic", linear.output = FALSE) #model with one hidden layer and one neuron
+	pr.nn <- compute(nn,temp_train[c(names[!names %in% riskLabels])])
+	
+	#print('the predictions results for testing data set')
+	#print(pr.nn$net.result)
+	iterationPredictions = as.matrix(apply(pr.nn$net.result, 1, FUN=which.max))
+	#print('the predicted level of risk for testing data set')
+	#print(iterationPredictions)
+	print("testing data set actual risk")
+	runActualCls = as.matrix(apply(temp_train[c(names[names %in% riskLabels])], 1, function(x)which(x==1)))
+	runPredictionResult = apply(cbind(iterationPredictions, runActualCls), 1, function(x){x[1] == x[2]});
+	#print(runPredictionResult)
+	#print(length(runPredictionResult[runPredictionResult == TRUE]))
+	runClsRate = length(runPredictionResult[runPredictionResult == TRUE])/length(runPredictionResult)
+	print("feature selection run")
+	#print(colnames[i])
+	print(runClsRate)
+	#clssRate = rbind(clssRate, data.frame(colname=colnames[i], rate=runClsRate))
+}
 
 #print(paste(paste(riskLabels, collapse= "+"), paste(names[!names %in% riskLabels], collapse= "+"), sep="~"))
 #f <- as.formula(paste("RISK1+RISK2+RISK3+RISK4+RISK5~", paste(names[!names %in% "RISK*"], collapse= "+"))) #making a formula to fit to neural net
