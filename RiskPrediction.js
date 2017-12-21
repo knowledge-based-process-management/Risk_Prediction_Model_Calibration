@@ -5,7 +5,7 @@
 	
 	var RExec = '\"C:/Program Files/R/R-3.2.5/bin/Rscript\" ./Rscript/RiskPredication.R ';
 	
-	var RExec = 'Rscript /Rscript/RiskPredication.R';
+	var RExec = 'Rscript ./Rscript/RiskPredication.R ';
 	
 	function runRiskPredictionModel(dataUrl, callbackfunc){
 //		console.log('generate model Analytics');
