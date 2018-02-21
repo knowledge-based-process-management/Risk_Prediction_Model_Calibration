@@ -64,7 +64,7 @@ app.get('/', function(req, res){
 	res.render('index');
 });
 
-var server = app.listen(8081,'127.0.0.1', function () {
+var server = app.listen(8081,'0.0.0.0', function () {
   var host = server.address().address
   var port = server.address().port
   console.log("Example app listening at http://%s:%s", host, port)
