@@ -94,10 +94,10 @@ write.csv(simulatedData, simulatedDataFilePath)
 
 
 png(paste(outputPath,"scatter_matrics_code_metrics.png", sep='/'))
-print(pairs(~CSmell+SVul,data=simulatedData, main="Simple Scatterplot Matrix for Code Metrics"))
+print(pairs(~CSmell+SVul,data=simulatedData, main="Scatterplot Matrix for Code Metrics"))
 
 
 png(paste(outputPath,"scatter_matrics_cocomo.png", sep='/'))
-print(pairs(~RELY+DATA+CPLX+RUSE+DOCU+TIME+STOR+PVOL+ACAP+PCAP+PCON+APEX+PLEX+LTEX+TOOL+SITE+SCED,data=simulatedData, main="Simple Scatterplot Matrix for COCOMO Variables"))
+print(pairs(~RELY+DATA+CPLX+RUSE+DOCU+TIME+STOR+PVOL+ACAP+PCAP+PCON+APEX+PLEX+LTEX+TOOL+SITE+SCED,data=simulatedData, main="Scatterplot Matrix for COCOMO Variables"))
 
 sink()

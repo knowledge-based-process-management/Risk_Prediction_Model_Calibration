@@ -40,9 +40,19 @@ app.post('/predictRiskLevel', upload.fields([{name:'project-data-file',maxCount:
 	console.log(req.body);
 	var projectDataFilePath = req.files['project-data-file'][0].path;
 	riskPrediction.runRiskPredictionModel(projectDataFilePath , function(result){
-		res.end(result);
+		res.end(JSON.stringify(result));
+//		res.end(result);
 	});
 });
+
+
+//app.get('/predictRiskLevel', function (req, res){
+//	console.log(req.body);
+//	var projectDataFilePath = req.files['project-data-file'][0].path;
+//	riskPrediction.runRiskPredictionModel(projectDataFilePath , function(result){
+//		res.end(result);
+//	});
+//});
 
 
 //to handle post redirect to home page

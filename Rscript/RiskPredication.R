@@ -12,6 +12,7 @@ if (length(args) < 1) {
 dataUrl <- args[1]
 outputPath <- args[2]
 reportPath <- paste(outputPath,'risk-prediction-report.txt', sep='/')
+resultsPath <- paste(outputPath,'risk-prediction-results.txt', sep='/')
 
 modelUrl <- "./Model/riskPredictionModel.rds"
 
@@ -54,6 +55,14 @@ predictions = as.matrix(apply(pr.nn$net.result, 1, FUN=which.max))
 print("prediction results:")
 print(pr.nn$net.result)
 print(predictions)
+
+sink(resultsPath)
+print(paste("risk_lvl1 ", pr.nn$net.result[1,1]));
+print(paste("risk_lvl2 ", pr.nn$net.result[1,2]));
+print(paste("risk_lvl3 ", pr.nn$net.result[1,3]));
+print(paste("risk_lvl4 ", pr.nn$net.result[1,4]));
+print(paste("risk_lvl5 ", pr.nn$net.result[1,5]));
+print(paste("predicted ", predictions[1,1]))
 
 #plot(nn)
 
