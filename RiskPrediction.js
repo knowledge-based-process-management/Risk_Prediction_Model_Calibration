@@ -47,8 +47,35 @@
 	}
 	
 	
+	function runRiskPredictionModelByJSON(jsonData, callbackfunc){
+		var csvFilePath = "./Temp/risk-prediction-data.csv";
+		var csvFileHeader = "";
+		var csvFileContent = "";
+		
+		for(var i in jsonData){
+			csvFileHeader += i+",";
+			csvFileContent += jsonData[i]+",";
+		}
+		
+		
+		csvFileContent = csvFileHeader + "\n" + csvFileContent;
+		console.log(csvFileContent);
+		
+		fs.writeFile(csvFilePath, csvFileContent, function(err){
+			if(err){
+				if(callbackfunc){
+					callbackfunc(err);
+				}
+				return;
+			}
+			runRiskPredictionModel(csvFilePath, callbackfunc);
+			
+		});
+	}
+	
 	
 	module.exports = {
-			runRiskPredictionModel: runRiskPredictionModel
+			runRiskPredictionModel: runRiskPredictionModel,
+			runRiskPredictionModelByJSON: runRiskPredictionModelByJSON
 	}
 })();

@@ -29,6 +29,9 @@ var upload = multer({ storage: storage });
 
 app.use(express.static('public'));
 app.use(bodyParser.urlencoded({ extended: true }));
+//app.use(express.bodyParser());
+var bodyParser = require('body-parser');
+app.use(bodyParser.json())
 
 
 app.set('views', './views');
@@ -46,13 +49,14 @@ app.post('/predictRiskLevel', upload.fields([{name:'project-data-file',maxCount:
 });
 
 
-//app.get('/predictRiskLevel', function (req, res){
-//	console.log(req.body);
+app.post('/predictRiskLevelByJSON', function (req, res){
+	console.log("body");
+	console.log(req.body);
 //	var projectDataFilePath = req.files['project-data-file'][0].path;
-//	riskPrediction.runRiskPredictionModel(projectDataFilePath , function(result){
-//		res.end(result);
-//	});
-//});
+	riskPrediction.runRiskPredictionModelByJSON(req.body , function(result){
+		res.end(JSON.stringify(result));
+	});
+});
 
 
 //to handle post redirect to home page
