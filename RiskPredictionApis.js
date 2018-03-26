@@ -58,6 +58,15 @@ app.post('/predictRiskLevelByJSON', function (req, res){
 	});
 });
 
+app.post('/predictTasksByJSON', function (req, res){
+	console.log("body");
+	console.log(req.body);
+//	var projectDataFilePath = req.files['project-data-file'][0].path;
+	riskPrediction.runTaskPredictionModelByJSON(req.body , function(result){
+		res.end(JSON.stringify(result));
+	});
+});
+
 
 //to handle post redirect to home page
 app.post('/', function(req, res){

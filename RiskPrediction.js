@@ -5,7 +5,7 @@
 	
 	var RExec = '\"C:/Program Files/R/R-3.2.5/bin/Rscript\" ./Rscript/RiskPredication.R ';
 	
-//	var RExec = 'Rscript ./Rscript/RiskPredication.R';
+//	var RExec = 'Rscript ./Rscript/RiskPredication.R ';
 	
 	function runRiskPredictionModel(dataUrl, callbackfunc){
 //		console.log('generate model Analytics');
@@ -46,6 +46,10 @@
 		});
 	}
 	
+	function runTaskPredictionModelByJSON(dataUrl, callbackfunc){
+		
+	}
+	
 	
 	function runRiskPredictionModelByJSON(jsonData, callbackfunc){
 		var csvFilePath = "./Temp/risk-prediction-data.csv";
@@ -76,6 +80,7 @@
 	
 	module.exports = {
 			runRiskPredictionModel: runRiskPredictionModel,
-			runRiskPredictionModelByJSON: runRiskPredictionModelByJSON
+			runRiskPredictionModelByJSON: runRiskPredictionModelByJSON,
+			runTaskPredictionModelByJSON: runTaskPredictionModelByJSON
 	}
 })();
