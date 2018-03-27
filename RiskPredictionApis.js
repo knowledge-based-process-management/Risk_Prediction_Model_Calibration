@@ -33,6 +33,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 var bodyParser = require('body-parser');
 app.use(bodyParser.json())
 
+app.use(function(req, res, next){
+	res.header("Access-Control-Allow-Origin", "*");
+	res.header("Access-Control-Allow-Headers", "Content-Type, Authorization");
+	next();
+});
+
 
 app.set('views', './views');
 app.set('view engine', 'jade');

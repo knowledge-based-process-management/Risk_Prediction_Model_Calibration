@@ -1,12 +1,8 @@
 [1] "prediction calculation with:"
-    CSmell    SVul RELY DATA CPLX RUSE DOCU TIME STOR PVOL ACAP PCAP PCON APEX
-1 1023.309 23.7053    1 1.14    1 0.95    1    1    1 0.87 0.85 0.88 0.81    1
-  PLEX LTEX TOOL SITE SCED       AA        PR      ETT       FCR       CD
-1    1    1    1    1    1 1.120155 0.9932374 1.047453 -782.0728 821.7832
-       ISS     ISRR      DRR
-1 356.9645 1535.991 1266.675
+  RELY DATA CPLX RUSE PVOL ACAP APEX
+1    1 1.14    1 0.95 0.87 0.85    1
 [1] "prediction results:"
-          [,1]      [,2]      [,3]      [,4]      [,5]
-[1,] 0.2130319 0.1969051 0.1853138 0.1963341 0.2076096
+              [,1]         [,2] [,3]          [,4] [,5]
+[1,] 1.899518e-185 5.783839e-06    1 1.861432e-128    0
      [,1]
-[1,]    1
+[1,]    3
