@@ -57,12 +57,17 @@ print(pr.nn$net.result)
 print(predictions)
 
 sink(resultsPath)
-print(paste("risk_lvl1 ", pr.nn$net.result[1,1]));
-print(paste("risk_lvl2 ", pr.nn$net.result[1,2]));
-print(paste("risk_lvl3 ", pr.nn$net.result[1,3]));
-print(paste("risk_lvl4 ", pr.nn$net.result[1,4]));
-print(paste("risk_lvl5 ", pr.nn$net.result[1,5]));
-print(paste("predicted ", predictions[1,1]))
+print(paste('risk_lvl1', 'risk_lvl2', 'risk_lvl3', 'risk_lvl4', 'risk_lvl5', 'predicted', sep=" "));
+
+for( i in 1:nrow(pr.nn$net.result)){
+print(paste(pr.nn$net.result[i,1], pr.nn$net.result[i,2], pr.nn$net.result[i,3], pr.nn$net.result[i,4], pr.nn$net.result[i,5], predictions[i,1], sep=" "));
+}
+#print(paste("risk_lvl1 ", pr.nn$net.result[1,1]));
+#print(paste("risk_lvl2 ", pr.nn$net.result[1,2]));
+#print(paste("risk_lvl3 ", pr.nn$net.result[1,3]));
+#print(paste("risk_lvl4 ", pr.nn$net.result[1,4]));
+#print(paste("risk_lvl5 ", pr.nn$net.result[1,5]));
+#print(paste("predicted ", predictions[1,1]))
 
 #plot(nn)
 
