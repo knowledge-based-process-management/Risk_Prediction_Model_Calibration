@@ -5634,3 +5634,4 @@ CSmell,SVul,RELY,DATA,CPLX,RUSE,DOCU,TIME,STOR,PVOL,ACAP,PCAP,PCON,APEX,PLEX,LTE
 [ '[1]', 'risk_lvl4', '1.86143195634384e-128' ]
 [ '[1]', 'risk_lvl5', '0' ]
 [ '[1]', 'predicted', '3' ]
+error: Forever detected script was killed by signal: SIGKILL

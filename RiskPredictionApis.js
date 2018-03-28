@@ -59,9 +59,34 @@ app.post('/predictRiskLevelByJSON', function (req, res){
 	console.log("body");
 	console.log(req.body);
 //	var projectDataFilePath = req.files['project-data-file'][0].path;
-	riskPrediction.runRiskPredictionModelByJSON(req.body , function(result){
+	riskPrediction.runRiskPredictionModelByJSON([req.body], function(result){
 		res.end(JSON.stringify(result));
 	});
+});
+
+app.post('/predictTasksByJSON', function (req, res){
+	console.log("body");
+	console.log(req.body);
+//  example json structure
+//  {
+//	current_status: {
+//		
+//	}
+//	strategies: [
+//		{strategy: "stg1",
+//		effects: {
+//			factor1: value1,
+//			factor2: value2
+//		}}
+//	]
+//}
+	riskPrediction.runTaskPredictionModelByJSON(req.body, function(result){
+		res.end(JSON.stringify(result));
+	});
+});
+
+app.post('/predictRiskLevelBySelectedTasks', function(req, res){
+	
 });
 
 
@@ -75,6 +100,7 @@ app.get('/', function(req, res){
 });
 
 var server = app.listen(8081,'0.0.0.0', function () {
+//var server = app.listen(8081,'0.0.0.0', function () {
   var host = server.address().address
   var port = server.address().port
   console.log("Example app listening at http://%s:%s", host, port)

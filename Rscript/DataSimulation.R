@@ -42,6 +42,8 @@ print(simulatedCodeMetricsData)
 COCOMOData<- read.csv(cocomoDataUrl, header=TRUE, sep=",")
 COCOMOData<- COCOMOData[c( "RELY","DATA","CPLX","RUSE","DOCU","TIME","STOR","PVOL","ACAP","PCAP","PCON","APEX","PLEX","LTEX","TOOL","SITE","SCED")]
 
+#COCOMOData<- COCOMOData[c( "RELY","DATA","CPLX","RUSE","PVOL","ACAP","APEX")]
+
 print(cov(COCOMOData))
 
 Sigma1 = cov(COCOMOData)
@@ -50,10 +52,12 @@ SqrtSigma1 = temp1$vectors%*%diag(sqrt(temp1$values))%*%t(temp1$vectors)
 
 
 simulatedCOCOMO = matrix(rep(c(NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA),n), ncol = 17)
+#simulatedCOCOMO = matrix(rep(c(NA,NA,NA,NA,NA,NA,NA),n), ncol = 7)
+#colnames(simulatedCOCOMO) <- c( "RELY","DATA","CPLX","RUSE","PVOL","ACAP","APEX")
 colnames(simulatedCOCOMO) <- c( "RELY","DATA","CPLX","RUSE","DOCU","TIME","STOR","PVOL","ACAP","PCAP","PCON","APEX","PLEX","LTEX","TOOL","SITE","SCED")
 print(simulatedCOCOMO);
 for(i in 1:n){
-	simulatedCOCOMO[i,] = colMeans(COCOMOData) + SqrtSigma1%*%rnorm(17)
+	simulatedCOCOMO[i,] = colMeans(COCOMOData) + SqrtSigma1%*%rnorm(7)
 }
 
 print(simulatedCOCOMO)

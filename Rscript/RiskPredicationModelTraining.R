@@ -28,10 +28,12 @@ sink(reportPath)
 df <- read.csv(dataUrl, header=TRUE, sep=",")
 names <- colnames(df)
 print('names')
+print(names);
 riskLabels <- names[grepl("RISK*", names)];
 #print(paste(paste(riskLabels, collapse= "+"), paste(names[!names %in% riskLabels], collapse= "+"), sep="~"))
 #f <- as.formula(paste("RISK1+RISK2+RISK3+RISK4+RISK5~", paste(names[!names %in% "RISK*"], collapse= "+"))) #making a formula to fit to neural net
 f <- as.formula(paste(paste(riskLabels, collapse= "+"), paste(names[!names %in% riskLabels], collapse= "+"), sep="~")) #making a formula to fit to neural net
+print((names[!names %in% riskLabels]))
 print(f)
 
 nn <- neuralnet(f, data=df, hidden=3, act.fct = "logistic", linear.output = FALSE) #model with one hidden layer and one neuron
@@ -39,6 +41,7 @@ nn <- neuralnet(f, data=df, hidden=3, act.fct = "logistic", linear.output = FALS
 # The information that is printed will be output into risk-predication-model-training-report.txt
 print(nn)
 
+if(FALSE){
 # The following part implement the logic for 5-fold cross validation to estimate the predication accuracy. For cross validation, it is testing out-of-sample predication accuracy, which have better predication on predication accuracy on un-seen data points.
 nfold = 10
 print("sequence")
@@ -76,6 +79,8 @@ for(i in 1:nfold){
 print("testing results")
 print(clsRate)
 print(mean(clsRate))
+
+}
 
 saveRDS(nn, "./Model/riskPredictionModel.rds")
 
