@@ -53,8 +53,9 @@ app.post('/predictRiskLevelByJSON', function (req, res){
 	console.log("body");
 	console.log(req.body);
 //	var projectDataFilePath = req.files['project-data-file'][0].path;
-	riskPrediction.runRiskPredictionModelByJSON([req.body], function(result){
-		res.end(JSON.stringify(result));
+	riskPrediction.runRiskPredictionModelByJSON([req.body], function(predictionResults){
+		predictionResults.results = predictionResults.results[0];
+		res.end(JSON.stringify(results));
 	});
 });
 
@@ -74,8 +75,9 @@ app.post('/predictTasksByJSON', function (req, res){
 //		}}
 //	]
 //}
-	riskPrediction.runTaskPredictionModelByJSON(req.body, function(result){
-		res.end(JSON.stringify(result));
+	riskPrediction.runTaskPredictionModelByJSON(req.body, function(predictionResults){
+		predictionResults.results = predictionResults.results[0];
+		res.end(JSON.stringify(predictionResults));
 	});
 });
 
