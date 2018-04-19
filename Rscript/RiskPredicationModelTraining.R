@@ -82,7 +82,7 @@ print(mean(clsRate))
 
 }
 
-saveRDS(nn, "./Model/riskPredictionModel.rds")
+saveRDS(nn, "./Model/riskPredictionModel_exp1.rds")
 
 plot(nn)
 
