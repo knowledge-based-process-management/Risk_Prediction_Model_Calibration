@@ -16,3 +16,21 @@ command line:
 "C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredication.R "Temp/risk-prediction-data-1.csv"
 
 "C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredicationModelTraining.R "Temp/training_data_set_4_18.csv"
+
+
+"C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredicationModelTraining.R "Temp/training_data_set_4_26.csv"
+
+"C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredication.R "Temp/risk-prediction-data-1.csv"
+
+"C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredication.R "Temp/risk-prediction-data-5-3.csv"
+
+"C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredicationModelTraining.R "Temp/training_data_set_5_3.csv"
+
+“C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/OpenSourceRiskPredicationModelTraining.R "Temp/training_data_set_4_26.csv”
+
+“C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/ICSMRiskPredicationModelTraining.R "Temp/training_data_set_5_3.csv”
+
+“C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredicationModelTesting.R "Temp/training_data_set_5_3.csv” "Temp/training_data_set_4_26.csv”
+
+“C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredicationModelTestingBootstrap.R "Temp/training_data_set_5_3.csv” "Temp/training_data_set_4_26.csv”
+

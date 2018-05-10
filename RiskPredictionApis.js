@@ -24,7 +24,6 @@ var storage = multer.diskStorage({
     }
 })
 
-
 var upload = multer({ storage: storage });
 
 app.use(express.static('public'));
