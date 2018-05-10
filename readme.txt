@@ -34,3 +34,12 @@ command line:
 
 “C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredicationModelTestingBootstrap.R "Temp/training_data_set_5_3.csv” "Temp/training_data_set_4_26.csv”
 
+“C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredicationModelTesting.R "Data/training_data_set_5_3.csv” "Data/training_data_set_4_26.csv”
+
+“C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredicationModelTestingBootstrap.R "Data/training_data_set_5_3.csv” "Data/training_data_set_4_26.csv”
+
+“C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/OpenSourceRiskPredicationModelTraining.R "Data/training_data_set_4_26.csv”
+
+“C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/ICSMRiskPredicationModelTraining.R "Data/training_data_set_5_3.csv”
+
+"C:/Program Files/R/R-3.2.5/bin/Rscript" ./Rscript/RiskPredication.R "Data/risk-prediction-data-5-3.csv"
