@@ -23,15 +23,17 @@
 					fs.readFile("./Temp/risk-prediction-results.txt", 'utf-8', (err, resultStr) => {
 					   if (err) throw err;
 					   var results = [];
-					   var lines = resultStr.split(/\r?\n/);
+					   var lines = resultStr.split(/\r?\n/g);
 					   var itemKeys = [];
+					   console.log(lines);
 					   for(var i in lines){
 						   var line = lines[i];
 						   if(line === ""){
 							   continue;
 						   }
+						   console.log(line);
 						   line = line.replace(/\"/g, "");
-						   items = line.split(/\s+/);
+						   items = line.split(/\s+/g);
 						   if(i == 0){
 							   itemKeys = items;
 							   continue;

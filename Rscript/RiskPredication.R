@@ -90,8 +90,6 @@ print("prediction results with open source model:")
 print(pr.nn2$net.result)
 print(predictions2)
 
-print(paste('risk_lvl1', 'risk_lvl2', 'risk_lvl3', 'risk_lvl4', 'risk_lvl5', 'predicted', sep=" "));
-
 for( i in 1:nrow(pr.nn$net.result)){
 	print(paste(pr.nn$net.result[i,1], pr.nn$net.result[i,2], pr.nn$net.result[i,3], pr.nn$net.result[i,4], pr.nn$net.result[i,5], predictions[i,1], sep=" "));
 }
@@ -103,6 +101,8 @@ print(combinedPredictionResults)
 predictions3 = as.matrix(apply(combinedPredictionResults, 1, FUN=which.max))
 
 sink(resultsPath)
+
+print(paste('risk_lvl1', 'risk_lvl2', 'risk_lvl3', 'risk_lvl4', 'risk_lvl5', 'predicted', sep=" "));
 
 for( i in 1:nrow(predictions3)){
 	print(paste(combinedPredictionResults[i,1], combinedPredictionResults[i,2], combinedPredictionResults[i,3], combinedPredictionResults[i,4], combinedPredictionResults[i,5], predictions3[i,1], sep=" "));
