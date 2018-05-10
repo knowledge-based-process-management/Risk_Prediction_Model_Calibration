@@ -1,17 +1,24 @@
 doctype html
 html
+  head
+    title="Example - Risk Prediction API"
   body
-    form(action='/predictRiskLevel', enctype='multipart/form-data', method='post')
-      | Project Data:
-      br
-      |   
-      input#project-data-file(type='file', name='project-data-file')
-      |   
-      br
-      br
-      |   
-      input(type='submit', value='Submit')
-    |  
-    p
-      | please submit a csv file with project data specified in this file: 
-      a(href='', \='')
+    center
+      h2 Example - Risk Prediction API
+      form(action='/predictRiskLevel', enctype='multipart/form-data', method='post')
+        table(style='width:400pt', cellpadding='5')
+          tr
+            td
+              b Instruction: 
+            td Please submit a 
+              a(href='http://ec2-54-67-99-52.us-west-1.compute.amazonaws.com:8686/demo/phase5/docs/Input_Data_ExampleV1.3.csv') csv file
+              |  with project data specified in this file
+          tr
+            td
+              b Project Data: 
+            td
+              input#project-data-file(type='file', name='project-data-file')
+          tr
+            td
+            td
+              input(type='submit', value='Submit', style='float: right; margin-right: 20px; width: 100px')

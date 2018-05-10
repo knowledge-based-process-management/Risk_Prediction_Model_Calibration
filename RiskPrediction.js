@@ -89,12 +89,12 @@
 			var results = predictionResults['results'];
 //			console.log(strategies)
 			for(var i in results){
-				if(i == 0){
+				if(i == results.length - 1){
 					 riskLevelForCurrentStatus = results[i];
 				}
 				else {
 					console.log(strategies[i-1]);
-					results[i].strategy = strategies[i-1]['strategy'];
+					results[i].strategy = strategies[i]['strategy'];
 					riskLevelsForStrategies.push(results[i]);
 				}
 			}
@@ -104,10 +104,19 @@
 			});
 			
 			var ratedStrategies = [];
-			riskLevelsForStrategies.forEach(function(riskLevelsForStrategy){
+			var priority = 0;
+			var lastPredictedRiskLevel = -1;
+			riskLevelsForStrategies.forEach(function(riskLevelForStrategy){
 				var strategyRating = {};
-				strategyRating[riskLevelsForStrategy.strategy] = riskLevelsForStrategy.predicted;
+				if(riskLevelForStrategy.predicted != lastPredictedRiskLevel){
+					priority ++;
+				}
+				strategyRating[riskLevelForStrategy.strategy] = {
+						priority: priority,
+						riskLevel: riskLevelForStrategy.predicted
+				}
 				ratedStrategies.push(strategyRating);
+				lastPredictedRiskLevel = riskLevelForStrategy.predicted;
 			});
 			
 			predictionResults['results'] = [riskLevelForCurrentStatus];
