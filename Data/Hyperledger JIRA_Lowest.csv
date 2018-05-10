@@ -1,0 +1,444 @@
+Summary,Issue key,Issue id,Issue Type,Status,Project key,Project name,Project type,Project lead,Project description,Project url,Priority,Resolution,Assignee,Reporter,Creator,Created,Updated,Last Viewed,Resolved,Affects Version/s,Fix Version/s,Fix Version/s,Component/s,Due Date,Votes,Labels,Labels,Labels,Description,Environment,Original Estimate,Remaining Estimate,Time Spent,Work Ratio,Σ Original Estimate,Σ Remaining Estimate,Σ Time Spent,Security Level,Custom field (Epic Link),Custom field (Rank),Custom field (Root Cause Analysis),Sprint,Custom field (Watchers),Custom field (Watchers),Custom field (Watchers),Custom field (Watchers),Custom field (Watchers),Custom field (Workaround),Custom field (gitBranch),Custom field (gitBranch),Custom field (gitBranch),Custom field (gitCommitsReferenced),Comment,Comment,Comment,Comment,Comment,Comment,Comment
+Identity or token does not match when relogin,FAB-2,12300,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,,zuowang,zuowang,8/4/2016 2:25,8/6/2016 14:05,4/26/2018 6:50,8/6/2016 14:04,,,,,,0,,,,"1. login bob
+curl -X POST --header ""Content-Type: application/x-www-form-urlencoded"" --header ""Accept: application/json"" -d '{  ""enrollId"": ""bob"",  ""enrollSecret"": ""NOE63pEQbL25"" }' ""http://localhost:7050/registrar""
+{""OK"":""Login successful for user 'bob'.""}
+2. logout bob
+curl -X DELETE --header 'Accept: application/json' 'http://localhost:7050/registrar/bob'
+{""OK"":""Deleted login token and directory for user bob.""}
+3. relogin bob
+curl -X POST --header ""Content-Type: application/x-www-form-urlencoded"" --header ""Accept: application/json"" -d '{  ""enrollId"": ""bob"",  ""enrollSecret"": ""NOE63pEQbL25"" }' ""http://localhost:7050/registrar""
+{""Error"":""rpc error: code = 2 desc = \""Identity or token does not match.\""""}
+",,,,,,,,,,,0|i00dvj:,,,mastersingh24,zuowang,,,,,,,,,"06/Aug/16 2:04 PM;mastersingh24;This is actually working as designed.  When you use the REST API to login, what happens is that whichever peer's REST endpoint you are using enrolls with membership services on your behalf (which basically means it registers and downloads all of your enrollment material).  The enrollSecret used for login is actually a one-time password so once you login / enroll one time, you will no longer be able to use that enrollSecret again.
+
+When you logout using the REST API, essentially all that is happening is that your enrollment material is being deleted from that peer (so it is not really a logout in the classic sense).
+
+This stems from the original thought that people would use NVPs as local ""virtual wallets"" to connect to remote fabric nodes.  But the reality is that this is not the strategy going forward and that is what led to the NodeJS SDK which actually does enroll and download your material from mebership services and will allow you to communicate with all peers using that ID not just a single peer like the REST API.",,,,,,
+Failed registration leaves the internal data structure in an inconsistent state,FAB-68,12367,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,agaragiola,smithbk,smithbk,8/12/2016 22:11,4/2/2017 12:21,4/26/2018 6:50,4/2/2017 12:21,v0.6,WON'T FIX,,fabric-membersrvc,,0,MembershipServices,,,See https://github.com/hyperledger-archives/fabric/issues/2183,,,,,,,,,,,0|i00e3f:,,,ChristopherFerris,mastersingh24,smithbk,,,,,,,,"05/Sep/16 8:58 PM;ChristopherFerris;Description
+
+When a registration fails the internal data structure are left in an inconsistent state at the client and at the membership service side. For instance, trying to register the second time with the same credentials will succeed by saying that the node has been already registered.
+
+Describe How to Reproduce
+
+The following test try to register a client with an enrollID that correspond to a validator at the membership service. The first call fails as expected but second doesn't. The client is in an inconsistent state.
+
+func TestDoubleRegistrationWithDifferentRoles(t * testing.T) {
+    err := RegisterClient(""validator"", nil, ""validator"", ""9gvZQRwhUq9q"")
+    if err == nil {
+        t.Fatal(""Init should fail"")
+    }
+
+    err = RegisterClient(""validator"", nil, ""validator"", ""9gvZQRwhUq9q"")
+    if err == nil {
+        t.Fatal(""Init should fail"")
+    }
+}
+The following test try to register a client with an enrollID that correspond to a validator at the membership service. The first call fails as expected but second should succeed. The membership service is in an inconsistent state.
+
+func TestDoubleRegistration(t * testing.T) {
+    // Wrong type
+    err := RegisterClient(""validator"", nil, ""validator"", ""9gvZQRwhUq9q"")
+    if err == nil {
+        t.Fatalf(""RegisterValidator should fail"")
+    }
+
+    // Right type
+    err = RegisterValidator(""validator"", nil, ""validator"", ""9gvZQRwhUq9q"")
+    if err != nil {
+        t.Fatalf(""RegisterValidator should succed [%s]"", err)
+    }
+}
+Actually, the above test is really subtle because the failure of the first RegisterClient happens at very end of the protocol when the RegisterClient parses the latest message sent by the MS. So, from the MS point of view, the protocol has been successfully run. One solution would be then to modify to registration protocol to notify immediately the MS about which kind of registration the client is trying to do. Other solutions are possible. @JonathanLevi what do you think?",02/Apr/17 12:21 PM;mastersingh24;There is no longer active development on v0.6 so closing this,,,,,
+Unable to Enroll user after being unEnrolled - ECA.db user state need to be reset,FAB-69,12368,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,,smithbk,smithbk,8/12/2016 22:53,11/5/2016 11:25,4/26/2018 6:50,11/5/2016 11:25,v0.6,,,,,0,MembershipServices,,,See https://github.com/hyperledger-archives/fabric/issues/1620,,,,,,,,,,,0|i00e33:,,,ChristopherFerris,mastersingh24,smithbk,,,,,,,,"05/Sep/16 8:59 PM;ChristopherFerris;When un-enrolling a User using REST API:
+DELETE host:port/resgistrar/{enrollmentID}
+
+and trying to re-enroll it using the new enrollSecret (fetched from the eca.db ,table :Users)
+i get the following failure notification:
+certificate creation token expired
+
+Upon investigation is seems that the ""state"" field in the ""Users"" table is not being reset to 0.
+
+",05/Nov/16 11:25 AM;mastersingh24;duplicate of FAB-71,,,,,
+Unable to Enroll user after being unEnrolled - ECA.db user state need to be reset ,FAB-71,12370,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,gromeroar,smithbk,smithbk,8/13/2016 0:34,4/2/2017 12:23,4/26/2018 6:50,4/2/2017 12:23,v0.6,,,fabric-membersrvc,,0,MembershipServices,,,"See https://github.com/hyperledger/fabric/issues/1620
+
+How is this different from ecert revocation?",,,,,,,,,,,0|i00e3j:,,,mastersingh24,smithbk,,,,,,,,,"02/Apr/17 12:23 PM;mastersingh24;Marking this as WON'T FIX as we have moved to fabric-ca.
+It should be noted that fabric-ca supports multiple enrollments, re-enroll and revoke",,,,,,
+"calls to StoreState, which returns error are ignoring error",FAB-178,12478,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,ChristopherFerris,ChristopherFerris,ChristopherFerris,8/19/2016 12:12,5/31/2017 13:58,4/26/2018 6:50,8/23/2016 14:15,,,,fabric-orderer,8/19/2016 0:00,0,consensus,ledger,,"eg consensus/pbft/pbft-persist.go line 70
+
+func (instance *pbftCore) persistRequestBatch(digest string) {
+	reqBatch := instance.reqBatchStore[digest]
+	reqBatchPacked, err := proto.Marshal(reqBatch)
+	if err != nil {
+		logger.Warningf(""Replica %d could not persist request batch %s: %s"", instance.id, digest, err)
+		return
+	}
+	instance.consumer.StoreState(""reqBatch.""+digest, reqBatchPacked)
+}
+
+should be:
+
+func (instance *pbftCore) persistRequestBatch(digest string) {
+	reqBatch := instance.reqBatchStore[digest]
+	reqBatchPacked, err := proto.Marshal(reqBatch)
+	if err != nil {
+		logger.Warningf(""Replica %d could not persist request batch %s: %s"", instance.id, digest, err)
+		return
+	}
+	err = instance.consumer.StoreState(""reqBatch.""+digest, reqBatchPacked)
+        if err != nil {
+		logger.Warningf(""Replica %d could not persist request batch %s: %s"", instance.id, digest, err)
+        }
+}
+",,3600,3600,,0%,3600,3600,,,,0|i00epr:,,,ChristopherFerris,,,,,,feature/ca,feature/convergence,master,TRUE,19/Aug/16 2:13 PM;ChristopherFerris;https://gerrit.hyperledger.org/r/#/c/583/,,,,,,
+`make checks` bug,FAB-393,12694,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,ChristopherFerris,warm3snow,warm3snow,9/14/2016 6:17,9/23/2016 23:58,4/26/2018 6:50,9/23/2016 23:58,,v0.6,,fabric-devenv,,0,build-system,getting-started,Usability,"$ make checks
+
+cd gotools && make
+make[1]: Entering directory '/home/opt/gopath/src/github.com/hyperledger/fabric/gotools'
+Makefile:31: *** target pattern contains no '%'.  Stop.
+make[1]: Leaving directory '/home/opt/gopath/src/github.com/hyperledger/fabric/gotools'
+Makefile:80: recipe for target 'gotools' failed
+make: *** [gotools] Error 2
+",,28800,28800,,0%,28800,28800,,,,0|hzzzyh:,,Sprint 2,ChristopherFerris,warm3snow,,,,,,,,,23/Sep/16 11:57 PM;ChristopherFerris;cannot recreate - possibly transient error or fixed elsewhere.,,,,,,
+Docker-based documentation fails to mention golang requirement,FAB-424,12725,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,ChristopherFerris,greg.haskins,greg.haskins,9/22/2016 16:02,11/23/2016 15:41,4/26/2018 6:50,11/23/2016 15:41,,,,fabric-peer,,0,Documentation,,,"The workflow described here
+
+http://hyperledger-fabric.readthedocs.io/en/latest/Setup/Chaincode-setup/
+
+neglects to mention that golang 1.6 is a prerequisite when following a docker-based workflow.
+
+Thanks to @ant2221 via slack",,3600,3600,,0%,3600,3600,,,,0|i00dx3:d,,,ChristopherFerris,greg.haskins,,,,,,,,,23/Nov/16 3:41 PM;ChristopherFerris;this has moved to http://hyperledger-fabric.readthedocs.io/en/latest/dev-setup/devenv/ and is resolved,,,,,,
+[explorer] Instructions for installing are shown without new lines,FAB-431,12732,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,ccooper21,ccooper21,ccooper21,9/23/2016 17:24,4/16/2017 15:57,4/26/2018 6:50,4/16/2017 15:57,,v1.0.0,,fabric-docs,,0,explorer,,,"The instructions for installing the Hyperledger Explorer are shown without new lines on the GitHub replica due the wrong markdown being used.  This is specifically in regard to the ""/explorer_1/README.md"" file.",,,,,,,,,,,0|hzzzza:c,,,ccooper21,,,,,,master,,,TRUE,"23/Sep/16 8:38 PM;ccooper21;The fix for this issue has been committed to the ""blockchain-explorer"" repository and the corresponding change can be viewed here:
+
+http://gerrit.hyperledger.org/r/1219",,,,,,
+A fmt.errorf change in accesscontrol package,FAB-1458,13867,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,grapebaba,grapebaba,grapebaba,12/21/2016 7:42,1/4/2017 18:20,4/26/2018 6:50,12/22/2016 7:54,,v1.0.0,,fabric-crypto,,0,,,,"fmt.Errorf(""Invalid hash algorithm "" + primitives.GetHashAlgorithm()) change to fmt.Errorf(""Invalid hash algorithm %s"", primitives.GetHashAlgorithm())",,1800,1800,,0%,1800,1800,,,,0|i00lbl:,,,grapebaba,,,,,,master,,,TRUE,,,,,,,
+Example02 BalanceResult protobuf encode/decode crash,FAB-2040,14543,Bug,To Do,FAB,Fabric,software,ChristopherFerris,,,Lowest,,greg.haskins,greg.haskins,greg.haskins,2/4/2017 14:05,3/16/2018 16:47,4/26/2018 6:50,,,v1.2,,fabric-chaintool,,0,,,,"h1. Issue
+
+Creating an account with a balance of 0, by init or by transaction, results in a crash when attempting to query the balance.
+
+```
+$ node ./out/example02.js -c deploy -n org.hyperledger.chaincode.example02 --port 5000 --args '{""partyA"":{""entity"":""a"", ""value"":100}, ""partyB"":{""entity"":""b"", ""value"":0}}'
+Running deploy({""partyA"":{""entity"":""a"",""value"":100},""partyB"":{""entity"":""b"",""value"":0}})
+HTTP POST: http://localhost:5000 - {""jsonrpc"":""2.0"",""method"":""deploy"",""params"":{""type"":3,""chaincodeID"":{""name"":""org.hyperledger.chaincode.example02""},""ctorMsg"":{""function"":""init"",""args"":[""CgUKAWEQZBIDCgFi""]}},""id"":""1""}
+Response: {:result {:status OK, :message org.hyperledger.chaincode.example02}}
+$ node ./out/example02.js -n org.hyperledger.chaincode.example02 --port 5000 -c check-balance --args '{""id"":""b""}'
+Running check-balance({""id"":""b""})
+HTTP POST: http://localhost:5000 - {""jsonrpc"":""2.0"",""method"":""query"",""params"":{""type"":3,""chaincodeID"":{""name"":""org.hyperledger.chaincode.example02""},""ctorMsg"":{""function"":""org.hyperledger.chaincode.example02/query/1"",""args"":[""CgFi""]}},""id"":""1""}
+
+/LSEG/chaintool/examples/example02/client/rest/cljs/node_modules/protobufjs/node_modules/bytebuffer/dist/bytebuffer-node.js:346
+            throw TypeError(""Illegal buffer"");
+                  ^
+TypeError: Illegal buffer
+    at TypeError (native)
+    at Function.module.exports.ByteBuffer.wrap (/LSEG/chaintool/examples/example02/client/rest/cljs/node_modules/protobufjs/node_modules/bytebuffer/dist/bytebuffer-node.js:346:19)
+    at Function.Message.decode (/LSEG/chaintool/examples/example02/client/rest/cljs/node_modules/protobufjs/dist/protobuf.js:2930:84)
+    at Message.decode64 (/LSEG/chaintool/examples/example02/client/rest/cljs/node_modules/protobufjs/dist/protobuf.js:2986:36)
+    at /LSEG/chaintool/examples/example02/client/rest/cljs/out/example02/core.cljs:40:69
+    at IncomingMessage.<anonymous> (/LSEG/chaintool/examples/example02/client/rest/cljs/out/example02/rpc.cljs:13:25)
+    at IncomingMessage.emit (events.js:107:17)
+    at IncomingMessage.Readable.read (_stream_readable.js:373:10)
+    at flow (_stream_readable.js:750:26)
+    at resume_ (_stream_readable.js:730:3)
+```
+h1. Discussion:
+
+About the 0 balance issue @jranz303 found, it seems to be a base64 encoding/decoding issue. When I try to initialize with a zero balance, for example: `{""partyA"":{""entity"":""a"", ""value"":100}, ""partyB"":{""entity"":""b"", ""value"":0}}`, the base64 encoded args are: `CgUKAWEQZBIDCgFi` When I decode that, I get something like:
+
+```
+
+ad
+b
+```
+
+The d corresponds to ASCII value 100, which seems like an odd way to encode it but that’s what appears to be happening. ASCII 0 is NULL, so I think what’s happening is on decoding, ByteBuffer is hitting this line for account b’s amount:
+
+```
+if (buffer === null || typeof buffer !== 'object')
+            throw TypeError(""Illegal buffer”);
+```
+
+---
+
+interesting
+what should be happening is a clean pipeline from protobuf->binary->base64 and back out again
+my guess is protobuf elided the entire message structure when the value of zero was presented
+what was the base64 in the case of 0?
+
+---
+
+I’m not exactly sure.
+Args: `{""partyA"":{""entity"":""a"", ""value"":100}}`
+Base64: `CgUKAWEQZA==`
+
+Args: `{""partyA"":{""entity"":""a"", ""value"":0}}`
+Base64: `CgMKAWE=`
+
+---
+
+my guess is whats happening here is something along the lines of `protobuf.encode(BalanceResult{0]).len == 0` and `base64(null) -> decode64` breaks somewhere
+",,,,,,,,,,,0|i00os9:,,,andrasfe,greg.haskins,,,,,,,,,,,,,,,
+Incorrect spelling and typos,FAB-2528,15095,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,murrekatt,murrekatt,murrekatt,2/28/2017 12:42,4/23/2017 12:50,4/26/2018 6:50,4/23/2017 12:50,,v1.0.0,,fabric-docs,,0,,,,,,,,,,,,,,,0|i00rm1:,,,ChristopherFerris,murrekatt,,,,,master,,,TRUE,12/Apr/17 5:57 PM;ChristopherFerris;Any details would be welcomed. Are you still planning on submitting a fix(es)? [~murrekatt],,,,,,
+Remove peer/util/util.go,FAB-2594,15161,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,C0rWin,C0rWin,C0rWin,3/2/2017 13:17,3/2/2017 17:35,4/26/2018 6:50,3/2/2017 17:35,,,,,,0,,,,"There is a package *peer/util/util.go* with not used functionality, the function:
+
+{code}
+func GetCliFilePath() string {
+	localStore := viper.GetString(""peer.fileSystemPath"")
+	if !strings.HasSuffix(localStore, ""/"") {
+		localStore = localStore + ""/""
+	}
+	localStore = localStore + ""client/""
+	return localStore
+}
+{code}
+
+is never used in the project and this is the only function in the file. Since this is an obsolete the file need to be removed.",,,,,,,,,,,0|i00s09:,,Sprint 13 - Gossip,C0rWin,,,,,,master,,,TRUE,,,,,,,
+"placeholder for viper bug when decoding a slice, but currently working around this",FAB-3159,15746,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,mastersingh24,smithbk,smithbk,4/14/2017 14:56,12/19/2017 11:13,4/26/2018 6:50,12/19/2017 11:13,v1.0.0-alpha1,v1.1,,fabric-ca,,0,,,,"This is a placeholder for viper bug https://github.com/spf13/viper/issues/327.
+fabric-ca currently has a workaround for this, but once the viper bug is fixed and viper is revendored in fabric-ca, then search the fabric-ca source for the string ""viperIssue327WorkAround"" and remove the work around code.",,,,,,,,,,,0|i00v9h:,,,mastersingh24,smithbk,,,,,master,,,TRUE,"25/May/17 4:59 PM;smithbk;Moving to v1.1.  It is a place holder to reference a viper issue for which there is a fix but is not yet merged.   We have worked around this issue, so no one will see a problem.",18/Dec/17 10:16 AM;mastersingh24;https://gerrit.hyperledger.org/r/16289,,,,,
+"Note in Getting Started doc incorrectly specifies ""peer2"" as anchor peer in configtx.yaml",FAB-3439,16034,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,,sanjay-saxena,sanjay-saxena,4/27/2017 6:08,5/23/2017 20:22,4/26/2018 6:50,5/23/2017 20:22,v1.0.0-alpha1,v1.0.0,,fabric-docs,,0,,,,"In http://hyperledger-fabric.readthedocs.io/en/latest/getting_startedv2.html, a Note in the {{Using the configtxgen tool}} section looks as shown below:
+
+{panel:title=Note}
+The configtx.yaml file contains the definitions for our sample network and presents the topology of the network components - three members (OrdererOrg, Org0 & Org1), and the anchor peers for each PeerOrg (peer0 and peer2). ....
+{panel}
+
+However, {{configtx.yaml}} does *not* contain any reference to *peer2*.",,,,,,,,,,,0|i00wvh:,,,ChristopherFerris,nickgaski,raheelz,sanjay-saxena,,,master,,,TRUE,27/Apr/17 4:29 PM;nickgaski;good catch.  the anchor peers are peer0.Org1 and peer0.Org2,"27/Apr/17 5:53 PM;ChristopherFerris;[~nickgaski]  , can we please fix this so that others don't hit? Unclear why you lowered the priority. I was the one made it high;-)",27/Apr/17 6:33 PM;nickgaski;addressed here https://gerrit.hyperledger.org/r/#/c/8591/,"27/Apr/17 7:22 PM;sanjay-saxena;It would be good if the numbering scheme(0-based or 1-based) between the peers and the orgs is consistent. For example, *peer0* {{-->}} *Org0*, *Org1*. Or, *peer1* {{->}} *Org1*, *Org2*.",,,
+Logging: Setting MSP component logging level fails to stop some incorrect-level logs ,FAB-5134,18868,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,wlahti,AdnanChoudhury,AdnanChoudhury,6/30/2017 18:54,11/6/2017 17:02,4/26/2018 6:50,11/6/2017 17:02,v1.0.0-rc1,,,fabric-peer,,0,,,,"If the msp logging level is set to ERROR/CRITICAL via a docker environment variable, the peer log still contains  WARN level logging from MSP.
+
++*Setup:*
++bring-your-first-network from fabric-sample. Added these two lines in the peer-base.yaml (so all peer containers will have these)
+{code:java}
+- CORE_LOGGING_LEVEL=ERROR
+ - CORE_LOGGING_LEDGER=WARNING
+ - CORE_LOGGING_MSP=ERROR{code}
+ +*Expected:*+
+No logs for msp if its lower than ERROR.
++*Observed:*+
+all peers have 3 WARN level logs and 1 INFO level log:
+{code:java}
+{""log"":""\u001b[33m2017-06-29 21:53:33.523 UTC [msp] getMspConfig -\u003e WARN 001\u001b[0m Intermediate certs folder not found at [/etc/hyperledger/fabric/msp/intermediatecerts]. Skipping. [stat /etc/hyperledger/fabric/msp/intermediatecerts: no such file or directory]\n"",""stream"":""stderr"",""time"":""2017-06-29T21:53:33.523640743Z""}
+{""log"":""\u001b[33m2017-06-29 21:53:33.523 UTC [msp] getMspConfig -\u003e WARN 002\u001b[0m TLS intermediate certs folder not found at [/etc/hyperledger/fabric/msp/tlsintermediatecerts]. Skipping. [stat /etc/hyperledger/fabric/msp/tlsintermediatecerts: no such file or directory]\n"",""stream"":""stderr"",""time"":""2017-06-29T21:53:33.523676862Z""}
+{""log"":""\u001b[33m2017-06-29 21:53:33.523 UTC [msp] getMspConfig -\u003e WARN 003\u001b[0m crls folder not found at [/etc/hyperledger/fabric/msp/crls]. Skipping. [stat /etc/hyperledger/fabric/msp/crls: no such file or directory]\n"",""stream"":""stderr"",""time"":""2017-06-29T21:53:33.523681098Z""}
+{""log"":""2017-06-29 21:53:33.523 UTC [msp] getMspConfig -\u003e INFO 004\u001b[0m MSP configuration file not found at [/etc/hyperledger/fabric/msp/config.yaml]: [stat /etc/hyperledger/fabric/msp/config.yaml: no such file or directory]\n"",""stream"":""stderr"",""time"":""2017-06-29T21:53:33.523684033Z""}{code}
++*More info*+
+Tested with RC1. If I set CORE_LOGGING_MSP=INFO it prints all logs info and up. These logs are at the very beginning.
+
+The likely reason behind this was mentioned in FAB-4931. From [~wlahti]: "".... this is just a side effect of the order that the packages are loaded. At the time the MSP code is running at the very start of the peer, the log level specifications from the environment variables/core.yaml haven't been applied.""",,,,,,,,,,,0|i01c25:,,,AdnanChoudhury,jeffgarratt,muralisr,wlahti,,,,,,,07/Sep/17 8:15 PM;muralisr;[~wlahti] can you comment on this (working as designed ?) please ?,26/Oct/17 7:51 PM;jeffgarratt;[~wlahti] assigned to you.  Le me know if this is still an issue.,06/Nov/17 3:10 PM;wlahti;I'll take another look to see if there's any way to not log the messages referred to above. ,06/Nov/17 5:02 PM;wlahti;I no longer see any unexpected log messages using v1.1 code due to libraries loading before the logging levels are set. Closing this item. ,,,
+"Typo in ""Gerrit Recommended Practices""",FAB-5160,18933,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,nemoto,nemoto,nemoto,7/4/2017 8:46,9/13/2017 15:29,4/26/2018 6:50,9/13/2017 15:29,v1.0.0-rc1,Future,,fabric-docs,,0,,,,"I think there is an unnecessary string "":abbr:"" in ""Gerrit Recommended Practices""
+{noformat}
+The topic will show up in the review :abbr:UI and in the Open Changes List. Topic branches will disappear from the master tree when its content is merged.{noformat}
+ [http://hyperledger-fabric.readthedocs.io/en/latest/Gerrit/best-practices.html]",,,,,,,,,,,0|i01cdp:,,,nemoto,,,,,,master,,,TRUE,,,,,,,
+Typo in test/feature/README.rst,FAB-5175,18956,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,nemoto,nemoto,nemoto,7/5/2017 0:26,8/5/2017 12:13,4/26/2018 6:50,8/5/2017 12:13,v1.0.0-rc1,Future,,fabric-docs,,0,,,,"There are typos in test/feature/README.md.
+“docker networks” should be “docker network”",,,,,,,,,,,0|i01chx:,,,nemoto,,,,,,master,,,TRUE,,,,,,,
+Typo in test/tools/LTE/README.md,FAB-5180,18963,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,nemoto,nemoto,nemoto,7/5/2017 9:29,10/26/2017 16:13,4/26/2018 6:50,10/26/2017 16:13,v1.0.0-rc1,Future,,fabric-docs,,0,,,,"There are typos in test/tools/LTE/README.md.
+ * ""Ledger Traffic Engine (LTE test tool"" should be ""Ledger Traffic Engine (LTE) test tool""
+ * ""./runbenchmark.sh"" should be ""./runbenchmarks.sh""",,,,,,,,,,,0|i01cj9:,,,joe-alewine,nemoto,,,,,master,,,TRUE,26/Oct/17 4:12 PM;joe-alewine;Merged. https://gerrit.hyperledger.org/r/c/11399/,,,,,,
+No title specified for architecture.html,FAB-5259,19177,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,luomin,tkuhrt,tkuhrt,7/11/2017 17:54,10/29/2017 18:56,4/26/2018 6:50,10/29/2017 18:56,v1.0.0,Not a Bug,,fabric-docs,,0,,,,"While doing a search of the documentation, I was returned a <<no title>> document: http://hyperledger-fabric.readthedocs.io/en/latest/architecture.html",,,,,,,,,,,0|i01dph:,,,joe-alewine,kuangue,luomin,markparz,tkuhrt,,master,,,TRUE,"24/Jul/17 5:57 PM;markparz;This is really a dead page, that we are ripping pieces out of for other pieces of doc... once completely ransacked, we'll delete this page altogether.","13/Sep/17 6:08 PM;markparz;Hi Min, What's being reviewed here? I didn't see a CR, and we don't need this this page. I think we should just close this issue.","13/Sep/17 7:04 PM;tkuhrt;If the page is not needed, it should be removed completely from being generated and ensure that there are no links to it in the rest of the documentation. Please don't close the issue without fixing. I can still get to this page.","20/Sep/17 1:16 AM;luomin;Hi, [~tkuhrt], I've removed the old documentation 'architecture.rst' as you pointed here, together with 'whyfabric.rst' doc in this folder, and the other pages in this folder seems contain no links to these two docs. the patch is [https://gerrit.hyperledger.org/r/#/c/13387/.]  is that what you want?",26/Oct/17 4:18 PM;joe-alewine;Have posted gerrit link to delete these docs in fabric-pr-review.,,
+make license fails with error,FAB-5282,19204,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,C0rWin,C0rWin,C0rWin,7/11/2017 23:02,7/20/2017 21:31,4/26/2018 6:50,7/20/2017 21:31,v1.0.0,,,fabric-orderer,,0,,,,"Running `make license` command leads to following output:
+
+{code}
+Checking committed files for SPDX-License-Identifier headers ...
+The following files are missing SPDX-License-Identifier headers:
+orderer/multichain/manager.go
+orderer/multichain/manager_test.go
+
+Please replace the Apache license header comment text with:
+SPDX-License-Identifier: Apache-2.0
+{code}
+
+Therefore as suggested in error warning license header in those two files need to be replaced with:
+
+{code}
+/*
+Copyright IBM Corp. All Rights Reserved.
+
+SPDX-License-Identifier: Apache-2.0
+*/
+{code}",,,,,,,,,,,0|i01dv1:,,,awattez,BalajiSR,C0rWin,kchristidis,,,master,,,TRUE,12/Jul/17 2:16 AM;kchristidis;https://gerrit.hyperledger.org/r/#/c/11577/,"12/Jul/17 6:13 AM;BalajiSR;I did an reinstallation of fabric and when I did a build it gave another file missing error though the file is present. Error details are below
+
+Test build output:
+
+docker tag hyperledger/fabric-tools hyperledger/fabric-tools:x86_64-1.0.1-snapshot-f56a82e
+Checking committed files for SPDX-License-Identifier headers ...
+The following files are missing SPDX-License-Identifier headers:
+release_notes/v1.0.0.txt
+
+Please replace the Apache license header comment text with:
+SPDX-License-Identifier: Apache-2.0
+Makefile:111: recipe for target 'license' failed
+make: *** [license] Error 1","12/Jul/17 8:24 AM;awattez;Hi, ihave the same trouble on vagrant devenv environment:
+{code:java}
+/src/github.com/hyperledger/fabric/devenv (master)
+$ vagrant up
+$ vagrant ssh
+{code}
+Go to the VM :
+{code:java}
+Welcome to Ubuntu 16.04.2 LTS (GNU/Linux 4.4.0-83-generic x86_64)
+
+* Documentation: https://help.ubuntu.com
+* Management: https://landscape.canonical.com
+* Support: https://ubuntu.com/advantage
+
+Get cloud support with Ubuntu Advantage Cloud Guest:
+http://www.ubuntu.com/business/services/cloud
+
+1 package can be updated.
+1 update is a security update.
+
+
+Last login: Wed Jul 12 07:57:24 2017 from 10.0.2.2
+ubuntu@hyperledger-devenv:b8e189e:/opt/gopath/src/github.com/hyperledger/fabric$ make dist-clean all
+Checking committed files for SPDX-License-Identifier headers ...
+The following files are missing SPDX-License-Identifier headers:
+(standard input)
+
+Please replace the Apache license header comment text with:
+SPDX-License-Identifier: Apache-2.0
+Makefile:111: recipe for target 'license' failed
+make: *** [license] Error 1
+ubuntu@hyperledger-devenv:b8e189e:/opt/gopath/src/github.com/hyperledger/fabric$ make license
+Checking committed files for SPDX-License-Identifier headers ...
+The following files are missing SPDX-License-Identifier headers:
+(standard input)
+
+Please replace the Apache license header comment text with:
+SPDX-License-Identifier: Apache-2.0
+Makefile:111: recipe for target 'license' failed
+make: *** [license] Error 1
+
+{code}
+Here the problem come from (standard input)
+
+ 
+
+ ","12/Jul/17 12:35 PM;C0rWin;Added *.txt files to exclusion list to skip license header validation. 
+CR is updated, so should work now.","12/Jul/17 1:02 PM;BalajiSR;I tried again by cloning the code and I still receive the error
+
+*Clone git:* 
+{quote}root@: git clone ssh://xxxxx@gerrit.hyperledger.org:29418/fabric && scp -p -P 29418 xxxxxx@gerrit.hyperledger.org:hooks/commit-msg fabric/.git/hooks/
+{quote}
+*build*
+{quote}root@: cd $GOPATH/src/github.com/hyperledger/fabric
+root@: make dist-clean all
+{quote}
+*Output:*
+{quote}docker tag hyperledger/fabric-tools hyperledger/fabric-tools:x86_64-1.0.1-snapshot-f56a82e
+Checking committed files for SPDX-License-Identifier headers ...
+The following files are missing SPDX-License-Identifier headers:
+release_notes/v1.0.0.txt
+
+Please replace the Apache license header comment text with:
+SPDX-License-Identifier: Apache-2.0
+Makefile:111: recipe for target 'license' failed
+make: *** [license] Error 1
+{quote}","12/Jul/17 1:10 PM;C0rWin;Hm, this is strange as all txt files should be ignored based on recent change I've made.
+
+{code}
+#!/bin/bash
+#
+# Copyright IBM Corp. All Rights Reserved.
+#
+# SPDX-License-Identifier: Apache-2.0
+#
+
+CHECK=$(git diff --name-only HEAD * | grep -v .png$ | grep -v .rst$ | grep -v .git \
+  | grep -v .md$ | grep -v ^vendor/ | grep -v ^build/ | grep -v .pb.go$ | grep -v .txt | sort -u)
+
+if [[ -z ""$CHECK"" ]]; then
+  CHECK=$(git diff-tree --no-commit-id --name-only -r $(git log -2 \
+    --pretty=format:""%h"") | grep -v .png$ | grep -v .rst$ | grep -v .git \
+    | grep -v .md$ | grep -v ^vendor/ | grep -v ^build/ | grep -v .pb.go$ | grep -v .txt | sort -u)
+fi
+
+echo ""Checking committed files for SPDX-License-Identifier headers ...""
+missing=`echo $CHECK | xargs grep -L ""SPDX-License-Identifier""`
+if [ -z ""$missing"" ]; then
+   echo ""All files have SPDX-License-Identifier headers""
+   exit 0
+fi
+echo ""The following files are missing SPDX-License-Identifier headers:""
+echo ""$missing""
+{code}
+
+Are you sure working with latest CR? https://gerrit.hyperledger.org/r/#/c/11577/2
+
+{code}
+git fetch ssh://C0rWin@gerrit.hyperledger.org:29418/fabric refs/changes/77/11577/2 && git checkout FETCH_HEAD -b FAB-5282
+{code}","12/Jul/17 1:22 PM;awattez;Hi,
+
+i still have the problem but not on standard input :( and not only on vagrant devenv Fabric
+{code:java}
+ubuntu@ubuntu-VirtualBox:~/go/src/github.com/hyperledger/fabric$ git rev-parse HEAD
+f56a82e36e040e1c1a986edfceac014ba1516571
+{code}
+{code:java}
+Successfully tagged hyperledger/fabric-tools:latest
+docker tag hyperledger/fabric-tools hyperledger/fabric-tools:x86_64-1.0.1-snapshot-f56a82e
+Checking committed files for SPDX-License-Identifier headers ...
+The following files are missing SPDX-License-Identifier headers:
+release_notes/v1.0.0.txt
+
+Please replace the Apache license header comment text with:
+SPDX-License-Identifier: Apache-2.0
+Makefile:111: recipe for target 'license' failed
+make: *** [license] Error 1
+{code}"
+correct spelling mistake for a debug log for dropped gossip msg,FAB-5342,19300,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,scottz,scottz,scottz,7/17/2017 15:17,7/30/2017 13:22,4/26/2018 6:50,7/21/2017 10:36,v1.0.0,v1.0.1,,fabric-gossip,,0,gossip_component,,,"-FAB-5293- introduced a debug log with an incorrect word ""overflown"", which we should correct.
+
+[https://gerrit.hyperledger.org/r/#/c/11689/] ",,,,,,,,,,,0|i01ee5:,,,scottz,,,,,,release-1.0,master,,TRUE,,,,,,,
+Hyperledge Fabric Samples directory cannot contain a space,FAB-5618,19958,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,eacoeytaux,eacoeytaux,eacoeytaux,8/4/2017 15:11,10/26/2017 14:55,4/26/2018 6:50,10/26/2017 14:55,v1.0.2,,,fabric-docs,,0,Documentation,,,"While going through the tutorials on [https://hyperledger-fabric.readthedocs.io/en/latest/samples.html] I cloned the git repo to a folder than had a space in it, and thus ran into errors while running the byfn.sh script.  While it is an easy issue to bypass it was unclear as to what was causing the problem, it might be worthwhile to state in the tutorial the directory for the samples should not contain spaces.",,3600,3600,,0%,3600,3600,,,,0|i01i45:,,,eacoeytaux,markparz,,,,,master,,,TRUE,12/Sep/17 2:30 PM;eacoeytaux;Link to change set: [https://gerrit.hyperledger.org/r/#/c/13365/],13/Sep/17 5:47 PM;markparz;[~eacoeytaux] I added a couple maintainers to your CR to verify. Thanks !,,,,,
+modify the default value for brocast_config tool,FAB-6047,20639,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,asaningmaxchain,asaningmaxchain,asaningmaxchain,9/6/2017 10:43,10/3/2017 8:37,4/26/2018 6:50,9/30/2017 16:53,v1.0.2,v1.0.3,v1.1,fabric-orderer,,0,,,,"Default Channel ID used in _orderer/sample_clients/broadcast_config_ is {{NewChannelId}}, which violates the rule of channel ID: {{""[a-z][a-z0-9.-]*""}} (lower case only)",,,,,,,,,,,0|i01lvx:,,,kchristidis,mastersingh24,wl6g11li,,,,release-1.0,master,,TRUE,28/Sep/17 3:47 PM;kchristidis;[~asaningmaxchain] you have assigned this to yourself. Are you working on a changeset? Please update.,"30/Sep/17 7:02 AM;asaningmaxchain;ok,i do it right now",30/Sep/17 11:53 AM;mastersingh24;https://gerrit.hyperledger.org/r/#/c/13999/,,,,
+createEnvelopeForMsg() has two return statements,FAB-6055,20648,Bug,In Progress,FAB,Fabric,software,ChristopherFerris,,,Lowest,,cclauss,cclauss,cclauss,9/6/2017 20:59,1/25/2018 21:05,4/26/2018 6:50,,v1.0.5,Future,,fabric-quality,,0,quality,,,"This issue is a simple one and I would like to make it my first PR to the project if someone would be willing to mentor me thru the process...
+
+[https://github.com/hyperledger/fabric/blob/release/bddtests/steps/bootstrap_util.py#L737-L739]
+
+return envelope
+return configEnvelope
+
+Which one do we actually want to return?  The other should be removed as it is superfluous and confusing.",,144000,144000,,0%,144000,144000,,,,0|i01lxx:,,,cclauss,denyeart,sanchezl,,,,,,,,24/Oct/17 8:36 PM;denyeart;[~latitiah] Can you provide some guidance for Christian?,"25/Jan/18 6:17 PM;sanchezl;Remove:
+
+ {{return configEnvelope}}",,,,,
+Typo in docs/source/chaincode4noah.rst,FAB-6488,21354,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,joe-alewine,bennettneale,bennettneale,10/6/2017 17:37,10/31/2017 13:28,4/26/2018 6:50,10/26/2017 20:29,v1.0.3,v1.0.4,v1.1,fabric-docs,,0,,,,"There are missing single quotations in doc code block lines:
+
+ 
+{noformat}
+peer chaincode instantiate -n mycc -v 0 -c '{""Args"":[""a"", ""b"", ""c""]} -C mychannel""
+{noformat}
+should be
+{noformat}
+peer chaincode instantiate -n mycc -v 0 -c '{""Args"":[""a"", ""b"", ""c""]}' -C mychannel
+{noformat}
+AND
+{noformat}
+peer chaincode upgrade -n mycc -v 1 -c '{""Args"":[""d"", ""e"", ""f""]} -C mychannel
+{noformat}
+should be
+{noformat}
+peer chaincode upgrade -n mycc -v 1 -c '{""Args"":[""d"", ""e"", ""f""]}' -C mychannel
+{noformat}",,,,,,,,,,,0|i01pel:,,,bennettneale,joe-alewine,,,,,release-1.0,master,,TRUE,26/Oct/17 2:51 PM;joe-alewine;[https://gerrit.hyperledger.org/r/c/14883/],,,,,,
+wrong log information in fabric/gossip/gossip/channel/channel.go line 375,FAB-7393,24884,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,meinvzou,meinvzou,meinvzou,12/8/2017 4:16,12/18/2017 20:50,4/26/2018 6:50,12/18/2017 20:50,,v1.1,,,,0,,,,"the code in  fabric/gossip/gossip/channel/channel.go line 375
+
+line374 if gc.joinMsg.SequenceNumber() > (joinMsg.SequenceNumber()) \{
+line375 gc.logger.Warning(""Already have a more updated JoinChannel message("", gc.joinMsg.SequenceNumber(), "") than"", gc.joinMsg.SequenceNumber())
+line376 return
+ }
+
+line 375 should changed to :
+
+gc.logger.Warning(""Already have a more updated JoinChannel message("", gc.joinMsg.SequenceNumber(), "") than"", joinMsg.SequenceNumber())",,,,,,,,,,,0|i01xel:,,,mastersingh24,meinvzou,,,,,master,,,TRUE,09/Dec/17 9:56 AM;mastersingh24;[~meinvzou] - Do you want to try to fix this?,"12/Dec/17 6:16 AM;meinvzou;gerrit committed :
+
+https://gerrit.hyperledger.org/r/#/c/16141/",,,,,
+chaincodespec type hard coded to 1 in createCIS() fabric/core/chaincode/chaincodeexec.go,FAB-7432,25407,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,tatsu-sato,meinvzou,meinvzou,12/12/2017 7:28,1/31/2018 20:52,4/26/2018 6:50,1/31/2018 20:52,,,,fabric-endorser,,0,,,,"in fabric/core/chaincode/chaincodeexec.go 
+ func createCIS()
+ the code below:
+
+spec := &pb.ChaincodeInvocationSpec\{ChaincodeSpec: &pb.ChaincodeSpec\{Type: 1, ChaincodeId: &pb.ChaincodeID\{Name: ccname}, Input: &pb.ChaincodeInput\{Args: args}}}
+ would be better for reading to change to :
+ spec := &pb.ChaincodeInvocationSpec\{ChaincodeSpec: &pb.ChaincodeSpec\{Type: pb.ChaincodeSpec_Type(pb.ChaincodeSpec_Type_value[""GOLANG""]), ChaincodeId: &pb.ChaincodeID\{Name: ccname}, Input: &pb.ChaincodeInput\{Args: args}}}",,,,,,,,,,,0|i01xot:,,,denyeart,meinvzou,tatsu-sato,,,,master,,,TRUE,30/Jan/18 3:18 AM;denyeart;[~tatsu-sato] Are you going to push a fix to Gerrit?,"31/Jan/18 5:47 AM;tatsu-sato;[~denyeart] I will push soon, so could you give me a moment, please ?","31/Jan/18 7:29 PM;denyeart;Thanks [~tatsu-sato]
+
+https://gerrit.hyperledger.org/r/#/c/17381/",,,,
+peer --version description inaccurate,FAB-8691,28267,Bug,Done,FAB,Fabric,software,ChristopherFerris,,,Lowest,Done,luomin,sanchezl,sanchezl,3/7/2018 14:29,3/14/2018 0:41,4/26/2018 6:50,3/14/2018 0:41,v1.1.0-rc1,v1.2,,fabric-peer,,0,help-wanted,,,"The {{peer}} executable help contains the following output:
+
+{{  -v, --version  Display current version of fabric peer server}}
+
+When using the {{peer}} executable as a client of a peer server it outputs the version of the {{peer}} executable itself, not that of the remote peer server.
+
+At minimun, the description should not say _server_.
+
+ ",,,,,,,,,,,0|i028i5:,,,luomin,sanchezl,,,,,master,,,TRUE,09/Mar/18 4:06 AM;luomin;https://gerrit.hyperledger.org/r/#/c/18913/,,,,,,
