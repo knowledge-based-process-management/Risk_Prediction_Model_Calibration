@@ -1,0 +1,29 @@
+[1] "prediction calculation with ICSM model:"
+ [1] "RELY" "DATA" "CPLX" "RUSE" "PVOL" "ACAP" "APEX" "AA"   "PR"   "TSL" 
+  RELY DATA CPLX RUSE PVOL ACAP APEX  AA  PR TSL
+1    1 1.14    1 0.95 0.87 0.85    1 0.1 0.4 0.4
+[1] "prediction results with ICSM model:"
+             [,1]         [,2] [,3]         [,4]         [,5]
+[1,] 1.000205e-23 1.127754e-28    1 9.226266e-50 2.299356e-71
+     [,1]
+[1,]    3
+[1] "risk_lvl1 risk_lvl2 risk_lvl3 risk_lvl4 risk_lvl5 predicted"
+[1] "1.00020539651022e-23 1.12775433465617e-28 1 9.22626555361803e-50 2.29935630323009e-71 3"
+[1] "prediction calculation with open source model:"
+ [1] "Phase"              "ISS_Num_Resolved"   "ISS_Num_Unresolved"
+ [4] "Personnel"          "Estimated.Effort"   "Accu_Trivial"      
+ [7] "Accu_Minor"         "Accu_Major"         "Accu_Critical"     
+[10] "Accu_Block"         "Csmell"             "Svul"              
+  Phase ISS_Num_Resolved ISS_Num_Unresolved Personnel Estimated.Effort
+1     2              281                568         8              768
+  Accu_Trivial Accu_Minor Accu_Major Accu_Critical Accu_Block   Csmell    Svul
+1            0          2          8             0          0 1023.309 23.7053
+[1] "prediction results with open source model:"
+          [,1]      [,2]       [,3]      [,4]      [,5]
+[1,] 0.1252086 0.4998519 0.02762403 0.2500356 0.1279926
+     [,1]
+[1,]    2
+[1] "1.00020539651022e-23 1.12775433465617e-28 1 9.22626555361803e-50 2.29935630323009e-71 3"
+[1] "final predication with combined results:"
+           [,1]     [,2]     [,3]     [,4]       [,5]
+[1,] 0.06165749 0.246146 0.506041 0.123127 0.06302842

@@ -1,0 +1,1226 @@
+"application","csha","cwhen","message","branch","email","application-2","csha-2","basic","emptycode","cloneimplementation","comments","codesize","stringandstringbuffer","naming","strictexceptions","optimization","design","securitycodeguidelines","braces","typeresolution","coupling","finalizer","importstatements","unusedcode","unnecessary","application-3","csha-3","classes","comment_lines_density","vulnerabilities","lines","ncloc","complexity","security_rating","major_violations","duplicated_blocks","code_smells","file_complexity","functions","duplicated_files","duplicated_lines_density","reliability_rating","critical_violations","violations","statements","blocker_violations","reliability_remediation_effort","duplicated_lines","bugs","security_remediation_effort","directories","info_violations","sqale_index","sqale_debt_ratio","minor_violations","files","sqale_rating"
+"hyperledger-fabric-sdk-java","d75fe66dd72240284b2a6be5927091728b662453","2018-04-12 13:05:44","FAB-9489 Network Config property overrides
+
+Minor fix and some more testing.
+
+Change-Id: I983ee96c1619da58e0e2f8d3f5609acbc0f5e0b5
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","d75fe66dd72240284b2a6be5927091728b662453","10","14","1","1652","169","62","1018","134","1903","191","14","0","34","1515","6","19","14","30","hyperledger-fabric-sdk-java","d75fe66dd72240284b2a6be5927091728b662453","156","16.1","47","21973","12155","3237","5","425","19","735","29.2","1037","10","2","5","84","831","5821","30","840","434","49","905","8","12","6337","1.7","280","111","1"
+"hyperledger-fabric-sdk-java","479b4982076a4dbdc65dbd8622a88c85d34dd14c","2018-04-12 11:10:58","FAB-9489 Network Config property overrides
+
+Change-Id: I230d998c39a6685ffda80fd0029e0d428cdc8190
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","479b4982076a4dbdc65dbd8622a88c85d34dd14c","10","14","1","1652","169","62","1018","134","1903","191","14","0","34","1515","6","19","14","30","hyperledger-fabric-sdk-java","479b4982076a4dbdc65dbd8622a88c85d34dd14c","156","16.1","47","21973","12155","3237","5","425","19","735","29.2","1037","10","2","5","84","831","5821","30","840","434","49","905","8","12","6337","1.7","280","111","1"
+"hyperledger-fabric-sdk-java","8b976c725f719a21a1a45f2c0102fb7d6ca8f16d","2018-04-08 17:54:17","FAB-9418 Default for SSL neg/provider
+
+Change-Id: Ic0f909e656584972e15051dc2415a34d5be362fc
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","8b976c725f719a21a1a45f2c0102fb7d6ca8f16d","10","14","1","1652","168","62","1018","134","1884","190","14","0","34","1514","6","19","14","30","hyperledger-fabric-sdk-java","8b976c725f719a21a1a45f2c0102fb7d6ca8f16d","156","16","47","21824","12086","3204","5","422","19","729","28.9","1026","10","2","5","84","825","5788","30","840","434","49","905","8","12","6316","1.7","277","111","1"
+"hyperledger-fabric-sdk-java","b8aa183e2842b0a008a57edd724e64bcb04fb122","2018-04-07 15:26:15","FAB-8596 failing parsing network-config.json
+
+Change-Id: I053dced3d806648c76219debe0c6c52f0b59be74
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","b8aa183e2842b0a008a57edd724e64bcb04fb122","10","14","1","1651","168","62","1022","136","1884","194","14","0","34","1514","6","19","16","30","hyperledger-fabric-sdk-java","b8aa183e2842b0a008a57edd724e64bcb04fb122","156","16","49","21781","12071","3204","5","428","19","735","28.9","1024","10","2","5","86","833","5781","30","840","434","49","945","8","12","6368","1.8","277","111","1"
+"hyperledger-fabric-sdk-java","7b7df11fb41f17cc21c629ac049256bd13c47e74","2018-04-05 14:57:42","FAB-9282 NetworkConfig support TLS HFCAClient
+
+NetworkConfig doesn't support TLS for CertificateAuthority
+
+Change-Id: I4df40c2ab36c4a474bc1d4293eb13701157f6ba9
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","7b7df11fb41f17cc21c629ac049256bd13c47e74","10","14","1","1645","169","62","1022","136","1874","189","14","0","34","1521","6","19","14","30","hyperledger-fabric-sdk-java","7b7df11fb41f17cc21c629ac049256bd13c47e74","156","16.3","49","21779","12035","3198","5","424","19","726","28.8","1021","10","2","5","86","824","5774","30","840","434","49","945","8","14","6256","1.7","270","111","1"
+"hyperledger-fabric-sdk-java","5c41e568161ca81404aa68d3a723dddbbea4e40a","2018-03-19 08:19:38","FAB-8961 V1.1 release notes updates.
+
+Change-Id: I30949446a92e73a69031cd1320c8f735e1069434
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","5c41e568161ca81404aa68d3a723dddbbea4e40a","10","14","1","1640","169","62","1022","134","1866","190","14","0","34","1521","6","19","14","30","hyperledger-fabric-sdk-java","5c41e568161ca81404aa68d3a723dddbbea4e40a","156","16.3","49","21748","12001","3184","5","424","19","727","28.7","1016","10","2","5","86","825","5757","30","840","434","49","945","8","15","6256","1.7","270","111","1"
+"hyperledger-fabric-sdk-java","4c4b546ae6887dddd0efcd551db5cd3e85f7e7d9","2018-03-07 15:06:19","FAB-8897 Customize trans. event handling.
+
+Change-Id: Iba84c7fa7e667d95e44a79c3b6fbf486175c6605
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","4c4b546ae6887dddd0efcd551db5cd3e85f7e7d9","10","14","1","1635","168","62","1014","134","1866","190","14","0","34","1521","6","19","14","30","hyperledger-fabric-sdk-java","4c4b546ae6887dddd0efcd551db5cd3e85f7e7d9","156","16.3","49","21729","11989","3179","5","423","19","726","28.6","1014","10","2","5","86","824","5753","30","840","434","49","945","8","15","6242","1.7","270","111","1"
+"hyperledger-fabric-sdk-java","ff4b8811e6e28851c5ab0b77c9b1c0586dea77b9","2018-03-14 09:53:15","FAB-8861 Missing Blockinfo information
+
+Change-Id: I700836c24260f88f444330209fa02ce9222064ab
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","ff4b8811e6e28851c5ab0b77c9b1c0586dea77b9","8","14","1","1603","157","61","990","134","1815","174","14","0","31","1506","6","19","14","28","hyperledger-fabric-sdk-java","ff4b8811e6e28851c5ab0b77c9b1c0586dea77b9","154","16.5","48","21328","11696","3075","5","414","19","707","27.7","990","10","2","5","83","802","5591","30","830","434","47","925","8","15","6083","1.7","260","111","1"
+"hyperledger-fabric-sdk-java","03c428e07e4ac4372afd7e83433a48a20937714a","2018-03-07 15:06:19","FAB-8842 Channel init retry
+
+Change-Id: Idf00862d3761138a2d115f73f3128acf5ed7715a
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","03c428e07e4ac4372afd7e83433a48a20937714a","8","14","1","1603","156","61","988","134","1812","174","14","0","31","1493","6","19","14","28","hyperledger-fabric-sdk-java","03c428e07e4ac4372afd7e83433a48a20937714a","153","16.5","48","21194","11632","3049","5","415","19","706","27.5","978","10","2","5","83","801","5568","30","830","434","47","925","8","15","6068","1.7","258","111","1"
+"hyperledger-fabric-sdk-java","8f65202c98b9ec6907202d1f7687e9be2a53803e","2018-02-21 05:22:01","FAB-8523 Update fabric generated artifacts to v1.1
+
+PS:
+
+14 issue with testing on Windows.
+
+Change-Id: I67c728f92762c2edcca7e1b9890b5425b4296ab3
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","8f65202c98b9ec6907202d1f7687e9be2a53803e","8","14","1","1540","147","61","974","134","1747","164","14","0","31","1495","6","19","9","28","hyperledger-fabric-sdk-java","8f65202c98b9ec6907202d1f7687e9be2a53803e","151","15.5","50","20629","11465","2999","5","404","21","673","27","940","10","2.5","5","81","772","5504","33","850","512","49","970","8","15","5909","1.7","239","111","1"
+"hyperledger-fabric-sdk-java","dc2b94f4ca6125af56a3bb92cc59993b1717ec4e","2018-03-01 04:52:29","[FAB-8606] Parse non-PKCS8 encoded TLS keys
+
+CryptoPrimitives.bytesToPrivateKey was only
+parsing PKCS8 encoded keys which being with
+a ""BEGIN EC PRIVATE KEY"" header.  This change
+addes support for parsing keys with a
+""BEGIN PRIVATE KEY"" header.
+
+Change-Id: I5c9ba740a1f88be56df373cd206f117e005b3bde
+Signed-off-by: Gari Singh <gari.r.singh@gmail.com>
+","refs/heads/master","gari.r.singh@gmail.com","hyperledger-fabric-sdk-java","dc2b94f4ca6125af56a3bb92cc59993b1717ec4e","8","14","1","1539","147","61","972","134","1747","164","14","0","32","1495","6","20","8","28","hyperledger-fabric-sdk-java","dc2b94f4ca6125af56a3bb92cc59993b1717ec4e","151","15.5","50","20628","11465","2999","5","403","21","673","27","940","10","2.5","5","81","772","5504","33","850","512","49","970","8","15","5906","1.7","240","111","1"
+"hyperledger-fabric-sdk-java","625e937384a7875cf6f50efd78a52ddecef924e6","2018-02-28 11:50:44","[FAB-8581] Increase timeouts on CI test
+
+Increase timeouts on the CI test to prevent failures
+due to processes taking a long time to finish.
+
+Change-Id: I3e405d51663424c1e167c1b9cdada4a8c6f8ff03
+Signed-off-by: Saad Karim <skarim@us.ibm.com>
+","refs/heads/master","skarim@us.ibm.com","hyperledger-fabric-sdk-java","625e937384a7875cf6f50efd78a52ddecef924e6","8","14","1","1539","147","61","966","134","1745","165","14","0","32","1494","6","20","8","28","hyperledger-fabric-sdk-java","625e937384a7875cf6f50efd78a52ddecef924e6","151","15.5","50","20613","11449","2996","5","402","21","672","27","940","10","2.5","5","81","771","5496","33","850","512","49","970","8","15","5894","1.7","240","111","1"
+"hyperledger-fabric-sdk-java","c1babcf3d6b93a24478cd6ec2f4d3314529db140","2018-02-21 13:18:25","FAB-8392 Include META-INF in chaincode packaging.
+
+Change-Id: I7730e10205c4a09805eb03d2b4d1d329c5647da2
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","c1babcf3d6b93a24478cd6ec2f4d3314529db140","8","14","1","1539","147","61","966","134","1745","165","14","0","32","1494","6","20","8","28","hyperledger-fabric-sdk-java","c1babcf3d6b93a24478cd6ec2f4d3314529db140","151","15.5","50","20613","11449","2996","5","402","21","672","27","940","10","2.5","5","81","771","5496","33","850","512","49","970","8","15","5894","1.7","240","111","1"
+"hyperledger-fabric-sdk-java","a44c2aa80887dbea7797f847046a0ef5ad8b5ae5","2018-02-14 09:31:09","[FAB-7324] Deploy Node CC using Java SDK
+
+Deploy Node CC using Java SDK
+
+Change-Id: Ic0db999944b9bf1528a1ca3b1f5e33ad3429da9f
+Signed-off-by: Saad Karim <skarim@us.ibm.com>
+","refs/heads/master","skarim@us.ibm.com","hyperledger-fabric-sdk-java","a44c2aa80887dbea7797f847046a0ef5ad8b5ae5","8","14","1","1531","147","61","956","134","1737","165","13","0","32","1486","6","20","8","28","hyperledger-fabric-sdk-java","a44c2aa80887dbea7797f847046a0ef5ad8b5ae5","151","15.5","50","20488","11368","2966","5","399","19","669","26.7","936","9","2.4","5","81","767","5446","32","840","486","48","970","8","15","5828","1.7","240","111","1"
+"hyperledger-fabric-sdk-java","f28a4b7957b3f671238f2a14d8c6961852582924","2018-02-20 08:56:55","Merge ""FAB-7949 tlsbinding_event_reg""","refs/heads/master","jim_the_matrix@hotmail.com","hyperledger-fabric-sdk-java","f28a4b7957b3f671238f2a14d8c6961852582924","8","14","1","1524","146","60","948","134","1734","165","13","0","30","1488","6","18","8","28","hyperledger-fabric-sdk-java","f28a4b7957b3f671238f2a14d8c6961852582924","151","15.6","50","20391","11295","2945","5","400","19","663","26.5","933","9","2.4","5","81","760","5413","31","830","486","47","970","8","15","5810","1.7","233","111","1"
+"hyperledger-fabric-sdk-java","7c768d6403a95b28d40ffe8f01bfb5be24a3a442","2018-02-12 06:13:38","FAB-8218 Update dependencies.
+
+Change-Id: I39625dbddbdb749145fd9f6090bc0e596a6ccf0d
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","7c768d6403a95b28d40ffe8f01bfb5be24a3a442","8","14","1","1519","146","60","940","134","1726","164","12","0","30","1478","6","18","8","28","hyperledger-fabric-sdk-java","7c768d6403a95b28d40ffe8f01bfb5be24a3a442","151","15.6","50","20324","11250","2938","5","403","19","666","26.5","931","9","2.4","5","81","763","5389","31","830","486","47","970","8","15","5835","1.7","233","111","1"
+"hyperledger-fabric-sdk-java","96ee2df4cfa23a77b111d246416966af46fc94c5","2018-02-06 10:51:34","FAB-7949 tlsbinding_event_reg
+
+Change-Id: I4f81f79495d2f53b38fd45f75219e27d312adb51
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","96ee2df4cfa23a77b111d246416966af46fc94c5","8","14","1","1524","146","60","948","134","1734","165","13","0","30","1488","6","18","8","28","hyperledger-fabric-sdk-java","96ee2df4cfa23a77b111d246416966af46fc94c5","151","15.6","50","20394","11298","2946","5","400","19","663","26.5","933","9","2.4","5","81","760","5415","31","830","486","47","970","8","15","5811","1.7","233","111","1"
+"hyperledger-fabric-sdk-java","09776f0610193982cdee6ec8e00d5244bb82e65d","2018-02-05 11:09:54","FAB-8077 Create client TLS from Fabric CA
+
+Change-Id: I68d811a517fb64c46cdb01f7f621277bb0d7627c
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","09776f0610193982cdee6ec8e00d5244bb82e65d","8","14","1","1519","146","60","940","134","1726","164","12","0","30","1478","6","18","8","28","hyperledger-fabric-sdk-java","09776f0610193982cdee6ec8e00d5244bb82e65d","151","15.6","50","20327","11253","2939","5","403","19","666","26.5","931","9","2.4","5","81","763","5391","31","830","486","47","970","8","15","5836","1.7","233","111","1"
+"hyperledger-fabric-sdk-java","5c57df45294ca5a1af62440ace48563b6065e5d5","2018-02-08 13:11:42","FAB-7994 Fix getConfig block
+
+Change-Id: I1ae047cafe8213555276cefaf03eee8725170712
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","5c57df45294ca5a1af62440ace48563b6065e5d5","8","14","1","1519","146","60","940","134","1726","164","12","0","33","1478","6","21","8","28","hyperledger-fabric-sdk-java","5c57df45294ca5a1af62440ace48563b6065e5d5","151","15.6","50","20322","11249","2939","5","403","19","669","26.5","931","9","2.4","5","81","766","5385","31","830","486","47","970","8","15","5842","1.7","236","111","1"
+"hyperledger-fabric-sdk-java","77cfdc71d547f561ba700f29f5e4d0c07bfa5f3f","2018-02-07 12:18:19","[FAB-7128] Update SDK to comply with swagger
+
+Updated HFCAClient to conform to the fabric ca
+swagger
+
+Change-Id: Iad81c7559e703a61f6547d28b38d2db38b9ba62a
+Signed-off-by: Saad Karim <skarim@us.ibm.com>
+","refs/heads/master","skarim@us.ibm.com","hyperledger-fabric-sdk-java","77cfdc71d547f561ba700f29f5e4d0c07bfa5f3f","8","14","1","1519","146","60","940","134","1726","164","12","0","33","1479","6","21","8","28","hyperledger-fabric-sdk-java","77cfdc71d547f561ba700f29f5e4d0c07bfa5f3f","151","15.6","50","20329","11252","2941","5","404","19","671","26.5","931","9","2.4","5","81","768","5387","31","830","486","47","970","8","16","5847","1.7","236","111","1"
+"hyperledger-fabric-sdk-java","2adcdbca9e2e81bd5966386e4e3f012c03c7b976","2018-02-05 09:17:53","FAB-8074 Misc fixes see description
+
+Change-Id: I7bfcb0a312a6000def95376cfc3cb8c821086265
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","2adcdbca9e2e81bd5966386e4e3f012c03c7b976","8","14","1","1517","143","60","940","133","1708","164","12","0","33","1471","6","21","8","28","hyperledger-fabric-sdk-java","2adcdbca9e2e81bd5966386e4e3f012c03c7b976","151","15.5","50","20232","11199","2918","5","402","17","662","26.3","928","8","2.2","5","81","759","5354","31","830","440","47","970","8","16","5747","1.7","229","111","1"
+"hyperledger-fabric-sdk-java","9b87b73b72c654de154141a003c1d558d4c98250","2018-01-25 10:06:44","FAB-7872 Java SDK v1.1-alpha
+
+Change-Id: I885f79b14aa240ac44cd9c64e52c31f890b352b1
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","9b87b73b72c654de154141a003c1d558d4c98250","8","14","1","1514","143","60","936","133","1708","164","12","0","33","1465","6","20","8","28","hyperledger-fabric-sdk-java","9b87b73b72c654de154141a003c1d558d4c98250","151","15.5","50","20198","11177","2911","5","402","19","662","26.2","927","8","2.4","5","81","759","5344","31","830","486","47","970","8","16","5758","1.7","229","111","1"
+"hyperledger-fabric-sdk-java","09f386c340e157e2a4f3f5cdde85e340f4586923","2017-12-12 13:09:52","[FAB-7383] 2. Support affiliations REST API
+
+This change implements all the affiliations
+REST API calls to the fabric-ca.
+
+Change-Id: If6827dd85de9b53fe905beccc96b60c7cec36a1e
+Signed-off-by: Saad Karim <skarim@us.ibm.com>
+","refs/heads/master","skarim@us.ibm.com","hyperledger-fabric-sdk-java","09f386c340e157e2a4f3f5cdde85e340f4586923","8","14","1","1514","143","60","936","133","1708","164","12","0","37","1465","6","24","8","28","hyperledger-fabric-sdk-java","09f386c340e157e2a4f3f5cdde85e340f4586923","151","15.5","50","20203","11181","2911","5","402","19","666","26.2","927","8","2.4","5","81","763","5344","31","830","486","47","970","8","16","5766","1.7","233","111","1"
+"hyperledger-fabric-sdk-java","224f569d9d1f1f77e5d22e8e0c78f3d4e298b3fc","2018-01-23 16:06:10","FAB-6989 update dependencies
+
+Change-Id: Iabef7dcf55f37ac48385f468e83c38970ff0cdf8
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","224f569d9d1f1f77e5d22e8e0c78f3d4e298b3fc","8","14","1","1485","138","54","904","128","1631","160","12","0","28","1420","6","15","8","24","hyperledger-fabric-sdk-java","224f569d9d1f1f77e5d22e8e0c78f3d4e298b3fc","148","15.4","54","19527","10782","2777","5","386","19","618","25.5","898","8","2.5","5","85","719","5121","31","830","480","47","1050","8","16","5485","1.7","201","109","1"
+"hyperledger-fabric-sdk-java","9224fa3f45a70392d1b244c080bf41bd561470d3","2018-01-11 14:32:48","FAB-7702 GetConfigBlock
+
+Change-Id: I8426196731995c514e729e217e054d8358813c7f
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","9224fa3f45a70392d1b244c080bf41bd561470d3","8","14","1","1485","138","54","904","128","1631","160","12","0","28","1420","6","15","8","24","hyperledger-fabric-sdk-java","9224fa3f45a70392d1b244c080bf41bd561470d3","148","15.4","54","19527","10782","2777","5","386","19","618","25.5","898","8","2.5","5","85","719","5121","31","830","480","47","1050","8","16","5485","1.7","201","109","1"
+"hyperledger-fabric-sdk-java","9bf5095521b4e1f668b6ef02ab35c7627b9821e4","2018-01-12 12:54:19","FAB-7693 Consistency set based off of payload bytes
+
+PS
+04 hf.revoker attr. renamed to hf.Revoker
+
+Change-Id: I0e69803a99a59ed90fa5c9abe174d82f4621c34d
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","9bf5095521b4e1f668b6ef02ab35c7627b9821e4","8","14","1","1477","138","54","900","127","1621","159","12","0","28","1404","6","15","7","24","hyperledger-fabric-sdk-java","9bf5095521b4e1f668b6ef02ab35c7627b9821e4","147","15.4","54","19406","10711","2760","5","384","19","615","25.6","892","8","2.5","5","85","716","5088","31","830","480","47","1050","8","16","5466","1.7","200","108","1"
+"hyperledger-fabric-sdk-java","25d8d394aca9390d35441f9f25d7d9db1408a4e6","2017-12-08 11:52:21","[FAB-7383] 1. Support identities REST API
+
+This change implements the different REST API
+call to the identity endpoint on the fabric-ca
+server.
+
+Change-Id: I2204c91c89a98765b41238157ac30ea596f479eb
+Signed-off-by: Saad Karim <skarim@us.ibm.com>
+","refs/heads/master","skarim@us.ibm.com","hyperledger-fabric-sdk-java","25d8d394aca9390d35441f9f25d7d9db1408a4e6","8","14","1","1476","138","54","900","127","1622","159","12","0","28","1406","6","15","7","24","hyperledger-fabric-sdk-java","25d8d394aca9390d35441f9f25d7d9db1408a4e6","147","15.5","54","19390","10697","2755","5","383","19","614","25.5","890","8","2.5","5","85","715","5082","31","830","480","47","1050","8","16","5453","1.7","200","108","1"
+"hyperledger-fabric-sdk-java","ee34177257b8ebb55b30e15ef1c565e4e000aa01","2018-01-10 10:36:41","FAB-7652 filterblock
+
+PS:
+06 Unrelated default enrollment profiles needs to be empty string.
+
+Change-Id: Id9242c40180292f0484d117c2d366cb73a4b23cc
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","ee34177257b8ebb55b30e15ef1c565e4e000aa01","8","14","1","1431","134","47","874","119","1514","154","12","0","23","1329","6","13","7","24","hyperledger-fabric-sdk-java","ee34177257b8ebb55b30e15ef1c565e4e000aa01","144","15.4","51","18649","10272","2661","5","368","15","577","25.3","867","6","2.3","5","82","674","4838","30","815","428","46","990","8","16","5157","1.7","178","105","1"
+"hyperledger-fabric-sdk-java","41ec4c36f8d8009e1e0117cb58a26646c8c91c21","2017-12-11 11:44:40","FAB-6066 Channel service_events
+
+Patch Set:
+024 Rebased on network config.
+025 Minor code cleanup and added Javadoc where needed.
+
+Change-Id: Iaf3f37ee7d1062ead7e2cc66de630268324d3575
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","41ec4c36f8d8009e1e0117cb58a26646c8c91c21","8","14","1","1422","134","47","866","119","1511","158","12","0","23","1293","7","12","8","24","hyperledger-fabric-sdk-java","41ec4c36f8d8009e1e0117cb58a26646c8c91c21","144","15.4","51","18420","10124","2583","5","362","15","573","24.6","856","6","2.3","5","82","670","4762","30","815","428","46","990","8","15","5054","1.7","181","105","1"
+"hyperledger-fabric-sdk-java","c4957fdca7dd935b3b6049decebcede9b5371105","2017-10-16 23:22:53","FAB-5632 Implement Network Config
+
+Change-Id: I49617d84bea3b5d5654aa6f7abc5ae880b8d8d56
+Signed-off-by: Chris Murphy <chrism@fast.au.fujitsu.com>
+","refs/heads/master","chrism@fast.au.fujitsu.com","hyperledger-fabric-sdk-java","c4957fdca7dd935b3b6049decebcede9b5371105","8","14","0","1376","121","47","808","114","1453","173","12","0","23","1202","5","13","8","22","hyperledger-fabric-sdk-java","c4957fdca7dd935b3b6049decebcede9b5371105","143","15.6","48","17620","9601","2457","5","341","8","580","23.6","822","5","1.7","5","77","671","4487","29","775","308","43","940","8","15","4828","1.7","209","104","1"
+"hyperledger-fabric-sdk-java","270a75e97042826ba3dc6f120a2506fec8187659","2017-12-07 08:16:12","[FAB-7127] Revoke missing gencrl
+
+Fabric CA supports generating a CRL on the revoke,
+this is now also supported rom the JSDK api.
+
+Also fixes the NPE if reason is null when making
+the revoke request.
+
+Change-Id: I1fb39089db9e3dd828a7f6a8da1d65eea6cf2f6d
+Signed-off-by: Saad Karim <skarim@us.ibm.com>
+","refs/heads/master","skarim@us.ibm.com","hyperledger-fabric-sdk-java","270a75e97042826ba3dc6f120a2506fec8187659","8","14","0","1287","108","47","772","114","1280","162","12","0","23","1149","5","13","8","14","hyperledger-fabric-sdk-java","270a75e97042826ba3dc6f120a2506fec8187659","135","15.3","47","16287","8847","2231","5","317","8","539","21.9","757","5","1.9","5","76","629","4083","29","775","308","43","925","8","11","4532","1.7","196","102","1"
+"hyperledger-fabric-sdk-java","213edec4fda8c3f94684655e9e00a82be59812a2","2017-12-04 10:38:41","[FAB-6939] Eclipse Setup Instructions
+
+Instructions on how to setup Eclipse with the
+Java SDK
+
+Change-Id: Ibc663163c0ae3b5d010d68b701bbb3455bfb75c6
+Signed-off-by: Saad Karim <skarim@us.ibm.com>
+","refs/heads/master","skarim@us.ibm.com","hyperledger-fabric-sdk-java","213edec4fda8c3f94684655e9e00a82be59812a2","8","14","0","1283","108","46","770","113","1254","162","12","0","22","1143","5","13","8","14","hyperledger-fabric-sdk-java","213edec4fda8c3f94684655e9e00a82be59812a2","135","15.2","47","16203","8799","2208","5","316","8","534","21.6","749","5","1.9","5","76","624","4059","29","775","308","43","925","8","11","4489","1.7","192","102","1"
+"hyperledger-fabric-sdk-java","c8cd86baa87f4eda63420e78c43bdc5b8dc84ca1","2017-11-30 09:04:56","FAB-7233 Update protos
+
+PS:
+ 4 Update pom.xml with latest.
+
+Change-Id: I63ebc08daa4fa1ce436f2975c51d7b0ff3384c07
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","c8cd86baa87f4eda63420e78c43bdc5b8dc84ca1","8","14","0","1283","108","46","770","113","1254","162","12","0","22","1143","5","13","8","14","hyperledger-fabric-sdk-java","c8cd86baa87f4eda63420e78c43bdc5b8dc84ca1","135","15.2","47","16203","8799","2208","5","315","8","533","21.6","749","5","1.9","5","76","623","4059","29","775","308","43","925","8","11","4488","1.7","192","102","1"
+"hyperledger-fabric-sdk-java","a8d89513f554812eea70cc4362c40af4fd1e0d60","2017-11-16 09:53:25","FAB-7009 Send orderer provide exception
+
+PS
+4 Shuffle orderers case first always is failing and provide load balancing.
+5 Minor tweak Arraylist probably faster for this.
+
+Change-Id: Idcdaaa02a61198b4e55090743ba83ea28e184278
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","a8d89513f554812eea70cc4362c40af4fd1e0d60","8","14","0","1282","108","46","770","113","1250","163","12","0","22","1132","5","13","8","14","hyperledger-fabric-sdk-java","a8d89513f554812eea70cc4362c40af4fd1e0d60","135","15.2","47","16163","8760","2203","5","316","8","534","21.6","747","5","1.9","5","76","624","4039","29","775","308","43","925","8","11","4496","1.7","192","102","1"
+"hyperledger-fabric-sdk-java","f678c01be8e1c68d48be3bcd8a61f47e59045684","2017-11-06 10:44:00","[FAB-6887] Support mutual TLS for peer/orderer
+
+Adds support for configuring client certificates
+when connecting via TLS to a peer or orderer.
+
+Change-Id: Id9200822f266d79672294180bca34c9b724c9f0d
+Signed-off-by: Gari Singh <gari.r.singh@gmail.com>
+","refs/heads/master","gari.r.singh@gmail.com","hyperledger-fabric-sdk-java","f678c01be8e1c68d48be3bcd8a61f47e59045684","8","14","0","1282","108","46","770","113","1249","162","12","0","22","1145","5","13","8","14","hyperledger-fabric-sdk-java","f678c01be8e1c68d48be3bcd8a61f47e59045684","135","15.2","47","16152","8752","2202","5","316","8","534","21.6","747","5","1.9","5","76","624","4034","29","775","308","43","925","8","11","4495","1.7","192","102","1"
+"hyperledger-fabric-sdk-java","0b3e5aaa7b7f9440921f75f488da34b67f6dd606","2017-11-07 06:44:44","FAB-6901 Affiliation is not required.
+
+Change-Id: I5261bebeb6c3c1439911a59023dfc49e4da0dce4
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","0b3e5aaa7b7f9440921f75f488da34b67f6dd606","8","14","0","1272","107","44","764","104","1245","160","12","0","19","1145","5","10","7","2","hyperledger-fabric-sdk-java","0b3e5aaa7b7f9440921f75f488da34b67f6dd606","135","15.2","40","16089","8695","2175","5","311","8","521","21.3","746","5","1.9","5","69","604","3999","29","775","308","43","785","8","11","4377","1.7","184","102","1"
+"hyperledger-fabric-sdk-java","b9da9353dd85fa9fec855dced85f6a25fc9d7503","2017-11-04 04:41:44","[FAB-6888] Reduce logging for Maven downloads
+
+See the JIRA for an example of the logs, but
+basically the CI logs are full of download and
+status logs for pulling from Maven repos.
+
+This change  sets the logging level to warn for
+downloading from Maven repos in general
+
+Change-Id: I3d511e2cd770e718fc8846da3b39f78cca90c256
+Signed-off-by: Gari Singh <gari.r.singh@gmail.com>
+","refs/heads/master","gari.r.singh@gmail.com","hyperledger-fabric-sdk-java","b9da9353dd85fa9fec855dced85f6a25fc9d7503","8","14","0","1275","107","44","762","102","1243","160","12","0","18","1145","5","10","7","2","hyperledger-fabric-sdk-java","b9da9353dd85fa9fec855dced85f6a25fc9d7503","135","15.2","38","16061","8687","2170","5","311","8","521","21.3","745","5","1.9","5","67","602","3996","29","775","308","43","745","8","11","4377","1.7","184","102","1"
+"hyperledger-fabric-sdk-java","97ca7c60a1814ecbff701140694541cf68139360","2017-10-12 07:19:55","FAB-6601 Use DiagnosticFileDumper clean up trace
+
+Change-Id: I0fd33f67cb141562cd20900e59c5458f5818626e
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","97ca7c60a1814ecbff701140694541cf68139360","8","14","0","1275","107","44","762","102","1243","160","12","0","18","1145","5","10","7","2","hyperledger-fabric-sdk-java","97ca7c60a1814ecbff701140694541cf68139360","135","15.2","38","16061","8687","2170","5","311","8","521","21.3","745","5","1.9","5","67","602","3996","29","775","308","43","745","8","11","4377","1.7","184","102","1"
+"hyperledger-fabric-sdk-java","83223f9b0246269c7e03884cc4246f198e688c34","2017-10-27 06:59:41","Merge ""FAB-6411 generate CRL""","refs/heads/master","jim_the_matrix@hotmail.com","hyperledger-fabric-sdk-java","83223f9b0246269c7e03884cc4246f198e688c34","3","14","0","1268","106","16","738","102","1238","160","12","0","18","1135","5","10","7","2","hyperledger-fabric-sdk-java","83223f9b0246269c7e03884cc4246f198e688c34","135","15.2","38","16006","8640","2158","5","306","8","516","21.2","744","5","1.9","5","67","597","3975","29","775","308","43","745","8","11","4351","1.7","184","102","1"
+"hyperledger-fabric-sdk-java","eecc9975f01979610cbf8bb84aff6f88ba96ae59","2017-10-09 12:52:39","FAB-6411 generate CRL
+
+Change-Id: I3110f26d653a47da443f0baad86eb60960745513
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","eecc9975f01979610cbf8bb84aff6f88ba96ae59","3","14","0","1268","106","16","738","102","1239","160","12","0","18","1133","5","10","7","2","hyperledger-fabric-sdk-java","eecc9975f01979610cbf8bb84aff6f88ba96ae59","135","15.2","38","16007","8634","2157","5","306","8","516","21.1","744","5","1.9","5","67","597","3971","29","775","308","43","745","8","11","4350","1.7","184","102","1"
+"hyperledger-fabric-sdk-java","cfa29f33ecd3fc41ebf0c92726bf337743f1136a","2017-10-11 11:20:28","FAB-6586 Allow for no eventHubs
+
+Change-Id: Ibe62739bdbafab84e442f38a91e3e5501794092e
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","cfa29f33ecd3fc41ebf0c92726bf337743f1136a","3","14","0","1257","106","16","738","101","1222","159","12","0","18","1128","5","10","7","2","hyperledger-fabric-sdk-java","cfa29f33ecd3fc41ebf0c92726bf337743f1136a","134","15.2","38","15895","8579","2143","5","304","8","512","21.2","741","5","1.9","5","67","593","3942","29","775","308","43","745","8","11","4316","1.7","182","101","1"
+"hyperledger-fabric-sdk-java","65a94a6711fd155eff7287fbe3a5a4099d140425","2017-10-20 04:23:05","FAB-6703 ChaincodeEvent handler fired once per block
+
+Replace hash map with LinkedList
+
+Change-Id: I609103ad92c4fb06cf555c347773088d764aa028
+Signed-off-by: Oleg Sesov <osesov@gmail.com>
+","refs/heads/master","osesov@gmail.com","hyperledger-fabric-sdk-java","65a94a6711fd155eff7287fbe3a5a4099d140425","3","14","0","1257","106","16","738","101","1223","159","12","0","18","1126","5","10","7","2","hyperledger-fabric-sdk-java","65a94a6711fd155eff7287fbe3a5a4099d140425","134","15.2","38","15896","8573","2142","5","304","8","512","21.2","741","5","1.9","5","67","593","3938","29","775","308","43","745","8","11","4315","1.7","182","101","1"
+"hyperledger-fabric-sdk-java","d0a28cfb314232ae7e19e725a82d1234583ff4fb","2017-10-18 06:52:13","[FAB-6670] Update AttrReq class definition
+
+Changed property 'require' to 'optional' to match
+the update fabric-ca API definition.
+
+Change-Id: I435f8c66a4656ae34d73ca64bf9a14a750eb659f
+Signed-off-by: Gari Singh <gari.r.singh@gmail.com>
+","refs/heads/master","gari.r.singh@gmail.com","hyperledger-fabric-sdk-java","d0a28cfb314232ae7e19e725a82d1234583ff4fb","3","14","0","1254","106","16","738","101","1220","159","12","0","18","1120","5","10","7","2","hyperledger-fabric-sdk-java","d0a28cfb314232ae7e19e725a82d1234583ff4fb","133","15.2","38","15886","8565","2141","5","304","8","512","21.2","740","5","1.9","5","67","593","3936","29","775","308","43","745","8","11","4314","1.7","182","101","1"
+"hyperledger-fabric-sdk-java","67eafc6717fe46f1a4f76b670a096aefa0467970","2017-10-12 11:16:34","[FAB-6603] Java SDK Signatures with Standard JCA/JCE
+
+Improvement [FAB-6603] changing CryptoPrimitives to use the standard
+JCA/JCE Signature class to perform the ECDSA signatures.
+
+The signature is then decoded in order to call preventMalleability.
+
+Change-Id: Ia69dade5008b5a1c91b3cd2186fc0c81fb9f3a39
+Signed-off-by: Jonathan Patchell <Jonathan.Patchell@gemalto.com>
+","refs/heads/master","Jonathan.Patchell@gemalto.com","hyperledger-fabric-sdk-java","67eafc6717fe46f1a4f76b670a096aefa0467970","3","14","0","1254","106","16","738","101","1220","159","12","0","18","1120","5","10","7","2","hyperledger-fabric-sdk-java","67eafc6717fe46f1a4f76b670a096aefa0467970","133","15.2","38","15886","8565","2141","5","304","8","512","21.2","740","5","1.9","5","67","593","3936","29","775","308","43","745","8","11","4314","1.7","182","101","1"
+"hyperledger-fabric-sdk-java","d963896bb2226dfcece714cb08859cced480b2ad","2017-10-08 12:11:00","FAB-6244 CompletableFuture can leak in Channel
+
+Updated with code review comments.
+
+Change-Id: I5c741afc76d9517fd2d1d7eb57fa2b04a7d367d8
+Signed-off-by: sgdev <sharadthedev@gmail.com>
+","refs/heads/master","sharadthedev@gmail.com","hyperledger-fabric-sdk-java","d963896bb2226dfcece714cb08859cced480b2ad","3","14","0","1254","106","16","738","100","1211","158","12","0","17","1118","5","10","7","2","hyperledger-fabric-sdk-java","d963896bb2226dfcece714cb08859cced480b2ad","133","15.2","37","15852","8538","2133","5","303","8","511","21.1","739","5","1.9","5","66","591","3917","29","775","308","43","725","8","11","4304","1.7","182","101","1"
+"hyperledger-fabric-sdk-java","d366074e650f8419f503e1b30f1b5b117e024fcb","2017-10-07 17:10:32","FAB-6312 unregister misspelled unRegister in method
+
+This change sets rectifies the misspelled unRegister in method names.
+
+Change-Id: I8087c27f7fe323b0ecda5257a5efd9ec227c182c
+Signed-off-by: sgdev <sharadthedev@gmail.com>
+","refs/heads/master","sharadthedev@gmail.com","hyperledger-fabric-sdk-java","d366074e650f8419f503e1b30f1b5b117e024fcb","3","14","0","1254","106","17","738","100","1213","158","12","0","17","1125","5","10","7","2","hyperledger-fabric-sdk-java","d366074e650f8419f503e1b30f1b5b117e024fcb","133","15.2","37","15840","8543","2135","5","307","10","515","21.1","737","5","2.1","5","66","595","3924","29","775","336","43","725","8","11","4373","1.7","182","101","1"
+"hyperledger-fabric-sdk-java","38e0d3807b88a21a6038f1b3a4c2fd60ca7c51f6","2017-10-04 10:32:18","FAB-6245 Return of BlockInfo.getTransactionActionInfos
+
+Change-Id: Id3db51876015867dab62a18d80e9e1b4612d5c4f
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","38e0d3807b88a21a6038f1b3a4c2fd60ca7c51f6","3","14","0","1254","106","17","738","100","1213","158","12","0","17","1125","5","10","7","2","hyperledger-fabric-sdk-java","38e0d3807b88a21a6038f1b3a4c2fd60ca7c51f6","133","15.2","37","15840","8543","2135","5","307","10","515","21.1","737","5","2.1","5","66","595","3924","29","775","336","43","725","8","11","4373","1.7","182","101","1"
+"hyperledger-fabric-sdk-java","85ba0534888aa7df5e3d0b34d64ad5d2a33db663","2017-10-03 07:26:27","FAB-5827 Add integration test ecert attr.
+
+PS 5 test ignored for v1.0
+
+Change-Id: I8e6c207b7a967e13bb8b39fe8ec37125f16dc39a
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","85ba0534888aa7df5e3d0b34d64ad5d2a33db663","3","14","0","1259","106","17","738","100","1213","158","12","0","17","1125","5","10","7","2","hyperledger-fabric-sdk-java","85ba0534888aa7df5e3d0b34d64ad5d2a33db663","133","15.3","37","15864","8546","2136","5","314","10","522","21.1","738","5","2.1","5","66","602","3925","29","775","336","43","725","8","11","4408","1.7","182","101","1"
+"hyperledger-fabric-sdk-java","1ceab9a6de2a30d15660e77c8482001f476dae45","2017-08-04 12:03:38","FAB-2564 crypto configuration
+
+PS 5 Addressed Jim's review.
+
+Change-Id: Iabc0f86962e63f3a0828e5399f6a5f0e322e80c0
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","1ceab9a6de2a30d15660e77c8482001f476dae45","3","14","0","1257","106","17","738","100","1209","161","12","0","17","1127","5","10","7","2","hyperledger-fabric-sdk-java","1ceab9a6de2a30d15660e77c8482001f476dae45","133","15.2","37","15831","8529","2131","5","314","10","522","21.1","738","5","2.1","5","66","602","3916","29","775","336","43","725","8","11","4404","1.7","182","101","1"
+"hyperledger-fabric-sdk-java","9282be96df6e5bd72d5aaca7b057b1693ae89af8","2017-09-18 12:15:03","FAB-6200 Java serialize channels.
+
+PS2 Check for shutdown channel.
+PS3 Minor cleanup no need for thread local.
+PS4 Remove unnecessary added code.
+PS5 Remove added commented code.
+PS6 Minor testcode change.
+PS7 Refactor cleaner to serialize on client itself.
+PS8 Refactor samplestore to use above.
+PS9 Typo fix.
+PS10 """"
+PS11 make sure stream closed.
+PS12 Make sure client is updated with channel.
+PS13 Move checks on both channels.
+PS14 sync on channels
+PS15 Do query peer channels on both again.
+
+Change-Id: I0e379d5dab626a4fd71cb66298612f5611215b78
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","9282be96df6e5bd72d5aaca7b057b1693ae89af8","3","14","0","1273","100","17","716","94","1188","156","13","0","17","1105","5","10","7","2","hyperledger-fabric-sdk-java","9282be96df6e5bd72d5aaca7b057b1693ae89af8","132","15.8","36","15512","8333","2065","5","335","12","539","20.9","729","5","3.2","5","64","616","3817","28","755","490","41","705","8","15","4414","1.8","174","99","1"
+"hyperledger-fabric-sdk-java","24390b41241a5903378d6a1ffb6eb72db978f309","2017-09-12 07:15:40","FAB-6117 Update proto. snapshot fix
+
+Orderer wait time overall configurable.
+Remove dead code CACERTS dir.
+
+Change-Id: Ib6b31f6fa4e2280b023e792d0659006eaab48eb5
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","24390b41241a5903378d6a1ffb6eb72db978f309","3","14","0","1268","96","17","712","94","1182","156","13","0","17","1098","5","10","7","2","hyperledger-fabric-sdk-java","24390b41241a5903378d6a1ffb6eb72db978f309","132","15.8","36","15354","8232","2040","5","330","12","535","20.6","724","5","3.2","5","61","608","3767","27","650","490","37","705","8","15","4334","1.8","175","99","1"
+"hyperledger-fabric-sdk-java","8ccc1a77d55a1dfcb5dde79df1c11266da0bc43d","2017-08-30 11:36:27","FAB-5827 Support attrib. req. for enrollment.
+
+Change-Id: Ibf57b250b43ed796da1178231bdf06d53476d978
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","8ccc1a77d55a1dfcb5dde79df1c11266da0bc43d","3","14","0","1268","96","17","710","94","1182","156","13","0","17","1099","5","10","7","2","hyperledger-fabric-sdk-java","8ccc1a77d55a1dfcb5dde79df1c11266da0bc43d","132","15.8","36","15353","8230","2040","5","330","12","536","20.6","724","5","3.4","5","61","609","3767","27","650","518","37","705","8","16","4334","1.8","175","99","1"
+"hyperledger-fabric-sdk-java","7f6dc287d9ace3b145805e730ee75e351a2a271a","2017-08-28 11:58:38","FAB-5943 Update protos check on duplicate channel.
+
+Change-Id: Ia717df5a99f8776a9a6481242eb330df1967ac73
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","7f6dc287d9ace3b145805e730ee75e351a2a271a","3","14","0","1262","96","17","706","94","1172","154","13","0","17","1095","5","10","7","2","hyperledger-fabric-sdk-java","7f6dc287d9ace3b145805e730ee75e351a2a271a","131","15.8","36","15315","8203","2030","5","330","12","536","20.5","720","5","3.4","5","61","609","3757","27","650","518","37","705","8","16","4330","1.8","175","99","1"
+"hyperledger-fabric-sdk-java","c63dd834d4f7affacb22cc8709888a5349dc0956","2017-08-23 10:36:05","FAB-5892 Facilitate Integration with configuration
+
+Change-Id: Id571d1e30a57bcfe3db671d000cbf2d82c66a86f
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","c63dd834d4f7affacb22cc8709888a5349dc0956","3","14","0","1262","96","17","706","94","1171","154","13","0","17","1095","5","10","7","2","hyperledger-fabric-sdk-java","c63dd834d4f7affacb22cc8709888a5349dc0956","131","15.8","36","15277","8179","2019","5","331","12","537","20.4","719","5","3.4","5","61","610","3743","27","650","518","37","705","8","16","4335","1.8","175","99","1"
+"hyperledger-fabric-sdk-java","f94d5ff367e1a0e8ba497fd0bd16af546eae3295","2017-08-18 14:23:10","FAB-5846 Infinite wait on slow channel update
+
+Change-Id: Id47b57f9283e97171ac10a8d134795b39a75623b
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","f94d5ff367e1a0e8ba497fd0bd16af546eae3295","3","14","0","1249","94","16","704","91","1154","154","13","0","17","1091","5","10","7","2","hyperledger-fabric-sdk-java","f94d5ff367e1a0e8ba497fd0bd16af546eae3295","129","15.9","34","15029","8047","1970","5","323","12","515","20.3","714","5","3.4","5","58","585","3672","27","645","518","36","665","8","16","4140","1.7","161","97","1"
+"hyperledger-fabric-sdk-java","7011ca42b7d5d46b8749373a0a84c7d3d8569a92","2017-08-01 07:59:32","FAB-5387 Listener for custom chaincode events.
+
+Change-Id: I3082678b840d4149dce6a6b772f2cb1ba23091a9
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","7011ca42b7d5d46b8749373a0a84c7d3d8569a92","3","14","0","1249","94","16","704","91","1154","154","13","0","17","1087","5","10","7","2","hyperledger-fabric-sdk-java","7011ca42b7d5d46b8749373a0a84c7d3d8569a92","129","15.9","34","15021","8040","1969","5","323","12","515","20.3","714","5","3.4","5","58","585","3669","27","645","518","36","665","8","16","4139","1.7","161","97","1"
+"hyperledger-fabric-sdk-java","6ac15e6b6a42b7f4350e3a6be329058f2f1bd749","2017-08-06 14:40:08","FAB-5039 provide failure reason.
+
+Change-Id: Ib450f2d6944cdea0315cfaad0a882777fe3c9599
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","6ac15e6b6a42b7f4350e3a6be329058f2f1bd749","3","14","0","1225","91","16","674","91","1126","150","13","0","16","1070","5","10","7","2","hyperledger-fabric-sdk-java","6ac15e6b6a42b7f4350e3a6be329058f2f1bd749","126","16.4","34","14703","7862","1912","5","342","12","531","20.1","697","5","3.5","5","58","601","3575","27","645","518","36","665","8","17","4155","1.8","157","95","1"
+"hyperledger-fabric-sdk-java","8eca761722b8c205be66756222ff0334d35f5da9","2017-08-04 12:03:38","FAB-5625 Java SDK v1.1 commencement
+
+PS 3 Addressed Jim's review.
+PS 4 Fixed  change in fabric error message.
+
+Change-Id: I4d905b533d5888fb52245c6a3b1fe65b0c766d4d
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","8eca761722b8c205be66756222ff0334d35f5da9","3","14","0","1225","88","14","674","91","1119","150","13","0","16","1058","5","10","7","2","hyperledger-fabric-sdk-java","8eca761722b8c205be66756222ff0334d35f5da9","126","16.4","34","14651","7823","1901","5","337","10","526","20","697","5","3.3","5","58","596","3546","27","645","490","36","665","8","17","4074","1.7","157","95","1"
+"hyperledger-fabric-sdk-java","11bd160a95fa8529d93582ec68556bb1c4652c21","2017-08-10 13:03:16","FAB-5717 Bad handling of failed responses
+
+PS 2 Quick fix expose event hub that got Transaction event.
+
+Change-Id: I5b87dcb9279f40b19a5efba7df8da5587a847e32
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","11bd160a95fa8529d93582ec68556bb1c4652c21","3","14","0","1225","88","14","674","91","1119","150","13","0","16","1058","5","10","7","2","hyperledger-fabric-sdk-java","11bd160a95fa8529d93582ec68556bb1c4652c21","126","16.4","34","14651","7823","1901","5","337","10","526","20","697","5","3.3","5","58","596","3546","27","645","490","36","665","8","17","4074","1.7","157","95","1"
+"hyperledger-fabric-sdk-java","4dc162996dbe5289be60feabaadd88bb1dafa5de","2017-08-02 08:05:09","FAB-5577 Eventhub reconnect failure.
+
+Change-Id: I3220bbdcea11dc8e2a745071adec486438ad154e
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","4dc162996dbe5289be60feabaadd88bb1dafa5de","4","14","0","1224","88","13","674","91","1115","150","13","0","16","1056","5","10","7","2","hyperledger-fabric-sdk-java","4dc162996dbe5289be60feabaadd88bb1dafa5de","126","16.4","34","14589","7788","1885","5","338","10","525","19.8","695","5","3.4","5","58","595","3528","27","645","490","36","665","8","17","4063","1.7","155","95","1"
+"hyperledger-fabric-sdk-java","764098648e38185fd5083b24b584908642d97173","2017-07-20 12:58:21","FAB-5408 Missing channel update method.
+
+PS 3: No need wait on genesis / handled in seekBlock
+PS 4: remove hardcoded 200 for retry wait time
+PS 5: rename upgrade to update, fix some typos.
+PS 6: Default logging to INFO
+PS 7: Add configtxlator to docker-compose for testing update.
+PS 8: Update READM.md for latest date
+PS 10: Full update channel test.
+PS 11: Clean up UpdateChannelIT add comments.
+PS 12: Clean up. Use common method for channel updating.
+PS 13: Clean up unnecessary logic
+
+Change-Id: I1d45faed6bb9e0ceb7ab9bcb0b487bef11f8a90b
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","764098648e38185fd5083b24b584908642d97173","4","14","0","1220","88","13","668","91","1114","150","13","0","16","1038","5","10","6","2","hyperledger-fabric-sdk-java","764098648e38185fd5083b24b584908642d97173","126","16.6","34","14550","7748","1878","5","339","10","526","19.8","694","5","3.4","5","58","595","3501","27","630","490","35","665","8","17","4067","1.7","154","95","1"
+"hyperledger-fabric-sdk-java","946e871b90ae49acc0f0ede7fe1cfa9d9898826e","2017-07-18 13:46:50","FAB-5368 No means to get channel config
+
+FAB-5368 No means to get channel config bytes for update.
+
+PS 4: Fix up javadoc. Do a sanity check in End2endAndBackAgainIT
+       for getChannelConfigurationBytes
+
+Change-Id: Ia7dd6de821e507ac37db17454072d85b86cb9664
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","946e871b90ae49acc0f0ede7fe1cfa9d9898826e","4","14","0","1204","86","11","634","87","1079","149","10","0","16","999","5","10","4","2","hyperledger-fabric-sdk-java","946e871b90ae49acc0f0ede7fe1cfa9d9898826e","125","16.4","34","14212","7579","1827","5","324","10","507","19.4","679","5","3.4","5","56","574","3409","27","600","490","33","665","8","17","3872","1.7","150","94","1"
+"hyperledger-fabric-sdk-java","8d12ffb1e571372f4233638da85bfe163520ac81","2017-07-17 09:25:05","FAB-5344 Provide common handling for Seek
+
+PS 5: fix Envelop->Envelope in test code
+
+Change-Id: Iaa0d35c72c204a1c67452bc3fe4e7d7e0507d2cc
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","8d12ffb1e571372f4233638da85bfe163520ac81","4","14","0","1201","86","11","634","86","1076","149","10","0","16","992","5","10","4","2","hyperledger-fabric-sdk-java","8d12ffb1e571372f4233638da85bfe163520ac81","125","16.3","34","14174","7568","1823","5","324","10","507","19.4","678","5","3.5","5","56","574","3402","27","600","490","33","665","8","17","3872","1.7","150","94","1"
+"hyperledger-fabric-sdk-java","c4910c0281319ef7ff9ad3306da19728dca078b5","2017-06-20 11:57:18","FAB-5312 Dump diagnostic files for logging.
+
+Change-Id: Ib86f05755e10b1011921f495ae6abb43a8f878be
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","c4910c0281319ef7ff9ad3306da19728dca078b5","4","14","0","1201","87","11","640","86","1088","150","10","0","16","1053","5","10","4","2","hyperledger-fabric-sdk-java","c4910c0281319ef7ff9ad3306da19728dca078b5","125","16.2","34","14227","7620","1828","5","324","10","507","19.4","677","5","3.4","5","56","574","3419","27","600","490","33","665","8","17","3874","1.7","150","94","1"
+"hyperledger-fabric-sdk-java","eb61de9c094e642deb783512c768cad33d4e4b6a","2017-07-18 10:52:26","Merge ""FAB-5242 The TLS configuration not working""","refs/heads/master","jim_the_matrix@hotmail.com","hyperledger-fabric-sdk-java","eb61de9c094e642deb783512c768cad33d4e4b6a","4","8","0","1176","86","11","628","86","1069","145","9","0","16","1040","5","10","4","2","hyperledger-fabric-sdk-java","eb61de9c094e642deb783512c768cad33d4e4b6a","123","16.4","34","13985","7474","1793","5","312","10","491","19.3","668","5","3.6","5","51","556","3359","27","580","498","31","665","8","17","3686","1.6","149","93","1"
+"hyperledger-fabric-sdk-java","024c41763dde7923d2ac2a0abbf37c269a65f223","2017-07-12 12:58:21","FAB-5290 Orderer wait time not being set properly
+
+Change-Id: I297667775d9a0319b4ea47a5f43b0327abc33bc2
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","024c41763dde7923d2ac2a0abbf37c269a65f223","4","8","0","1176","86","11","628","86","1069","145","9","0","16","1040","5","10","4","2","hyperledger-fabric-sdk-java","024c41763dde7923d2ac2a0abbf37c269a65f223","123","16.4","34","13985","7474","1793","5","312","10","491","19.3","668","5","3.6","5","51","556","3359","27","580","498","31","665","8","17","3686","1.6","149","93","1"
+"hyperledger-fabric-sdk-java","12334a9501f351480e47988967cdfb3476704d00","2017-07-12 13:28:45","FAB-5242 The TLS configuration not working
+
+The TLS configuration not work for peer/orderer
+
+Change-Id: I8f4503a7c2d4b95a5e7f14b277501f77e6e44c6d
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","12334a9501f351480e47988967cdfb3476704d00","4","8","0","1176","86","11","626","86","1069","145","9","0","16","1038","5","10","4","2","hyperledger-fabric-sdk-java","12334a9501f351480e47988967cdfb3476704d00","123","16.4","34","13974","7464","1792","5","312","10","491","19.3","668","5","3.6","5","51","556","3355","27","580","498","31","665","8","17","3686","1.6","149","93","1"
+"hyperledger-fabric-sdk-java","7ed5ebc7388a3bed9441cde2c5a85af746007b91","2017-07-17 09:30:39","Merge ""[FAB-5178] deliver envelope get 503 error""","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","7ed5ebc7388a3bed9441cde2c5a85af746007b91","4","8","0","1176","86","11","626","86","1069","145","9","0","16","1038","5","10","4","2","hyperledger-fabric-sdk-java","7ed5ebc7388a3bed9441cde2c5a85af746007b91","123","16.4","34","13974","7464","1792","5","312","10","491","19.3","668","5","3.6","5","51","556","3355","27","580","498","31","665","8","17","3686","1.6","149","93","1"
+"hyperledger-fabric-sdk-java","9d8e225d3c37869c6b607d0f03e3f22a4ed3998a","2017-07-04 20:22:15","[FAB-5178] deliver envelope get 503 error
+
+Change-Id: I3a37f7c9c56022bf41744692d30ddb763fa6e41f
+Signed-off-by: liuwenliang0632@qq.com <liuwenliang0632@qq.com>
+","refs/heads/master","liuwenliang0632@qq.com","hyperledger-fabric-sdk-java","9d8e225d3c37869c6b607d0f03e3f22a4ed3998a","4","8","0","1176","86","11","626","86","1069","145","9","0","16","1038","5","10","4","2","hyperledger-fabric-sdk-java","9d8e225d3c37869c6b607d0f03e3f22a4ed3998a","123","16.4","34","13974","7464","1792","5","312","10","491","19.3","668","5","3.6","5","51","556","3355","27","580","498","31","665","8","17","3686","1.6","149","93","1"
+"hyperledger-fabric-sdk-java","0171c93d6fe84b65df9ca5984b85a9609f8a54b8","2017-07-13 07:04:54","FAB-5299 v1.0.1 release start
+
+Change-Id: Iefb76c6de4fc816af7a8e42f23c4de20f212344c
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","0171c93d6fe84b65df9ca5984b85a9609f8a54b8","4","8","0","1176","86","11","626","86","1069","145","9","0","16","1037","5","10","4","2","hyperledger-fabric-sdk-java","0171c93d6fe84b65df9ca5984b85a9609f8a54b8","123","16.4","34","13974","7464","1791","5","312","10","491","19.3","668","5","3.6","5","51","556","3355","27","580","498","31","665","8","17","3685","1.6","149","93","1"
+"hyperledger-fabric-sdk-java","137070b21c1c3c5509ee6d069e2c020443fdd6f3","2017-07-04 03:52:31","[FAB-5162] java-sdk leak memory after long run
+
+[FAB-5162] txListeners in Class channel forgot to rmeove unless items,
+this lead to memory leak. remoing the useless items would resolve the
+problem.
+
+Change-Id: I5d00e94400688bc1a31ef42bc5e1955e203e621d
+Signed-off-by: zhang hongquan <hongquan.zhang@dianrong.com>
+","refs/heads/master","hongquan.zhang@dianrong.com","hyperledger-fabric-sdk-java","137070b21c1c3c5509ee6d069e2c020443fdd6f3","4","8","0","1176","86","11","626","86","1069","145","9","0","16","1037","5","10","4","2","hyperledger-fabric-sdk-java","137070b21c1c3c5509ee6d069e2c020443fdd6f3","123","16.4","34","13974","7464","1791","5","312","10","491","19.3","668","5","3.6","5","51","556","3355","27","580","498","31","665","8","17","3685","1.6","149","93","1"
+"hyperledger-fabric-sdk-java","6431a0a91bbc2ee646542f768caf51cff41a4b17","2017-06-19 11:16:06","FAB-4869 remove hardcode orderer wait
+
+Change-Id: I1e880f53c8970e2aa9193a738e7271a235303ddb
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","6431a0a91bbc2ee646542f768caf51cff41a4b17","4","8","0","1176","86","11","626","86","1069","144","9","0","16","1036","5","10","4","2","hyperledger-fabric-sdk-java","6431a0a91bbc2ee646542f768caf51cff41a4b17","123","16.4","34","13971","7461","1790","5","311","10","490","19.2","668","5","3.6","5","51","555","3353","27","580","498","31","665","8","17","3683","1.6","149","93","1"
+"hyperledger-fabric-sdk-java","bc0e3fa48a7b6a97ce9717e7601674e8dd3b0525","2017-06-20 07:14:39","Merge ""FAB-4850 Orderer reconnect on errors""","refs/heads/master","jim_the_matrix@hotmail.com","hyperledger-fabric-sdk-java","bc0e3fa48a7b6a97ce9717e7601674e8dd3b0525","4","8","0","1173","86","11","622","86","1067","144","9","0","16","1036","5","10","4","2","hyperledger-fabric-sdk-java","bc0e3fa48a7b6a97ce9717e7601674e8dd3b0525","123","16.4","34","13951","7452","1789","5","311","10","490","19.2","668","5","3.6","5","51","555","3349","27","580","498","31","665","8","17","3683","1.6","149","93","1"
+"hyperledger-fabric-sdk-java","eccc738df7e19d876f1861bb3eaa419eb634f520","2017-06-17 14:02:08","FAB-4850 Orderer reconnect on errors
+
+PS 3 Make timeout for orderer waits configurable.
+PS 4 Strubs are not reused managedchannel maintains single connection
+      no need to warn.
+PS 5 Factor out timeout setting
+
+Change-Id: Ice49db47580723bf983a411f253268a7e00c7991
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","eccc738df7e19d876f1861bb3eaa419eb634f520","4","8","0","1173","86","11","622","86","1067","144","9","0","16","1036","5","10","4","2","hyperledger-fabric-sdk-java","eccc738df7e19d876f1861bb3eaa419eb634f520","123","16.4","34","13947","7449","1787","5","311","10","490","19.2","668","5","3.6","5","51","555","3347","27","580","498","31","665","8","17","3681","1.6","149","93","1"
+"hyperledger-fabric-sdk-java","fc1d7cea37112be6586fdb103f3117c0b540aa3f","2017-06-18 01:46:13","FAB-4454 Increase IT coverage for HFCAClient
+
+. Added more tests to increase coverage
+. Changed the existing tests to use the ""thrown"" pattern
+. Added MockHFCAClient to help test coverage
+. Added mechanism to generate unique users for each run
+(allows the tests to be run repeatedly without needing to restart CA)
+. Minor change to HFCAClient to prevent NPEs
+
+Change-Id: I920213f1bd7d372ba9200d5de68ca0c0e3344bb7
+Signed-off-by: Chris Murphy <chrism@fast.au.fujitsu.com>
+","refs/heads/master","chrism@fast.au.fujitsu.com","hyperledger-fabric-sdk-java","fc1d7cea37112be6586fdb103f3117c0b540aa3f","4","8","0","1173","81","11","626","82","1071","144","9","0","16","1026","5","10","4","2","hyperledger-fabric-sdk-java","fc1d7cea37112be6586fdb103f3117c0b540aa3f","123","16.4","32","13906","7424","1777","5","312","10","493","19.1","668","5","3.6","5","51","556","3336","25","580","498","31","625","8","17","3651","1.6","151","93","1"
+"hyperledger-fabric-sdk-java","dc6c72c72aff8d9f9626c05d1509ff50c7e7a18a","2017-06-13 15:02:47","FAB-4596 Improve code coverage
+
+Improve code coverage for the fabric-sdk-java code base
+
+Change-Id: If9e62ee86315b70acfd0bbd8ab845b1775c71386
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","dc6c72c72aff8d9f9626c05d1509ff50c7e7a18a","4","8","0","1173","81","11","626","82","1071","144","9","0","16","1026","5","10","4","2","hyperledger-fabric-sdk-java","dc6c72c72aff8d9f9626c05d1509ff50c7e7a18a","123","16.4","32","13902","7421","1775","5","312","10","493","19.1","668","5","3.6","5","51","556","3334","25","580","498","31","625","8","17","3649","1.6","151","93","1"
+"hyperledger-fabric-sdk-java","18b2e13c36bf76ac05873d370f6e84b73864215e","2017-06-14 22:43:47","FAB-4454 Increase test coverage for sdk.security
+
+. Increased test coverage for CryptoPrimitives
+. Added new methods to TestUtils
+. Minor changes to main code to facilitate unit tests
+. Fixed minor issue with Config ExtraLogLevel
+. Set ExtraLogLevel to 10 in cirun.sh to help ensure logger output is
+covered
+
+Change-Id: I75e507b41339cbaffe4ba21206153883ccb9f75d
+Signed-off-by: Chris Murphy <chrism@fast.au.fujitsu.com>
+","refs/heads/master","chrism@fast.au.fujitsu.com","hyperledger-fabric-sdk-java","18b2e13c36bf76ac05873d370f6e84b73864215e","4","8","0","1173","78","11","624","81","1070","144","9","0","16","1025","5","10","4","2","hyperledger-fabric-sdk-java","18b2e13c36bf76ac05873d370f6e84b73864215e","123","16.4","32","13891","7413","1772","5","312","13","493","19.1","668","5","3.8","5","51","556","3329","25","580","527","31","625","8","17","3676","1.7","151","93","1"
+"hyperledger-fabric-sdk-java","8232a0614a597399341b8b48618f96e7d39c624b","2017-06-13 03:36:48","FAB-4454 Increase junit coverage transaction
+
+. Increased junit coverage for the fabric.sdk.transaction package
+. Added new unit tests for various classes
+. Removed some assert statements
+. Removed ProtoUtils.createChaincodeSpec as it was unused
+. Removed TransactionContext.attrs property as it was unused
+. Removed some other minor dead code and minor refactoring
+
+Change-Id: I70c179dc96069160365cbd1ba1a5ca1b8203643e
+Signed-off-by: Chris Murphy <chrism@fast.au.fujitsu.com>
+","refs/heads/master","chrism@fast.au.fujitsu.com","hyperledger-fabric-sdk-java","8232a0614a597399341b8b48618f96e7d39c624b","4","8","0","1173","78","11","624","81","1071","145","9","0","16","1024","5","10","4","2","hyperledger-fabric-sdk-java","8232a0614a597399341b8b48618f96e7d39c624b","123","16.4","32","13889","7415","1774","5","314","13","495","19.1","668","5","3.8","5","51","558","3332","25","580","527","31","625","8","17","3716","1.7","151","93","1"
+"hyperledger-fabric-sdk-java","53f69557e334902f9933780d72c9897e68856ffe","2017-06-13 05:33:10","FAB-4596 Improve code coverage
+
+Improve code coverage for the fabric-sdk-java code base
+
+Change-Id: I5d549d02b3accbeb97463ca31328a10287df4f4b
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","53f69557e334902f9933780d72c9897e68856ffe","4","8","0","1175","78","11","626","84","1079","145","9","0","18","1037","5","10","4","2","hyperledger-fabric-sdk-java","53f69557e334902f9933780d72c9897e68856ffe","123","16.3","34","13916","7444","1774","5","310","13","492","19.1","673","5","3.8","5","53","557","3346","25","580","527","31","665","8","17","3674","1.6","152","93","1"
+"hyperledger-fabric-sdk-java","819afce09981daea43561f2657981b469c54223e","2017-06-12 13:22:14","[FAB-4363] Increase fabric-sdk-java code coverage #5
+
+This change improves the code coverage of:
+ChannelConfiguration.class
+Orderer.class
+Peer.class
+
+Change-Id: Iee85392eda3a31562189b4360f395454d419d767
+Signed-off-by: John Harrison <harrijk63@gmail.com>
+","refs/heads/master","harrijk63@gmail.com","hyperledger-fabric-sdk-java","819afce09981daea43561f2657981b469c54223e","4","8","0","1198","86","16","630","84","1094","146","9","0","18","1053","5","10","4","2","hyperledger-fabric-sdk-java","819afce09981daea43561f2657981b469c54223e","126","16","34","14089","7599","1887","5","327","13","512","19.9","668","5","3.7","5","53","577","3427","25","580","527","31","665","8","15","3976","1.7","157","95","1"
+"hyperledger-fabric-sdk-java","13cbafa27e93990316d92c908e9bad170cabbcbb","2017-06-12 16:14:05","Merge ""FAB-4574 add missing license header""","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","13cbafa27e93990316d92c908e9bad170cabbcbb","4","8","0","1198","86","16","630","84","1094","146","9","0","18","1053","5","10","4","2","hyperledger-fabric-sdk-java","13cbafa27e93990316d92c908e9bad170cabbcbb","126","16","34","14089","7599","1887","5","327","13","512","19.9","668","5","3.7","5","53","577","3427","25","580","527","31","665","8","15","3976","1.7","157","95","1"
+"hyperledger-fabric-sdk-java","9e3ae8ed82eea81b87ba567e5bcde21d0388d618","2017-06-12 12:38:01","FAB-4574 add missing license header
+
+Change-Id: I614432eb9b1be6728179355c642557c03a087bd3
+Signed-off-by: Christopher Ferris <chrisfer@us.ibm.com>
+","refs/heads/master","chrisfer@us.ibm.com","hyperledger-fabric-sdk-java","9e3ae8ed82eea81b87ba567e5bcde21d0388d618","4","8","0","1195","87","16","744","89","1174","166","9","0","23","1093","5","14","37","2","hyperledger-fabric-sdk-java","9e3ae8ed82eea81b87ba567e5bcde21d0388d618","127","14.4","35","14300","7888","1935","5","305","13","538","20.4","686","5","3.6","5","55","603","3564","23","525","520","30","685","8","18","4051","1.7","202","95","1"
+"hyperledger-fabric-sdk-java","d0f1811210f8bba0651455eae7dccaec5b44e0e3","2017-06-10 10:37:45","FAB-4532 Signature algorithm wrong for endorsers
+
+Change-Id: I7e0e019f62575180fa38dd5b211f5105e87f29a7
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","d0f1811210f8bba0651455eae7dccaec5b44e0e3","4","8","0","1198","86","16","630","84","1094","146","9","0","18","1053","5","10","4","2","hyperledger-fabric-sdk-java","d0f1811210f8bba0651455eae7dccaec5b44e0e3","126","16","34","14084","7599","1887","5","327","13","512","19.9","668","5","3.7","5","53","577","3427","25","580","527","31","665","8","15","3976","1.7","157","95","1"
+"hyperledger-fabric-sdk-java","bedc97cb282a69f6249c800f1a6d6f477b685113","2017-06-12 05:22:01","FAB-4566 Minor code cleanup
+
+Change-Id: I744aada6ad4006eea7ffc08c682091df7156ffc4
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","bedc97cb282a69f6249c800f1a6d6f477b685113","4","8","0","1210","86","16","676","84","1094","154","9","0","18","1057","5","10","10","2","hyperledger-fabric-sdk-java","bedc97cb282a69f6249c800f1a6d6f477b685113","126","16","34","14106","7619","1889","5","334","13","527","19.9","669","5","3.7","5","53","592","3437","25","580","527","31","665","8","15","4034","1.8","165","95","1"
+"hyperledger-fabric-sdk-java","2aee0bdb6632666262b8dba050c7ebc5def953d6","2017-06-10 02:08:23","FAB-4504 Add checkstyle import ordering rules
+
+. Enforced the order: java, javax, other, static
+. All sections are sorted alphabetically
+. Line breaks between groups are allowed but not enforced
+. Changed pom.xml to display errors on console for maven builds
+. Also fixed the ordering of the imports in a couple of source files
+
+Change-Id: I8a0c57706ccaa4439806948adcc7cb67c432e493
+Signed-off-by: Chris Murphy <chrism@fast.au.fujitsu.com>
+","refs/heads/master","chrism@fast.au.fujitsu.com","hyperledger-fabric-sdk-java","2aee0bdb6632666262b8dba050c7ebc5def953d6","4","8","0","1210","86","16","676","84","1094","154","9","0","18","1057","5","10","10","2","hyperledger-fabric-sdk-java","2aee0bdb6632666262b8dba050c7ebc5def953d6","126","16","34","14124","7619","1889","5","334","13","528","19.9","669","5","3.7","5","53","593","3437","25","580","527","31","665","8","15","4039","1.8","166","95","1"
+"hyperledger-fabric-sdk-java","d86c34636742685f5b0f65ffb3e45ae55f07b8a7","2017-06-09 18:50:26","FAB-4454 Remove unused deprecated method
+
+Change-Id: I9be7f2f5ac0fa20accc4406c977e02efd08de838
+Signed-off-by: Chris Murphy <chrism@fast.au.fujitsu.com>
+","refs/heads/master","chrism@fast.au.fujitsu.com","hyperledger-fabric-sdk-java","d86c34636742685f5b0f65ffb3e45ae55f07b8a7","4","8","0","1210","86","16","676","84","1094","154","9","0","18","1057","5","10","10","2","hyperledger-fabric-sdk-java","d86c34636742685f5b0f65ffb3e45ae55f07b8a7","126","16","34","14124","7619","1889","5","334","13","528","19.9","669","5","3.7","5","53","593","3437","25","580","527","31","665","8","15","4039","1.8","166","95","1"
+"hyperledger-fabric-sdk-java","90f46035c5b40d23e02395058824b9b9b2da3847","2017-06-09 09:24:35","FAB-4501-Bad null check channelConfiguration
+
+Change-Id: Ie61bfa9c106a4767449c849ad901beea2276574d
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","90f46035c5b40d23e02395058824b9b9b2da3847","4","8","0","1210","86","16","676","84","1094","154","9","0","18","1057","5","10","10","2","hyperledger-fabric-sdk-java","90f46035c5b40d23e02395058824b9b9b2da3847","126","16","34","14135","7623","1891","5","334","13","529","19.9","670","5","3.7","5","53","594","3438","25","580","527","31","665","8","16","4049","1.8","166","95","1"
+"hyperledger-fabric-sdk-java","c2602e83232ff3826954fdecb87b8fde16f686ad","2017-06-09 09:19:03","Merge changes Ia88d6471,Ic93ace54
+
+* changes:
+  FAB-4454 Increase junit coverage for Config.java
+  FAB-4454 Remove unused and duplicated imports
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","c2602e83232ff3826954fdecb87b8fde16f686ad","4","8","0","1210","86","16","676","84","1094","155","9","0","18","1057","5","10","10","2","hyperledger-fabric-sdk-java","c2602e83232ff3826954fdecb87b8fde16f686ad","126","16","34","14139","7626","1892","5","334","13","529","19.9","671","5","3.7","5","53","594","3439","25","580","527","31","665","8","16","4049","1.8","166","95","1"
+"hyperledger-fabric-sdk-java","8ba882df17174fadb6c8db1c49d06a6f3e2e504b","2017-06-09 08:37:53","Merge ""[FAB-4363] Increase fabric-sdk-java code coverage #4""","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","8ba882df17174fadb6c8db1c49d06a6f3e2e504b","4","8","0","1210","86","16","676","84","1094","155","9","0","22","1057","5","18","10","2","hyperledger-fabric-sdk-java","8ba882df17174fadb6c8db1c49d06a6f3e2e504b","126","16","34","14147","7634","1892","5","334","13","529","19.9","671","5","3.7","5","53","594","3439","25","580","527","31","665","8","16","4049","1.8","166","95","1"
+"hyperledger-fabric-sdk-java","d0329662daa4e74ec7536a4f444556914cc69b9c","2017-06-08 12:10:18","[FAB-4363] Increase fabric-sdk-java code coverage #4
+
+This change improves the code coverage of:
+org.hyperledger.fabric.sdk.security
+
+Change-Id: Ia48f1570e656d156c1fd2dc6e646b63d69e2a77c
+Signed-off-by: John Harrison <harrijk63@gmail.com>
+","refs/heads/master","harrijk63@gmail.com","hyperledger-fabric-sdk-java","d0329662daa4e74ec7536a4f444556914cc69b9c","4","8","0","1210","86","16","676","84","1094","155","9","0","22","1057","5","18","10","2","hyperledger-fabric-sdk-java","d0329662daa4e74ec7536a4f444556914cc69b9c","126","16","34","14149","7636","1892","5","336","13","531","19.9","671","5","3.7","5","53","596","3441","25","580","527","31","665","8","16","4051","1.8","166","95","1"
+"hyperledger-fabric-sdk-java","86befc2001faf51a089a04f59c4abadf81ddb827","2017-06-09 00:21:47","FAB-4454 Remove unused and duplicated imports
+
+Change-Id: Ic93ace5411e91f93b491767e11d2dc8eb5304e71
+Signed-off-by: Chris Murphy <chrism@fast.au.fujitsu.com>
+","refs/heads/master","chrism@fast.au.fujitsu.com","hyperledger-fabric-sdk-java","86befc2001faf51a089a04f59c4abadf81ddb827","4","8","0","1182","86","16","702","89","1145","156","9","0","18","1077","5","10","4","2","hyperledger-fabric-sdk-java","86befc2001faf51a089a04f59c4abadf81ddb827","126","14.7","35","14168","7765","1918","5","291","13","489","20.2","681","5","3.7","5","55","556","3513","25","585","527","32","685","8","16","3850","1.7","169","95","1"
+"hyperledger-fabric-sdk-java","a405626abf1650f02001af831ebab1f801734e42","2017-06-08 16:41:46","FAB-4454 Increase junit coverage for helper/Utils
+
+. Added units tests to cover all methods
+. Moved UtilsTest into the helper dir where it belongs
+. Removed some assert statements in Utils.java
+
+Change-Id: Ieab4ccd725534e64ee789c69a8ebc38b30cb3d84
+Signed-off-by: Chris Murphy <chrism@fast.au.fujitsu.com>
+","refs/heads/master","chrism@fast.au.fujitsu.com","hyperledger-fabric-sdk-java","a405626abf1650f02001af831ebab1f801734e42","4","8","0","1182","86","16","702","89","1145","156","9","0","22","1077","5","18","4","2","hyperledger-fabric-sdk-java","a405626abf1650f02001af831ebab1f801734e42","126","14.7","35","14176","7773","1918","5","291","13","489","20.2","681","5","3.7","5","55","556","3513","25","585","527","32","685","8","16","3850","1.7","169","95","1"
+"hyperledger-fabric-sdk-java","13337b64716141995e49f3f0b81e6356fc05a06a","2017-05-25 01:51:16","[FAB-4258] Fix compile warnings for redundant code
+
+Also fix checkstyle errors in modified files.
+Update Eclipse .classpath for Maven POM changes.
+Update checkstyle configuration to allow suppression.
+Fix compile warnings in test code.
+
+Change-Id: I91b5cf5e6f3085431d490b8d821d72a5dba50c57
+Signed-off-by: Mark S. Lewis <Mark_Lewis@uk.ibm.com>
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","Mark_Lewis@uk.ibm.com","hyperledger-fabric-sdk-java","13337b64716141995e49f3f0b81e6356fc05a06a","4","8","0","1182","86","16","702","89","1145","156","9","0","22","1077","5","18","4","2","hyperledger-fabric-sdk-java","13337b64716141995e49f3f0b81e6356fc05a06a","126","14.7","35","14178","7775","1918","5","293","13","491","20.2","681","5","3.7","5","55","558","3515","25","585","527","32","685","8","16","3852","1.7","169","95","1"
+"hyperledger-fabric-sdk-java","8f1fe23df323ff4baddfee584880a98f8b33eaad","2017-06-08 11:10:25","FAB-4478 Post beta update
+
+Change-Id: I9736e8bf924230e1271871b727b4aa4a769b653a
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","8f1fe23df323ff4baddfee584880a98f8b33eaad","4","8","0","1195","87","16","744","89","1174","166","9","0","23","1093","5","14","37","2","hyperledger-fabric-sdk-java","8f1fe23df323ff4baddfee584880a98f8b33eaad","127","14.4","35","14295","7887","1935","5","305","13","538","20.4","686","5","3.6","5","55","603","3564","23","525","520","30","685","8","18","4051","1.7","202","95","1"
+"hyperledger-fabric-sdk-java","99f321bcf4a4419e1514f34a650e352cf12cdb96","2017-06-05 05:56:27","FAB-4423 Threading issues usercontext on client.
+
+Change-Id: I39a6132d5f189e157a41997d725139d5d6b39fd6
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","99f321bcf4a4419e1514f34a650e352cf12cdb96","4","8","0","1195","87","16","744","89","1174","166","9","0","23","1093","5","14","37","2","hyperledger-fabric-sdk-java","99f321bcf4a4419e1514f34a650e352cf12cdb96","127","14.4","35","14295","7888","1935","5","305","13","538","20.4","686","5","3.6","5","55","603","3564","23","525","520","30","685","8","18","4051","1.7","202","95","1"
+"hyperledger-fabric-sdk-java","00e6c80b7bf3cad38d7b26a4e6e19e37fae9355f","2017-06-05 09:15:09","[FAB-4363] Increase fabric-sdk-java code coverage #2
+
+This change improves the code coverage of the
+org.hyperledger.fabric_ca.sdk package.
+
+Classes covered:
+RegistrationRequest
+RevocationRequest
+
+Change-Id: I5a70c2e41df60ec4cf81d99bfe2c807a51885ba6
+Signed-off-by: John Harrison <harrijk63@gmail.com>
+","refs/heads/master","harrijk63@gmail.com","hyperledger-fabric-sdk-java","00e6c80b7bf3cad38d7b26a4e6e19e37fae9355f","4","8","0","1178","86","16","748","89","1165","165","9","0","23","1096","5","14","38","2","hyperledger-fabric-sdk-java","00e6c80b7bf3cad38d7b26a4e6e19e37fae9355f","127","14.3","35","14164","7820","1908","5","303","13","539","20.1","677","5","3.7","5","56","605","3540","24","535","520","31","685","8","18","4048","1.7","204","95","1"
+"hyperledger-fabric-sdk-java","37b344c1adc6c8483deaae41c70db6d78097a44c","2017-05-25 01:51:16","[FAB-4235] Fix compile and Javadoc warnings
+
+Fix to compile warnings due to code issues.
+* Minor logic errors.
+* Generic declarations and casts.
+* Resources not closed (now use try-with-resources)
+
+Resolve issues in existing Javadoc.
+
+Fixes for actual bugs flagged by Checkstyle
+* Two (static) utility classes with public constructors.
+* Peer class had equals() implementation but no hashCode().
+
+Change-Id: I5484a93b3b36cb27761b297aaa33f8321f0f4d02
+Signed-off-by: Mark S. Lewis <Mark_Lewis@uk.ibm.com>
+","refs/heads/master","Mark_Lewis@uk.ibm.com","hyperledger-fabric-sdk-java","37b344c1adc6c8483deaae41c70db6d78097a44c","4","8","0","1178","86","16","748","89","1165","165","9","0","23","1096","5","14","38","2","hyperledger-fabric-sdk-java","37b344c1adc6c8483deaae41c70db6d78097a44c","127","14.3","35","14164","7820","1908","5","303","13","539","20.1","677","5","3.7","5","56","605","3540","24","535","520","31","685","8","18","4048","1.7","204","95","1"
+"hyperledger-fabric-sdk-java","edf315b889648e76a2ebefb7cbc875685544f66f","2017-05-30 19:55:35","FAB-4241 maintaining stream
+
+java SDK - maintaining stream b/w SDK and peer
+
+Enable http/2 keepalive
+
+Change-Id: Iaf418df7d0be7726c1403807af818765ff0a8ab7
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","edf315b889648e76a2ebefb7cbc875685544f66f","5","8","0","1166","86","16","758","89","1175","165","9","0","23","1099","5","14","41","0","hyperledger-fabric-sdk-java","edf315b889648e76a2ebefb7cbc875685544f66f","127","14.3","35","14173","7819","1909","5","317","13","556","20.1","678","5","3.9","5","56","624","3544","26","565","546","33","685","8","18","4178","1.8","207","95","1"
+"hyperledger-fabric-sdk-java","220f55ad17f49fee41ef216cc93fe90f256505f4","2017-05-30 07:08:44","FAB-2956 Update server
+
+Change-Id: I14fa77be340cf8418d689bcfac596b6e299a7173
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","220f55ad17f49fee41ef216cc93fe90f256505f4","5","8","0","1166","86","16","758","89","1174","165","9","0","23","1097","5","14","41","0","hyperledger-fabric-sdk-java","220f55ad17f49fee41ef216cc93fe90f256505f4","127","14.3","35","14164","7814","1907","5","316","13","555","20.1","678","5","3.9","5","56","623","3540","26","565","546","33","685","8","18","4166","1.8","207","95","1"
+"hyperledger-fabric-sdk-java","7fe73c4e2e9582bff3c87c9d2536b40d2af4f23f","2017-05-29 19:35:23","Merge ""FAB-4156 Code clean up""","refs/heads/master","jim_the_matrix@hotmail.com","hyperledger-fabric-sdk-java","7fe73c4e2e9582bff3c87c9d2536b40d2af4f23f","5","8","0","1166","86","16","758","89","1174","165","9","0","23","1097","5","14","41","0","hyperledger-fabric-sdk-java","7fe73c4e2e9582bff3c87c9d2536b40d2af4f23f","127","14.3","35","14164","7814","1907","5","316","13","555","20.1","678","5","3.9","5","56","623","3540","26","565","546","33","685","8","18","4166","1.8","207","95","1"
+"hyperledger-fabric-sdk-java","4f4767c5ed9e46b3973c28a4941e4fe9910ba79b","2017-05-25 20:02:45","[FAB-4170] chaincodeInput deserializer
+
+Change-Id: Ic1e272efd5123948accefdd487e2f561ac0b01ae
+Signed-off-by: liuwenliang0632@qq.com <liuwenliang0632@qq.com>
+","refs/heads/master","liuwenliang0632@qq.com","hyperledger-fabric-sdk-java","4f4767c5ed9e46b3973c28a4941e4fe9910ba79b","5","8","0","1170","86","16","758","89","1179","165","9","0","23","1098","5","14","40","0","hyperledger-fabric-sdk-java","4f4767c5ed9e46b3973c28a4941e4fe9910ba79b","127","14.3","35","14233","7853","1915","5","319","15","558","20.2","682","7","4.1","5","56","626","3557","26","565","578","33","685","8","18","4211","1.8","207","95","1"
+"hyperledger-fabric-sdk-java","9a0a0a027c71e3df874af0a0f2e94c6129d56fcd","2017-05-25 07:53:25","FAB-4156 Code clean up
+
+Change-Id: I760cac01a13811b5e3f0b40999ef01473160e3f5
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","9a0a0a027c71e3df874af0a0f2e94c6129d56fcd","5","8","0","1160","86","16","756","89","1173","165","9","0","23","1093","5","14","41","0","hyperledger-fabric-sdk-java","9a0a0a027c71e3df874af0a0f2e94c6129d56fcd","126","14.4","35","14086","7773","1898","5","316","13","555","20.2","675","5","3.9","5","56","623","3522","26","565","546","33","685","8","18","4166","1.8","207","94","1"
+"hyperledger-fabric-sdk-java","465d871a12e484463376578180ab2d91252e6abc","2017-05-24 08:02:31","FAB-4088 Determine which proposals are consistent
+
+Decided this should be checked all the time by default.
+Allow users to turn off and then check explicitly if they
+so desire.
+
+Change-Id: Ied8c02db63fe6af0033e25f061031e5a75b553b2
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","465d871a12e484463376578180ab2d91252e6abc","5","8","0","1164","86","16","756","89","1178","165","9","0","23","1094","5","14","40","0","hyperledger-fabric-sdk-java","465d871a12e484463376578180ab2d91252e6abc","126","14.4","35","14155","7812","1906","5","319","15","558","20.3","679","7","4.1","5","56","626","3539","26","565","578","33","685","8","18","4211","1.8","207","94","1"
+"hyperledger-fabric-sdk-java","457ac6197f120d0759d1f31784afa46eba7f17c5","2017-05-22 05:51:08","FAB-4088 Determine which proposals are consistent
+
+Utility to determine which proposals are consistent
+
+Move ChainUtils and rename to SDKUtils so it with other public classes.
+Rename SDKUtils to just Utils for internal usage.
+Fix typo tansaction to transaction
+
+Change-Id: I0d39dc2a89dc4c57ffee035d0ec3a73b8c32b78d
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","457ac6197f120d0759d1f31784afa46eba7f17c5","4","8","0","1163","86","16","750","89","1178","165","9","0","23","1093","5","14","40","0","hyperledger-fabric-sdk-java","457ac6197f120d0759d1f31784afa46eba7f17c5","126","14.4","35","14133","7802","1902","5","319","15","558","20.2","678","7","4.1","5","56","626","3534","26","565","586","33","685","8","18","4211","1.8","207","94","1"
+"hyperledger-fabric-sdk-java","10323e4f94eb796a6ac87812aea84df67f6ec0a8","2017-05-21 07:15:34","[This fixes FAB-3969]
+
+Change-Id: I35884c0d32fc2a201313839d1c4ad180c49972ea
+Signed-off-by: liuwenliang0632@qq.com <liuwenliang0632@qq.com>
+","refs/heads/master","liuwenliang0632@qq.com","hyperledger-fabric-sdk-java","10323e4f94eb796a6ac87812aea84df67f6ec0a8","4","8","0","1161","86","16","748","89","1172","165","9","2","23","1090","5","14","40","0","hyperledger-fabric-sdk-java","10323e4f94eb796a6ac87812aea84df67f6ec0a8","126","14.4","35","14094","7779","1896","5","319","15","558","20.2","677","7","4.2","5","56","626","3522","26","565","586","33","685","8","18","4211","1.8","207","94","1"
+"hyperledger-fabric-sdk-java","40bbb9d73cb8d0bf580c0867a9d5459d21052d5e","2017-05-18 09:58:54","FAB-4025 Rename chain to channel
+
+PS 4 rename chaincode
+
+Change-Id: I14e3b2972ad2b2758f3b6ecc633f2f3a2cacf1fd
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","40bbb9d73cb8d0bf580c0867a9d5459d21052d5e","4","8","0","1157","86","16","746","89","1166","163","9","2","23","1089","5","14","40","0","hyperledger-fabric-sdk-java","40bbb9d73cb8d0bf580c0867a9d5459d21052d5e","125","14.4","34","14030","7750","1890","5","317","15","556","20.3","676","7","4.2","5","55","623","3509","26","565","586","33","665","8","18","4171","1.8","207","93","1"
+"hyperledger-fabric-sdk-java","dec17727ddb6b269f8fb30930e10d89bc185225f","2017-05-19 03:25:25","FAB-4034 SDK unnecessarily creating tgz file
+
+Change-Id: I5e93e13fef12d5381dc41e2f26821dec028b0719
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","dec17727ddb6b269f8fb30930e10d89bc185225f","4","8","0","1162","86","16","750","89","1170","164","9","3","24","1090","5","14","40","0","hyperledger-fabric-sdk-java","dec17727ddb6b269f8fb30930e10d89bc185225f","126","14.3","34","14105","7794","1899","5","317","15","558","20.2","680","7","4.6","5","55","625","3529","26","565","649","33","665","8","19","4172","1.8","208","94","1"
+"hyperledger-fabric-sdk-java","2fad9ae4a0e2ab4633d95ef18c146c9d45fed05d","2017-05-17 18:38:26","Merge ""FAB-3930 Wrapper method returning the CC Status""","refs/heads/master","jim_the_matrix@hotmail.com","hyperledger-fabric-sdk-java","2fad9ae4a0e2ab4633d95ef18c146c9d45fed05d","4","8","0","1162","86","16","750","89","1171","164","9","3","24","1090","5","14","40","0","hyperledger-fabric-sdk-java","2fad9ae4a0e2ab4633d95ef18c146c9d45fed05d","126","14.3","34","14110","7798","1899","5","317","15","558","20.2","680","7","4.6","5","55","625","3532","26","565","649","33","665","8","19","4172","1.8","208","94","1"
+"hyperledger-fabric-sdk-java","ab4b732803202276acef86d0716f94e783d4702b","2017-05-17 14:42:40","FAB-3930 Wrapper method returning the CC Status
+
+Provide to the response wrapper a method for returning the CC Status
+
+Change-Id: I88ca200b0c55a00c48642c638151f7bb1bd407ed
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","ab4b732803202276acef86d0716f94e783d4702b","4","8","0","1158","79","16","742","89","1167","163","9","3","24","1089","5","14","40","0","hyperledger-fabric-sdk-java","ab4b732803202276acef86d0716f94e783d4702b","126","14.3","34","14055","7753","1884","5","317","15","558","20","680","7","4.7","5","55","625","3509","26","565","657","33","665","8","19","4165","1.8","208","94","1"
+"hyperledger-fabric-sdk-java","ac76caf7a743aa63763c104235bef8449b4132da","2017-05-12 08:11:45","F2881 Inputstream source
+
+DeployRequest to allow chaincode zip compressed tar tag InputStream
+
+Change-Id: I0ac84bf4a11bcd900e46d907fa1af96238bad7ba
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","ac76caf7a743aa63763c104235bef8449b4132da","4","8","0","1163","86","16","744","82","1175","167","9","3","24","1098","5","14","40","0","hyperledger-fabric-sdk-java","ac76caf7a743aa63763c104235bef8449b4132da","126","14.2","34","14020","7757","1877","5","317","15","562","20","679","7","4.6","5","56","629","3514","26","565","649","33","665","8","20","4192","1.8","210","94","1"
+"hyperledger-fabric-sdk-java","9a593f9a383842ee6fe5a2719f806eec512e1091","2017-05-14 06:36:15","FAB-3903 Javadoc cleanup
+
+Change-Id: Ib4455ed14628e4d6c43a407bab79f64bec98a9ac
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","9a593f9a383842ee6fe5a2719f806eec512e1091","4","8","0","1159","79","16","736","82","1171","166","9","3","24","1097","5","14","40","0","hyperledger-fabric-sdk-java","9a593f9a383842ee6fe5a2719f806eec512e1091","126","14.3","34","13965","7712","1862","5","317","15","562","19.8","679","7","4.7","5","56","629","3491","26","565","657","33","665","8","20","4185","1.8","210","94","1"
+"hyperledger-fabric-sdk-java","b179b310e78cf33726695cebc73fc3a857d62440","2017-05-12 13:58:51","FAB-3903 Javadoc cleanup
+
+Change-Id: Ideb63e05c3fcf6a20f648c6f2609ae49e8fbd441
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","b179b310e78cf33726695cebc73fc3a857d62440","4","8","0","1158","79","16","736","82","1171","166","9","3","24","1097","5","15","40","0","hyperledger-fabric-sdk-java","b179b310e78cf33726695cebc73fc3a857d62440","126","14.3","34","13966","7713","1862","5","317","15","562","19.8","679","7","4.7","5","56","629","3491","26","565","657","33","665","8","20","4185","1.8","210","94","1"
+"hyperledger-fabric-sdk-java","4f11cb33823861ee1f7fa8148cee5e17d92e88ad","2017-05-09 20:15:14","Merge ""F3719-removePublicKey""","refs/heads/master","jim_the_matrix@hotmail.com","hyperledger-fabric-sdk-java","4f11cb33823861ee1f7fa8148cee5e17d92e88ad","4","8","0","1173","79","16","736","82","1171","166","9","3","24","1097","5","15","40","0","hyperledger-fabric-sdk-java","4f11cb33823861ee1f7fa8148cee5e17d92e88ad","127","14.2","34","13998","7731","1861","5","317","15","562","19.6","693","7","4.7","5","56","629","3491","26","565","657","33","665","8","20","4185","1.8","210","95","1"
+"hyperledger-fabric-sdk-java","f69f0f9251734cb660adc1e585025958fbf0892e","2017-05-09 20:07:34","Merge ""FAB-3718 Keep continuous orderer connection""","refs/heads/master","jim_the_matrix@hotmail.com","hyperledger-fabric-sdk-java","f69f0f9251734cb660adc1e585025958fbf0892e","4","8","0","1177","74","16","736","82","1171","167","9","3","24","1096","5","14","41","0","hyperledger-fabric-sdk-java","f69f0f9251734cb660adc1e585025958fbf0892e","127","14.2","34","13978","7721","1857","5","317","15","560","19.5","694","7","4.7","5","56","627","3486","26","565","657","33","665","8","20","4166","1.8","208","95","1"
+"hyperledger-fabric-sdk-java","01d38d85dcb0d5d64cd0ee219a9bc86da9f40398","2017-05-07 13:54:56","F3719-removePublicKey
+
+PS 5 Allow the user to optionally provide the certificate signing request.
+
+Change-Id: I0ca2af19a7a0ba6d9e67ea63cd584059f9117354
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","01d38d85dcb0d5d64cd0ee219a9bc86da9f40398","4","8","0","974","83","16","662","77","1115","160","9","1","25","961","5","12","39","0","hyperledger-fabric-sdk-java","01d38d85dcb0d5d64cd0ee219a9bc86da9f40398","94","15.2","30","12018","6696","1578","5","265","17","499","20.2","562","7","4.6","5","55","557","3096","17","415","558","28","585","8","20","3903","1.9","200","78","1"
+"hyperledger-fabric-sdk-java","8dfd52e7b827684a7f512fd8ec57fa982f2d900a","2017-03-07 12:36:30","FAB-2681 BlockEvent enhancement
+
+FAB-2681 BlockEvent return proposal, read write set and result
+
+https://gerrit.hyperledger.org/r/#/c/6969/
+
+Looking for build hang.
+
+Change-Id: I19f992d162eaf519e60a2add0bdb235216f59157
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","8dfd52e7b827684a7f512fd8ec57fa982f2d900a","4","8","0","1176","74","16","726","78","1169","166","9","3","24","1083","5","14","41","0","hyperledger-fabric-sdk-java","8dfd52e7b827684a7f512fd8ec57fa982f2d900a","127","14.2","30","13908","7664","1822","5","318","15","558","19.2","692","7","4.7","5","56","621","3451","22","565","657","33","585","8","20","4162","1.8","205","95","1"
+"hyperledger-fabric-sdk-java","e3efe2480df845d76482cb554e7f8f5bf7cd72df","2017-05-07 12:17:04","FAB-3718 Keep continuous orderer connection
+
+Change-Id: I86bd13918c8d84461d4b948c7876f90bee1c11c7
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","e3efe2480df845d76482cb554e7f8f5bf7cd72df","4","8","0","979","78","16","672","81","1117","162","9","1","25","973","5","11","40","0","hyperledger-fabric-sdk-java","e3efe2480df845d76482cb554e7f8f5bf7cd72df","94","15.2","34","12068","6743","1609","5","264","17","499","20.6","565","7","4.6","5","55","561","3126","21","415","558","28","665","8","20","3888","1.9","201","78","1"
+"hyperledger-fabric-sdk-java","3b540444031763a64f90900f8c91123deaced1bf","2017-04-27 16:18:30","FAB-3477 Move install chaincode client.
+
+Cleanup
+
+Change-Id: Ib0d0bbdea9ec77a8c4567aa1b42c8e44748ce115
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","3b540444031763a64f90900f8c91123deaced1bf","4","8","0","978","78","16","662","77","1115","161","9","1","25","960","5","11","40","0","hyperledger-fabric-sdk-java","3b540444031763a64f90900f8c91123deaced1bf","94","15.2","30","11998","6686","1574","5","265","17","497","20.2","563","7","4.7","5","55","555","3091","17","415","558","28","585","8","20","3884","1.9","198","78","1"
+"hyperledger-fabric-sdk-java","d436247e11f1e523e5a1e7033620945b5ce304c2","2017-05-08 08:47:07","F3697 - change lscc to channelname
+
+Change-Id: Iadec8e2a41de5144eeccec897ae0cc1510e3705c
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","d436247e11f1e523e5a1e7033620945b5ce304c2","4","8","0","965","75","15","652","73","1096","154","9","1","25","946","5","9","40","0","hyperledger-fabric-sdk-java","d436247e11f1e523e5a1e7033620945b5ce304c2","94","15.3","29","11821","6566","1546","5","257","11","483","19.8","561","7","4.9","5","54","536","3021","13","275","581","24","565","8","20","3697","1.9","192","78","1"
+"hyperledger-fabric-sdk-java","fa6dc538a59c72e28a0a045f1496b1002a6bc871","2017-04-18 17:02:18","FAB-3236 Transient data support
+
+https://gerrit.hyperledger.org/r/#/c/8199/
+
+clean up
+
+Change-Id: Iaa8ab8890c547056d3ecc6f1dfc4dfbd51ff6284
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","fa6dc538a59c72e28a0a045f1496b1002a6bc871","4","8","0","965","75","15","652","73","1096","154","9","1","25","946","5","9","40","0","hyperledger-fabric-sdk-java","fa6dc538a59c72e28a0a045f1496b1002a6bc871","94","15.3","29","11821","6566","1546","5","257","11","483","19.8","561","7","4.9","5","54","536","3021","13","275","581","24","565","8","20","3697","1.9","192","78","1"
+"hyperledger-fabric-sdk-java","bac2b548205091b3047bb960fb85eaf1df8118dc","2017-04-24 04:41:56","FAB-3378 create join channel fail.
+
+Refactored so signatures are byte arrays and provided api to create them.
+
+Change-Id: I91dab31977232079daf90bf155b634873517b35a
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","bac2b548205091b3047bb960fb85eaf1df8118dc","4","8","0","971","75","15","650","73","1085","154","9","5","26","938","5","10","40","0","hyperledger-fabric-sdk-java","bac2b548205091b3047bb960fb85eaf1df8118dc","97","15.3","29","11789","6505","1522","5","257","11","483","18.8","554","7","4.9","5","54","536","2988","13","275","581","24","565","8","20","3672","1.9","192","81","1"
+"hyperledger-fabric-sdk-java","c1a616e7b8b448bd6d2c69a7e2033a38f86eb2a5","2017-04-27 11:59:54","FAB-3469 Additional logging for HFCAClient
+
+change reason from int to string to match fabric-ca
+
+Change-Id: Iaf53b283dc46674ce2ce1ff38f42189d3fbb6db8
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","c1a616e7b8b448bd6d2c69a7e2033a38f86eb2a5","4","4","0","954","74","15","612","72","1048","149","9","17","26","903","5","8","40","0","hyperledger-fabric-sdk-java","c1a616e7b8b448bd6d2c69a7e2033a38f86eb2a5","97","15.6","28","11460","6266","1467","5","245","13","466","18.1","539","7","5.3","5","51","518","2860","13","275","609","24","545","8","20","3514","1.9","189","81","1"
+"hyperledger-fabric-sdk-java","a9666db2788486ebd3797a78ca90f0e3624a9267","2017-04-26 06:54:19","FAB-3377 Fails to compile with IBM JDK in HFCAClient
+
+Also added testcases to verify revoked users cannot be reenrolled
+Confirmed that all the tests run fine using both IBM JDK and Open JDK
+Updated README.md to describe -notext option when generating cert.pem files.
+
+Change-Id: I956a0f943960511544d1895cb3b0c9801a0d76e4
+Signed-off-by: Toshio Suganuma <suganuma@jp.ibm.com>
+","refs/heads/master","suganuma@jp.ibm.com","hyperledger-fabric-sdk-java","a9666db2788486ebd3797a78ca90f0e3624a9267","4","4","0","954","74","15","610","72","1045","149","9","17","26","903","5","8","40","0","hyperledger-fabric-sdk-java","a9666db2788486ebd3797a78ca90f0e3624a9267","97","15.6","28","11416","6239","1464","5","244","13","464","18.1","538","7","5.3","5","51","516","2842","13","275","609","24","545","8","19","3499","1.9","189","81","1"
+"hyperledger-fabric-sdk-java","62c7b12e9a72f089e90a2c0b50ff954182265eda","2017-04-24 21:32:54","FAB-3078 Change REST prefix on fabric-ca to /api/v1/
+
+Worked ok with the latest fabric-ca code
+Updated fabric-ca level in README.md
+
+Change-Id: Ia0e07f5f097f1d3fb543e77f1e6e6ef53909970d
+Signed-off-by: Toshio Suganuma <suganuma@jp.ibm.com>
+","refs/heads/master","suganuma@jp.ibm.com","hyperledger-fabric-sdk-java","62c7b12e9a72f089e90a2c0b50ff954182265eda","5","4","0","954","74","15","610","72","1045","149","9","17","30","900","5","12","40","0","hyperledger-fabric-sdk-java","62c7b12e9a72f089e90a2c0b50ff954182265eda","97","15.6","29","11420","6243","1464","5","247","13","471","18.1","538","7","5.3","5","52","524","2842","13","275","609","24","575","8","19","3687","2","193","81","1"
+"hyperledger-fabric-sdk-java","981f70d58545bd28dd0d92ae37f0d69a44d8cec1","2017-04-11 13:01:30","FAB-3104 Eventhub sign register request.
+
+https://gerrit.hyperledger.org/r/#/c/7951/
+
+Change-Id: I46839c58ed152c61996284b52b4f8a7aea6c8fb8
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","981f70d58545bd28dd0d92ae37f0d69a44d8cec1","5","4","0","954","74","15","610","72","1045","149","9","17","30","900","5","12","40","0","hyperledger-fabric-sdk-java","981f70d58545bd28dd0d92ae37f0d69a44d8cec1","97","15.6","29","11420","6243","1464","5","247","13","471","18.1","538","7","5.3","5","52","524","2842","13","275","609","24","575","8","19","3687","2","193","81","1"
+"hyperledger-fabric-sdk-java","5d069da1675097b2b1aacc1e7e8fbe16518c70c8","2017-04-16 23:08:08","FAB-2534 Cleanup RegistrationRequest
+
+Additional changes for cleaning up fabric_ca interfaces (enroll, reenroll, revoke)
+Add an option for user to provide a key pair in enroll api
+Add test cases to use additional options to enroll and reenroll
+
+Change-Id: Id549fd338f5b90fd437fba913d477049aef0a7ae
+Signed-off-by: Toshio Suganuma <suganuma@jp.ibm.com>
+","refs/heads/master","suganuma@jp.ibm.com","hyperledger-fabric-sdk-java","5d069da1675097b2b1aacc1e7e8fbe16518c70c8","5","4","0","953","72","15","602","72","1043","149","9","17","30","891","5","12","40","0","hyperledger-fabric-sdk-java","5d069da1675097b2b1aacc1e7e8fbe16518c70c8","97","15.7","29","11399","6223","1459","5","248","13","472","18","537","7","5.3","5","52","525","2835","13","275","609","24","575","8","19","3690","2","193","81","1"
+"hyperledger-fabric-sdk-java","36f4ac10b49b0e60d9dad9dfc9172a97afcf86f5","2017-04-18 07:15:32","F3219 lcccRename
+
+Change-Id: If017d408b7e0815a6d5b0db665226cdc3a11133b
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","36f4ac10b49b0e60d9dad9dfc9172a97afcf86f5","4","4","0","924","71","15","594","70","1023","147","9","17","25","877","5","8","40","0","hyperledger-fabric-sdk-java","36f4ac10b49b0e60d9dad9dfc9172a97afcf86f5","95","15.6","27","11138","6072","1421","5","246","13","462","18","517","7","5.5","5","50","513","2781","13","275","609","24","535","8","19","3645","2","185","79","1"
+"hyperledger-fabric-sdk-java","5b96ca4e0fb3aae3e5c09482ede02217e5daeb42","2017-04-13 13:34:01","FAB-3130 V1.0 Clean up members services
+
+https://gerrit.hyperledger.org/r/#/c/7999/
+
+PS 5 Rebase
+PS 6 Rebase.
+PS 7 Cleanup
+
+Change-Id: Idb01a68366410257fbb93e0e241a7a2dbe841f4d
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","5b96ca4e0fb3aae3e5c09482ede02217e5daeb42","4","4","0","924","71","15","594","70","1023","147","9","17","25","877","5","8","40","0","hyperledger-fabric-sdk-java","5b96ca4e0fb3aae3e5c09482ede02217e5daeb42","95","15.6","27","11138","6072","1421","5","246","13","462","18","517","7","5.5","5","50","513","2781","13","275","609","24","535","8","19","3645","2","185","79","1"
+"hyperledger-fabric-sdk-java","1fd92ca2728df6419b1da3dc951771b5ddf0f872","2017-04-11 13:01:30","FAB-2956 Update server level
+
+https://gerrit.hyperledger.org/r/#/c/8023/
+
+PS 5: README.md updated.
+
+Change-Id: I082e9f0bc799d92abb20fd426dcc08a85f74352f
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","1fd92ca2728df6419b1da3dc951771b5ddf0f872","4","4","0","977","71","15","602","73","1045","162","11","18","25","882","7","8","52","0","hyperledger-fabric-sdk-java","1fd92ca2728df6419b1da3dc951771b5ddf0f872","102","17.2","31","11752","6258","1453","5","278","15","513","16.9","544","9","5.5","5","55","569","2826","13","290","652","25","615","8","26","3944","2.1","197","86","1"
+"hyperledger-fabric-sdk-java","c788a00ed99f88125496fd3c4ac3aedd1d5f0e34","2017-04-10 13:49:55","FAB-2782 Chain cleanup
+
+PS 9 Addressed Jim's review.
+
+https://gerrit.hyperledger.org/r/#/c/7907/
+
+Change-Id: I4c55485db8c4e1c50cccd8e08c3bc9ec0d1aaf85
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","c788a00ed99f88125496fd3c4ac3aedd1d5f0e34","4","4","0","977","71","15","602","73","1045","162","11","18","25","882","7","8","52","0","hyperledger-fabric-sdk-java","c788a00ed99f88125496fd3c4ac3aedd1d5f0e34","102","17.2","31","11752","6258","1453","5","278","15","513","16.9","544","9","5.5","5","55","569","2826","13","290","652","25","615","8","26","3944","2.1","197","86","1"
+"hyperledger-fabric-sdk-java","69812415ba6ceeb09e39c08443bec2f284d997a1","2017-04-08 16:50:56","FAB-3062 Eventhub reconnect
+
+https://gerrit.hyperledger.org/r/#/c/7873/
+publish
+
+Change-Id: I2e72f34a9adfb08a8960d0581c81a4d9a44153fc
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","69812415ba6ceeb09e39c08443bec2f284d997a1","4","0","0","967","58","14","590","69","1023","158","11","21","25","865","6","8","52","0","hyperledger-fabric-sdk-java","69812415ba6ceeb09e39c08443bec2f284d997a1","102","17.8","31","11401","5985","1331","5","266","13","498","15.5","534","7","5.5","5","54","553","2656","11","275","622","24","615","8","26","3667","2","196","86","1"
+"hyperledger-fabric-sdk-java","358c15b4e6b6fc582ce2663431cc2eb7b5edccbe","2017-04-11 09:20:04","FAB-2534 Clean up RegistrationRequest
+
+Set all required fields for registration request to fabric_ca
+Add attrs for user registration in HFCAClientEnrollIT
+Remove references from fabric_ca/sdk package to fabric/sdk
+
+Change-Id: I37a679533be52c30e23b26b6598f9511e480f4b0
+Signed-off-by: Toshio Suganuma <suganuma@jp.ibm.com>
+","refs/heads/master","suganuma@jp.ibm.com","hyperledger-fabric-sdk-java","358c15b4e6b6fc582ce2663431cc2eb7b5edccbe","4","0","0","958","51","14","582","67","1016","152","11","25","25","844","6","8","53","0","hyperledger-fabric-sdk-java","358c15b4e6b6fc582ce2663431cc2eb7b5edccbe","101","17.7","30","11237","5889","1318","5","256","13","481","15.3","530","7","5.5","5","52","535","2609","11","275","623","24","610","8","26","3529","2","190","86","1"
+"hyperledger-fabric-sdk-java","8261c985eaa2ed16f37b8dd8a5e9dca323fa3c00","2017-04-06 12:07:59","FAB-3033 Enhance eventhub to avoid waits
+
+https://gerrit.hyperledger.org/r/#/c/7811/
+
+PS 12: rebase
+PS 13  rebase
+
+Change-Id: I9ebf8c576420ef7aa5796c9245cbb32136b22138
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","8261c985eaa2ed16f37b8dd8a5e9dca323fa3c00","4","0","0","917","51","14","550","67","1004","147","11","25","28","844","6","8","52","0","hyperledger-fabric-sdk-java","8261c985eaa2ed16f37b8dd8a5e9dca323fa3c00","99","17.8","30","10958","5736","1289","5","252","11","471","15.3","507","5","2","5","51","525","2550","11","275","221","24","610","7","26","3425","2","185","84","1"
+"hyperledger-fabric-sdk-java","7e72881cfe1e160b1d36987ae5b64c1befb1fee4","2017-04-11 10:36:45","FAB-3054 Remove /api/v1/cfssl prefix to fabric-ca
+
+Confirmed all work ok for IntegrationSuite
+
+Change-Id: I5243bd3b58d23d0f11ad74155ebecb4408537287
+Signed-off-by: Toshio Suganuma <suganuma@jp.ibm.com>
+","refs/heads/master","suganuma@jp.ibm.com","hyperledger-fabric-sdk-java","7e72881cfe1e160b1d36987ae5b64c1befb1fee4","4","0","0","911","50","14","550","66","1001","136","11","34","29","838","6","9","51","0","hyperledger-fabric-sdk-java","7e72881cfe1e160b1d36987ae5b64c1befb1fee4","99","17.7","30","10962","5696","1283","5","247","11","451","15.3","502","5","2","5","51","506","2538","11","285","224","25","610","7","26","3302","1.9","171","84","1"
+"hyperledger-fabric-sdk-java","71b6e1b87dd9b6a1ccab3c9d04cd26e78a34f65d","2017-04-10 11:35:20","[FAB-3064] remove unneeded protos from sdk-java
+
+ - chaincodehim.proto: shim removed
+ - table.proto: obsolete v0.6 proto
+
+Change-Id: I9f184a9d9a8787f95af19bdc5bbfe92f8816b996
+Signed-off-by: Luis Sanchez <sanchezl@us.ibm.com>
+","refs/heads/master","sanchezl@us.ibm.com","hyperledger-fabric-sdk-java","71b6e1b87dd9b6a1ccab3c9d04cd26e78a34f65d","4","0","0","911","50","14","550","66","1001","136","11","34","29","838","6","9","51","0","hyperledger-fabric-sdk-java","71b6e1b87dd9b6a1ccab3c9d04cd26e78a34f65d","99","17.7","30","10962","5696","1283","5","247","11","451","15.3","502","5","2","5","51","506","2538","11","285","224","25","610","7","26","3302","1.9","171","84","1"
+"hyperledger-fabric-sdk-java","9ba88ec4f9bd8b7ac4b163a367067594b84ce733","2017-04-10 11:22:21","[FAB-3063] delete sdk copy of java shim
+
+moved back to fabric repository
+
+Change-Id: I4dcc9342433f852dbc73dcdcec3041b22a27f5e5
+Signed-off-by: Luis Sanchez <sanchezl@us.ibm.com>
+","refs/heads/master","sanchezl@us.ibm.com","hyperledger-fabric-sdk-java","9ba88ec4f9bd8b7ac4b163a367067594b84ce733","4","0","0","911","50","14","550","66","1001","136","11","34","29","838","6","9","51","0","hyperledger-fabric-sdk-java","9ba88ec4f9bd8b7ac4b163a367067594b84ce733","99","17.7","30","10962","5696","1283","5","247","11","451","15.3","502","5","2","5","51","506","2538","11","285","224","25","610","7","26","3302","1.9","171","84","1"
+"hyperledger-fabric-sdk-java","4c3f8fc6a524beb094cfeee93228e01607d5c52b","2017-04-06 08:20:16","FAB-1982 Make TLS connection with orderer and peers
+
+Added dependencies for using netty-tcnative-boringssl
+Updated cert and key files for each of orderer and peers for e2e test
+Put minor changes for Grpc SSL context
+Confirmed End2endIT test works fine with TLS enabled for
+fabric-peer, fabric-orderer, and fabric-ca of 1.0.0-alpha
+Added some description on how to generate cert and key in README.md
+
+Change-Id: I90a73f95732c03555fa4082a1a181c04b37d4364
+Signed-off-by: Toshio Suganuma <suganuma@jp.ibm.com>
+","refs/heads/master","suganuma@jp.ibm.com","hyperledger-fabric-sdk-java","4c3f8fc6a524beb094cfeee93228e01607d5c52b","6","0","0","1056","68","14","584","73","1125","161","11","50","36","897","6","12","54","0","hyperledger-fabric-sdk-java","4c3f8fc6a524beb094cfeee93228e01607d5c52b","123","17.6","53","13234","6999","1563","5","321","11","589","14.5","590","5","1.7","5","93","668","3124","11","300","224","26","1040","12","30","4309","2.1","213","108","1"
+"hyperledger-fabric-sdk-java","d3f6d45fdc6ac191cb7f8d6a08f0aa7f5aaab442","2017-04-05 12:17:25","FAB-3006 Bad merge by reviewer causes build break:)
+
+Change-Id: Idea1232407e608faab717983d8258ca5f0e9ff86
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","d3f6d45fdc6ac191cb7f8d6a08f0aa7f5aaab442","6","0","0","1050","68","14","582","69","1123","151","11","46","36","897","6","12","54","0","hyperledger-fabric-sdk-java","d3f6d45fdc6ac191cb7f8d6a08f0aa7f5aaab442","123","17.6","49","13207","6979","1551","5","315","11","583","14.4","590","5","1.7","5","89","657","3110","10","290","224","25","960","12","30","4237","2","213","108","1"
+"hyperledger-fabric-sdk-java","2e19be6dd62b3bb6ab7afcc013d3beaa4474e9c8","2017-04-05 11:16:44","Merge ""FAB-2948 custom endorsement policy""","refs/heads/master","jim_the_matrix@hotmail.com","hyperledger-fabric-sdk-java","2e19be6dd62b3bb6ab7afcc013d3beaa4474e9c8","6","0","0","1050","68","14","582","69","1123","151","11","46","36","897","6","12","54","0","hyperledger-fabric-sdk-java","2e19be6dd62b3bb6ab7afcc013d3beaa4474e9c8","123","17.6","49","13206","6979","1551","5","315","11","583","14.4","590","5","1.7","5","89","657","3110","10","290","224","25","960","12","30","4237","2","213","108","1"
+"hyperledger-fabric-sdk-java","83bae970449206eae0dd0b98679ff0c8c71bd807","2017-04-04 06:54:27","FAB-2948 custom endorsement policy
+
+https://gerrit.hyperledger.org/r/#/c/7683/
+
+PS 4:Rebase
+PS 5:Rebase cleanup
+
+Change-Id: Ie5377e505e3834934bcd6c32428f85b3d56061c3
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","83bae970449206eae0dd0b98679ff0c8c71bd807","6","0","0","1050","68","14","582","69","1123","151","11","46","36","897","6","12","54","0","hyperledger-fabric-sdk-java","83bae970449206eae0dd0b98679ff0c8c71bd807","123","17.6","49","13206","6979","1551","5","315","11","583","14.4","590","5","1.7","5","89","657","3110","10","290","224","25","960","12","30","4237","2","213","108","1"
+"hyperledger-fabric-sdk-java","dfec91adcaf52938a84325619ce7adf8d07b19f2","2017-03-31 11:35:11","FAB-2956 Update server level
+
+https://gerrit.hyperledger.org/r/#/c/7627/
+
+PS 2: Updated README.md
+PS 3: No change
+
+Change-Id: Ic17b23bdb8d7b8a993f1f912613ea2751ef364f9
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","dfec91adcaf52938a84325619ce7adf8d07b19f2","6","0","0","1039","58","13","566","69","1088","149","12","46","35","845","6","12","54","0","hyperledger-fabric-sdk-java","dfec91adcaf52938a84325619ce7adf8d07b19f2","121","17.8","49","12972","6837","1495","5","305","11","573","14","583","5","1.7","5","89","646","3035","10","285","224","24","960","12","30","4103","2","212","107","1"
+"hyperledger-fabric-sdk-java","956e6f86d656ba6394c63c46f1b108f8c79b9d3a","2017-03-25 09:05:12","FAB-2754_Query_Channels
+
+https://gerrit.hyperledger.org/r/#/c/7469/
+PS 8 rebase added HFCAClientEnrollIT to integration tests.
+PS 13 Cleanup on chain.
+PS 14 Cleanup
+PS 15 Cleanup
+PS 16 Cleanup
+PS 18 Cleanup
+PS 19.Addressed Jim's review
+
+Change-Id: I8107c4c607e86830c592bc4de1e4d76f2b3eda70
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","956e6f86d656ba6394c63c46f1b108f8c79b9d3a","6","0","0","1039","58","13","566","69","1088","149","12","46","35","845","6","12","54","0","hyperledger-fabric-sdk-java","956e6f86d656ba6394c63c46f1b108f8c79b9d3a","121","17.8","49","12972","6837","1495","5","305","11","573","14","583","5","1.7","5","89","646","3035","10","285","224","24","960","12","30","4103","2","212","107","1"
+"hyperledger-fabric-sdk-java","315420e81794defdb56cb480e0867103eb0fea27","2017-03-29 13:38:31","[FAB-2918] parse anchor peers from config block
+
+get the anchor peers from the channel config block.
+Protobufs defines in configtx.proto and described in
+hyperledger/fabric/docs/src/configtx.rst
+For now, do not externalize the data. We can decide
+once we have a requirement for processing the anchor peers info.
+
+http://gerrit.hyperledger.org/r/7557
+
+Change-Id: I576d85a9f1135cd172f41aef06722d0c68a708f0
+Signed-off-by: tuand27613 <tuan.dang.27613@gmail.com>
+","refs/heads/master","tuan.dang.27613@gmail.com","hyperledger-fabric-sdk-java","315420e81794defdb56cb480e0867103eb0fea27","6","0","0","1008","50","7","528","61","1041","147","12","46","44","784","6","21","54","0","hyperledger-fabric-sdk-java","315420e81794defdb56cb480e0867103eb0fea27","116","18.3","49","12360","6529","1390","5","309","6","564","13.6","561","5","0.9","5","86","634","2882","10","255","112","21","960","12","28","3942","2","201","102","1"
+"hyperledger-fabric-sdk-java","9c11650c053e9baf46a674576302bf117f8a4b7f","2017-03-25 09:05:12","FAB-2752 Upgrade chain code.
+
+.
+https://gerrit.hyperledger.org/r/#/c/7445/
+
+PS 6 Rebase
+PS 7 hostnameOverride - from Jim ! :)
+PS 9 Rebase add HFCAClientEnrollIT to integration suite
+PS 10 Minor bug fix.
+PS 11 README.md change remove limitation on upgrade cc
+
+Change-Id: I4bfa55027ae8f7dc78fff03f0c5538032a82b993
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","9c11650c053e9baf46a674576302bf117f8a4b7f","6","0","0","1004","50","7","528","61","1029","146","12","46","44","786","6","21","52","0","hyperledger-fabric-sdk-java","9c11650c053e9baf46a674576302bf117f8a4b7f","115","18.4","49","12321","6499","1385","5","305","6","559","13.6","559","5","0.9","5","86","629","2866","10","255","112","21","960","12","28","3907","2","200","102","1"
+"hyperledger-fabric-sdk-java","9b90860583709cd02f84b3fbc7e0725d05886da0","2017-03-27 17:49:46","[FAB-2753] complete Farbic CA api re-enroll/revoke
+
+complete re-enroll/revoke api.
+re-enroll is to get new enrollment cert from CA server,
+revoke is to revoke one enrollment cert or revoke one user (including
+all his certs)
+
+Change-Id: Icf79f924ff1516d559f806bf1f6d961340a75d8b
+Signed-off-by: conghonglei <conghonglei@wanda.cn>
+","refs/heads/master","conghonglei@wanda.cn","hyperledger-fabric-sdk-java","9b90860583709cd02f84b3fbc7e0725d05886da0","6","0","0","971","49","7","516","58","1020","146","12","46","48","779","6","21","50","0","hyperledger-fabric-sdk-java","9b90860583709cd02f84b3fbc7e0725d05886da0","113","18.5","53","12158","6411","1351","5","299","6","546","13.5","553","5","0.9","5","90","620","2822","10","255","112","21","1040","12","29","3805","2","192","100","1"
+"hyperledger-fabric-sdk-java","fb490a02fc50220f7ee868d188a8f90cea667b80","2017-03-24 14:54:54","FAB-1732 TLS support
+
+https://gerrit.hyperledger.org/r/#/c/7195/
+
+blocked
+https://jira.hyperledger.org/browse/FAB-2855
+
+Change-Id: Iae4315020fe410babe2adcdcda2b1187014353fd
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","fb490a02fc50220f7ee868d188a8f90cea667b80","5","0","0","963","48","7","510","54","974","146","12","46","48","758","6","22","50","0","hyperledger-fabric-sdk-java","fb490a02fc50220f7ee868d188a8f90cea667b80","112","18.4","52","11926","6280","1323","5","295","6","535","13.4","544","5","0.9","5","89","608","2738","10","255","112","21","1010","12","29","3580","1.9","185","99","1"
+"hyperledger-fabric-sdk-java","af4c69166fdb5bc0af8567aa00a3f346c3a21ce7","2017-03-15 12:17:22","[FAB-2751]  End2EndIT with multiple orgs
+
+https://gerrit.hyperledger.org/r/#/c/7321/
+
+--------------------
+PS 6 rebase
+PS 7 Facade for Orgs -> SampleOrg hides parsing things that
+ are not really part of API. Makes test/sample more easy to
+ follow I think
+PS 8 Minor clean up
+PS 9 rebase
+PS 10 move docker-compose and e2e0-org it references under
+  a common directory
+PS 11 Minor clean up
+PS 12 Minor clean up
+
+Change-Id: I55564f29ca78f96e3185873a9edf14572e63c542
+Signed-off-by: tuand27613 <tuan.dang.27613@gmail.com>
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","tuan.dang.27613@gmail.com","hyperledger-fabric-sdk-java","af4c69166fdb5bc0af8567aa00a3f346c3a21ce7","4","0","0","951","42","7","492","53","940","141","12","46","55","754","6","27","50","0","hyperledger-fabric-sdk-java","af4c69166fdb5bc0af8567aa00a3f346c3a21ce7","111","18.3","52","11617","6104","1283","5","292","8","541","13","536","6","1.3","5","87","613","2662","9","240","150","20","1010","13","38","3523","1.9","187","99","1"
+"hyperledger-fabric-sdk-java","0a4f232a5e61d093f5b0ae90b285b5230567e16f","2017-03-18 09:24:20","FAB-2825 Update fabric level
+
+https://gerrit.hyperledger.org/r/#/c/7335/
+
+Change-Id: Ia6c8f3ed5ff540d80e35e75ed32eb2d6e2651b50
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","0a4f232a5e61d093f5b0ae90b285b5230567e16f","3","0","0","950","42","6","492","53","935","142","12","43","54","747","6","26","49","2","hyperledger-fabric-sdk-java","0a4f232a5e61d093f5b0ae90b285b5230567e16f","111","18.4","52","11592","6082","1276","5","292","8","541","12.9","535","6","1.3","5","86","612","2646","9","225","150","19","1010","13","39","3492","1.9","186","99","1"
+"hyperledger-fabric-sdk-java","c9038512b58438cec79c5c12755e2b174c95e0a9","2017-03-20 07:36:55","[FAB-2832] Error deploying Java chaincode
+
+Change-Id: Ia63e46d63c78eea343a22f3f9feb4d67a330e4ec
+Signed-off-by: Luis Sanchez <sanchezl@us.ibm.com>
+","refs/heads/master","sanchezl@us.ibm.com","hyperledger-fabric-sdk-java","c9038512b58438cec79c5c12755e2b174c95e0a9","3","0","0","950","42","6","492","53","935","142","12","43","54","747","6","26","49","2","hyperledger-fabric-sdk-java","c9038512b58438cec79c5c12755e2b174c95e0a9","111","18.4","52","11592","6082","1276","5","292","8","541","12.9","535","6","1.3","5","86","612","2646","9","225","150","19","1010","13","39","3492","1.9","186","99","1"
+"hyperledger-fabric-sdk-java","1b6a996f3bb60b06c944cdd4c03ebef8910c7b4f","2017-03-18 05:43:46","FAB-2776 non asicii platforms UTF8
+
+EnrollmentException: Failed to enroll user admin on non ASCII/UTF platform
+Make sur we always use UTF8
+https://gerrit.hyperledger.org/r/#/c/7329/
+
+Change-Id: I8f11739772b9cb47eb45f93c45bdba086148e960
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","1b6a996f3bb60b06c944cdd4c03ebef8910c7b4f","3","0","0","950","42","6","492","53","935","143","12","43","54","747","6","26","49","2","hyperledger-fabric-sdk-java","1b6a996f3bb60b06c944cdd4c03ebef8910c7b4f","111","18.4","52","11590","6081","1276","5","296","8","545","12.9","535","6","1.3","5","86","616","2645","9","225","150","19","1010","13","39","3557","1.9","186","99","1"
+"hyperledger-fabric-sdk-java","bbccc936fdb30ea71c8c3147d2a20be802c11929","2017-03-17 07:39:30","FAB-2812 Failure to get last config block
+
+https://gerrit.hyperledger.org/r/#/c/7311/
+
+Change-Id: I2030ad904d0739421474e894f10c239566970dc8
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","bbccc936fdb30ea71c8c3147d2a20be802c11929","3","0","0","950","42","6","492","53","935","143","12","43","53","747","6","25","49","2","hyperledger-fabric-sdk-java","bbccc936fdb30ea71c8c3147d2a20be802c11929","111","18.4","52","11582","6076","1276","5","296","8","544","12.9","535","6","1.3","5","86","615","2645","9","225","150","19","1010","13","39","3555","2","185","99","1"
+"hyperledger-fabric-sdk-java","8a001bb4f07825307787e46f2ccdbef5bb8587ab","2017-03-15 17:48:18","[FAB-2273] fix inconsistent name in peer creation
+
+Change-Id: I827e86c8af9eed6de21813b09903e0dd00172a3d
+Signed-off-by: conghonglei <conghonglei@wanda.cn>
+","refs/heads/master","conghonglei@wanda.cn","hyperledger-fabric-sdk-java","8a001bb4f07825307787e46f2ccdbef5bb8587ab","3","0","0","950","42","6","492","53","935","143","12","43","53","749","6","25","49","2","hyperledger-fabric-sdk-java","8a001bb4f07825307787e46f2ccdbef5bb8587ab","111","18.4","52","11583","6077","1276","5","296","8","544","12.9","535","6","1.3","5","86","615","2645","9","225","150","19","1010","13","39","3555","1.9","185","99","1"
+"hyperledger-fabric-sdk-java","f101e665dfc7478b9ea965389c630e25b0491c88","2017-02-21 12:59:03","[FAB-1437] Add QSCC queries
+
+add QSCC queryBlockChainInfo, queryBlockByNumber,
+queryBlockByHash,queryBlockByTxID and queryTxByID API calls
+
+https://gerrit.hyperledger.org/r/#/c/7027/
+
+tuand27613: picked up form choojoyq's original changeset
+
+squashed with changeset 6325 as dependencies created
+intermediate commits with invalid syntax
+
+Change-Id: I8ce4cefb3a5981fc1bca5127ef22b2c80f5e2b64
+Signed-off-by: tuand27613 <tuan.dang.27613@gmail.com>
+","refs/heads/master","choojoyq@gmail.com","hyperledger-fabric-sdk-java","f101e665dfc7478b9ea965389c630e25b0491c88","3","0","0","951","42","6","492","53","935","143","12","43","53","749","6","25","49","2","hyperledger-fabric-sdk-java","f101e665dfc7478b9ea965389c630e25b0491c88","111","18.4","52","11580","6077","1276","5","296","8","544","12.9","535","6","1.3","5","86","615","2645","9","225","150","19","1010","13","39","3555","1.9","185","99","1"
+"hyperledger-fabric-sdk-java","2d5629cca2dba95274ab70dba34e9d86e1092e0e","2017-03-01 06:54:13","FAB-1204 V1.0 Implement support for Fabric CA
+
+https://gerrit.hyperledger.org/r/#/c/6797/
+
+Last big change rearranging for the moving from .6 to 1.0.
+ (most churn is because of this- not new code)
+Members services entirely moved to new package org.hyperledger.fabric_ca
+SDK itself is not involved with registering or enrollment -
+  left to the embedding application and FCAClient.
+All persistence is left for the embedding application.
+GOPATH environment is not used for GO code.
+  The embedding application is free to implement this.
+Finally users can be registered with an Admin user through FCAClient .
+
+--------------------------------------
+PS 19: Don't need separate package for Sample store move to sdkintegration test package
+PS 22: Fix for changes in enrollment and registration.
+PS 23: Move Fabric CA based exception to fabric_ca
+PS 24: RegistrationException wrong base class.
+PS 25: More consistent names move FCA ->HFCA
+PS 26: Addressed Tuan's comments.
+PS 27: Rebase
+PS 28: Rebase
+
+Change-Id: Ib51f78794dc1ac7079c8fb1b4359724d5d937f1e
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","2d5629cca2dba95274ab70dba34e9d86e1092e0e","3","0","0","908","40","0","480","54","895","138","12","37","40","676","6","9","47","0","hyperledger-fabric-sdk-java","2d5629cca2dba95274ab70dba34e9d86e1092e0e","107","18.2","50","10930","5708","1173","5","284","8","496","12.3","505","6","1.4","5","84","564","2476","8","215","150","18","970","13","37","3284","1.9","151","95","1"
+"hyperledger-fabric-sdk-java","cdb352d0739cd859f1ac02403b8ae51453ed6892","2017-03-14 12:26:32","[FAB-2785] load CA certs from genesis block
+
+Put CA and intermediate certs from the MSPs into
+the channel's cryptoSuite.
+
+https://gerrit.hyperledger.org/r/#/c/7213/
+
+Change-Id: I4cdc4740938967e63bc2f33ca6d16e604a99904a
+Signed-off-by: tuand27613 <tuan.dang.27613@gmail.com>
+","refs/heads/master","tuan.dang.27613@gmail.com","hyperledger-fabric-sdk-java","cdb352d0739cd859f1ac02403b8ae51453ed6892","3","0","0","937","40","0","468","54","899","148","12","41","40","653","6","8","46","0","hyperledger-fabric-sdk-java","cdb352d0739cd859f1ac02403b8ae51453ed6892","107","19.6","50","11302","5824","1182","5","302","8","518","12.4","515","6","1.3","5","87","586","2518","8","215","150","18","970","11","39","3377","1.9","150","95","1"
+"hyperledger-fabric-sdk-java","66bfd9504b1d4198d845d802fe8d6ee392de971c","2017-03-13 09:15:22","Merge ""FAB-2656 Support multiple MSPIDs""","refs/heads/master","jim_the_matrix@hotmail.com","hyperledger-fabric-sdk-java","66bfd9504b1d4198d845d802fe8d6ee392de971c","3","0","0","933","40","0","460","54","887","144","12","34","40","647","6","8","45","0","hyperledger-fabric-sdk-java","66bfd9504b1d4198d845d802fe8d6ee392de971c","107","19.7","50","11217","5764","1154","5","298","8","513","12.1","510","6","1.3","5","87","581","2473","8","215","150","18","970","11","41","3360","1.9","147","95","1"
+"hyperledger-fabric-sdk-java","640151dd30453004cbb88b0af929e0db9f00abad","2017-03-13 05:28:23","FAB-2755-user registration is failing
+
+Fix for breaking change by Fabric_ca.
+
+https://gerrit.hyperledger.org/r/#/c/7157/
+
+Change-Id: I3400ee7a8937aca19c103733ee7dcc2d2c2eee03
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","640151dd30453004cbb88b0af929e0db9f00abad","2","0","0","936","36","0","446","52","833","141","9","34","41","521","6","9","45","0","hyperledger-fabric-sdk-java","640151dd30453004cbb88b0af929e0db9f00abad","106","21.1","50","10975","5529","1102","5","311","6","525","11.6","500","5","1.1","5","86","591","2349","7","190","122","16","970","11","41","3370","2","146","95","1"
+"hyperledger-fabric-sdk-java","5c22f832c5ddf3cf25520579952dd12b68ef34c5","2017-03-06 17:30:04","FAB-2656 Support multiple MSPIDs
+
+https://gerrit.hyperledger.org/r/#/c/6941/
+
+patch 12: Addressed Jims comments.
+
+Change-Id: Idfb6027a1b7abd7b6134dd937191f69dac00a8b1
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","5c22f832c5ddf3cf25520579952dd12b68ef34c5","3","0","0","933","40","0","460","54","887","144","12","34","40","645","6","8","45","0","hyperledger-fabric-sdk-java","5c22f832c5ddf3cf25520579952dd12b68ef34c5","107","19.7","50","11217","5764","1154","5","298","8","513","12.1","510","6","1.3","5","87","581","2473","8","215","150","18","970","11","41","3360","1.9","147","95","1"
+"hyperledger-fabric-sdk-java","9cd3b754c1d894575b4bd83caa17992ab77ae1c2","2017-03-09 12:28:08","Merge ""[FAB-2385] do not provide Dockerfile for Java cc""","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","9cd3b754c1d894575b4bd83caa17992ab77ae1c2","2","0","0","936","36","0","446","52","833","141","9","34","41","519","6","9","45","0","hyperledger-fabric-sdk-java","9cd3b754c1d894575b4bd83caa17992ab77ae1c2","106","21.1","50","10975","5529","1102","5","311","6","525","11.6","500","5","1.1","5","86","591","2349","7","190","122","16","970","11","41","3370","2","146","95","1"
+"hyperledger-fabric-sdk-java","61e24bde5d087f3d9ca3912ba85613d2661a188d","2017-03-08 07:55:10","[FAB-2706] CI always uses latest Fabric/CA
+
+Update SDK to run with latest Fabric and Fabric-ca
+commit levels.
+
+Set environment so that Jenkins always runs with the
+latest available Fabric and Fabric-ca commits
+
+https://gerrit.hyperledger.org/r/#/c/7029
+
+Change-Id: I8118c342cb93b674dad8b6b1119f046a4b80983a
+Signed-off-by: tuand27613 <tuan.dang.27613@gmail.com>
+","refs/heads/master","tuan.dang.27613@gmail.com","hyperledger-fabric-sdk-java","61e24bde5d087f3d9ca3912ba85613d2661a188d","2","0","0","936","43","0","446","52","838","141","9","35","41","524","6","9","45","0","hyperledger-fabric-sdk-java","61e24bde5d087f3d9ca3912ba85613d2661a188d","106","21","50","11015","5555","1110","5","308","6","523","11.7","501","5","1.1","5","86","589","2367","7","190","122","16","970","11","41","3329","2","147","95","1"
+"hyperledger-fabric-sdk-java","5af3bbe41dfb984a72aab8109ff479316e733284","2017-03-06 07:13:06","[FAB-2660] package v1.0 java chaincode as expected
+
+Change-Id: I0bce1c99ec7a9297820193ca4bfd079e2d509481
+Signed-off-by: Luis Sanchez <sanchezl@us.ibm.com>
+","refs/heads/master","sanchezl@us.ibm.com","hyperledger-fabric-sdk-java","5af3bbe41dfb984a72aab8109ff479316e733284","2","0","0","936","43","0","446","52","838","141","9","35","41","523","6","9","45","0","hyperledger-fabric-sdk-java","5af3bbe41dfb984a72aab8109ff479316e733284","106","21","50","11015","5555","1110","5","308","6","523","11.7","501","5","1.1","5","86","589","2367","7","190","122","16","970","11","41","3329","2","147","95","1"
+"hyperledger-fabric-sdk-java","0f175d25bbfd26afc694a69397598664b8e298eb","2017-03-06 16:49:06","Move to latest fabric, fabric-ca commits.
+
+https://gerrit.hyperledger.org/r/#/c/6939/
+
+fabric|db2021e3f8c826eb008e72321cfc60e72c93ad5e|Mar 6 20:59:26 2017 +0000
+fabric-ca|f18b6b769b80c889cb6b82ce34d755d9303ec881|Mar 4 23:51:45 2017 +0000
+
+Change-Id: I6c1713e8e17a14e5bccf95709bdaceeac5ce6948
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","0f175d25bbfd26afc694a69397598664b8e298eb","2","0","0","937","36","0","446","52","840","141","9","35","41","513","6","9","45","0","hyperledger-fabric-sdk-java","0f175d25bbfd26afc694a69397598664b8e298eb","106","21.1","50","11015","5542","1105","5","307","6","522","11.6","501","5","1.1","5","86","588","2359","7","190","122","16","970","11","41","3314","2","147","95","1"
+"hyperledger-fabric-sdk-java","71de455f53c760fef7939c0a41eb96b05541d28e","2017-03-03 18:13:44","FAB-2639 no longer use testchainid configtx for docker
+
+https://gerrit.hyperledger.org/r/#/c/6823
+update server level
+new configtx files for docker
+Patch 8 fix up Readme,  catch event hub errors, configure end2end test to run two peers.
+Patch 9 fix up Readme.md for policies.
+
+Change-Id: Ica63d1ddebb6f6ebbd642598b4aaf96011b9e288
+Signed-off-by: rickr <cr22rc@gmail.com>
+","refs/heads/master","cr22rc@gmail.com","hyperledger-fabric-sdk-java","71de455f53c760fef7939c0a41eb96b05541d28e","2","0","0","900","36","0","384","55","838","133","9","36","39","514","6","7","35","0","hyperledger-fabric-sdk-java","71de455f53c760fef7939c0a41eb96b05541d28e","104","20.8","52","10884","5472","1097","5","309","6","505","11.7","483","5","1.1","5","89","574","2340","7","205","122","17","1010","11","41","3247","2","128","94","1"
+"hyperledger-fabric-sdk-java","881df15bbf95619a3e5fa7a2a00af6c06da6f4d9","2017-03-01 07:52:48","[FAB-2566] handle new TxValidationCode
+
+Update BlockEvent/TransactionEvent to parse
+the correct TxValidationCode from the Block.
+
+Change-Id: I4136d61c4657d7f84ec6db2f9d215b3b0643c90e
+Signed-off-by: tuand27613 <tuan.dang.27613@gmail.com>
+","refs/heads/master","tuan.dang.27613@gmail.com","hyperledger-fabric-sdk-java","881df15bbf95619a3e5fa7a2a00af6c06da6f4d9","2","0","0","877","33","0","370","54","818","131","9","33","42","501","6","10","35","0","hyperledger-fabric-sdk-java","881df15bbf95619a3e5fa7a2a00af6c06da6f4d9","102","21.1","52","10618","5321","1044","5","305","6","508","11.2","466","5","1.1","5","91","574","2268","5","160","122","14","1010","11","44","3173","2","129","93","1"
+"hyperledger-fabric-sdk-java","60860245c2ad7c7f1e3e1f70948e82d5116034c8","2017-02-27 13:48:13","Update latest Fabric commit level (Feb 27)
+
+Change-Id: I105aa49fbbac9a983e1355f36b6e229af13f1e83
+Signed-off-by: tuand27613 <tdang@us.ibm.com>
+","refs/heads/master","tdang@us.ibm.com","hyperledger-fabric-sdk-java","60860245c2ad7c7f1e3e1f70948e82d5116034c8","2","0","0","841","30","0","328","50","753","126","6","33","43","433","6","12","29","0","hyperledger-fabric-sdk-java","60860245c2ad7c7f1e3e1f70948e82d5116034c8","100","20.1","53","9885","5002","983","5","274","6","472","10.8","447","5","1.2","5","93","537","2137","5","135","122","12","1030","11","44","2987","2","121","91","1"
+"hyperledger-fabric-sdk-java","3fe55a2e8832f9ebbb869cffd1148775a2158f60","2017-02-21 11:38:55","[FAB-2395]  check status from transaction event
+
+Get transaction status in Block.BlockMetadata bit map
+and add to result from the Chain.sendTransaction().get() call.
+
+If we determine from the event that a transaction is
+invalid, Chain.sendTransaction().get() throws a
+TransactionEventException which contains the Block.
+
+Change-Id: I2281f1d55e206a6c97cda778e70a4c58c87f4330
+Signed-off-by: tuand27613 <tdang@us.ibm.com>
+","refs/heads/master","tdang@us.ibm.com","hyperledger-fabric-sdk-java","3fe55a2e8832f9ebbb869cffd1148775a2158f60","2","0","0","841","30","0","328","50","753","126","6","33","43","433","6","12","29","0","hyperledger-fabric-sdk-java","3fe55a2e8832f9ebbb869cffd1148775a2158f60","100","20.1","53","9885","5002","983","5","274","6","472","10.8","447","5","1.2","5","93","537","2137","5","135","122","12","1030","11","44","2987","2","121","91","1"
+"hyperledger-fabric-sdk-java","96dd22be33e301cb2feb274ce10a5c00bbf60930","2017-02-20 12:59:00","[FAB-2376] Add policy to CC install/deploy
+
+Add policy to peer.ChaincodeInput messages in
+an instantiate request.
+
+The other CC requests (upgrade, install, etc...)
+will be covered in FAB-2449
+
+Assume that policy is a byte[] given to the SDK by
+the client.
+
+Change-Id: Ie94696b8e081f0490218b9c763582d18384b8478
+Signed-off-by: tuand27613 <tdang@us.ibm.com>
+","refs/heads/master","tdang@us.ibm.com","hyperledger-fabric-sdk-java","96dd22be33e301cb2feb274ce10a5c00bbf60930","2","0","0","819","31","0","324","50","742","125","6","31","42","436","6","12","29","0","hyperledger-fabric-sdk-java","96dd22be33e301cb2feb274ce10a5c00bbf60930","97","19.9","53","9676","4897","968","5","276","6","473","10.9","434","5","1.3","5","93","538","2103","5","135","122","12","1030","11","43","3007","2","121","89","1"

@@ -42,6 +42,8 @@ print(simulatedCodeMetricsData)
 COCOMOData<- read.csv(cocomoDataUrl, header=TRUE, sep=",")
 COCOMOData<- COCOMOData[c( "RELY","DATA","CPLX","RUSE","DOCU","TIME","STOR","PVOL","ACAP","PCAP","PCON","APEX","PLEX","LTEX","TOOL","SITE","SCED")]
 
+#COCOMOData<- COCOMOData[c( "RELY","DATA","CPLX","RUSE","PVOL","ACAP","APEX")]
+
 print(cov(COCOMOData))
 
 Sigma1 = cov(COCOMOData)
@@ -50,10 +52,12 @@ SqrtSigma1 = temp1$vectors%*%diag(sqrt(temp1$values))%*%t(temp1$vectors)
 
 
 simulatedCOCOMO = matrix(rep(c(NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA,NA),n), ncol = 17)
+#simulatedCOCOMO = matrix(rep(c(NA,NA,NA,NA,NA,NA,NA),n), ncol = 7)
+#colnames(simulatedCOCOMO) <- c( "RELY","DATA","CPLX","RUSE","PVOL","ACAP","APEX")
 colnames(simulatedCOCOMO) <- c( "RELY","DATA","CPLX","RUSE","DOCU","TIME","STOR","PVOL","ACAP","PCAP","PCON","APEX","PLEX","LTEX","TOOL","SITE","SCED")
 print(simulatedCOCOMO);
 for(i in 1:n){
-	simulatedCOCOMO[i,] = colMeans(COCOMOData) + SqrtSigma1%*%rnorm(17)
+	simulatedCOCOMO[i,] = colMeans(COCOMOData) + SqrtSigma1%*%rnorm(7)
 }
 
 print(simulatedCOCOMO)
@@ -85,7 +89,6 @@ for(i in 1:n){
 	simulatedRiskData[i,riskPick[i]] = 1
 }
 
-png(paste(outputPath,"scatter_matrics.png", sep='/'))
 print(simulatedRiskData)
 
 simulatedData <- cbind(simulatedCodeMetricsData, COCOMOData, simulatedCOQUALMOData, simulatedQualityManagementData, simulatedRiskData)
@@ -93,6 +96,12 @@ write.csv(simulatedData, simulatedDataFilePath)
 
 #print(pairs(~CSmell+SVul+FCR+CD+ISS+ISRR+DRR+RELY+DATA+CPLX+RUSE+DOCU+TIME+STOR+PVOL+ACAP+PCAP+PCON+APEX+PLEX+LTEX+TOOL+SITE+SCED,data=simulatedData, main="Simple Scatterplot Matrix"))
 
-print(pairs(~CSmell+SVul+FCR+CD+ISS+ISRR+DRR,data=simulatedData, main="Simple Scatterplot Matrix"))
+
+png(paste(outputPath,"scatter_matrics_code_metrics.png", sep='/'))
+print(pairs(~CSmell+SVul,data=simulatedData, main="Scatterplot Matrix for Code Metrics"))
+
+
+png(paste(outputPath,"scatter_matrics_cocomo.png", sep='/'))
+print(pairs(~RELY+DATA+CPLX+RUSE+DOCU+TIME+STOR+PVOL+ACAP+PCAP+PCON+APEX+PLEX+LTEX+TOOL+SITE+SCED,data=simulatedData, main="Scatterplot Matrix for COCOMO Variables"))
 
 sink()
